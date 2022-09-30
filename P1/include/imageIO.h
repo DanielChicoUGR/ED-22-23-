@@ -36,7 +36,7 @@ ImageKind ReadImageKind (const char *path);
   * @param rows Parámetro de salida con las filas de la imagen.
   * @param cols Parámetro de salida con las columnas de la imagen.
   * @return puntero a una nueva zona de memoria que contiene @a filas x @a columnas
-  * bytes que corresponden a los grises de todos los píxeles
+  * imagen::bytes que corresponden a los grises de todos los píxeles
   * (desde la esquina superior izqda a la inferior drcha). En caso de que no
   * no se pueda leer, se devuelve cero. (0).
   * @post En caso de éxito, el puntero apunta a una zona de memoria reservada en
@@ -48,7 +48,7 @@ unsigned char *ReadPGMImage (const char *path, int& rows, int& cols);
   * @brief Escribe una imagen de tipo PGM
   *
   * @param path archivo a escribir
-  * @param datos punteros a los @a f x @a c bytes que corresponden a los valores
+  * @param datos punteros a los @a f x @a c imagen::bytes que corresponden a los valores
   *    de los píxeles de la imagen de grises.
   * @param rows filas de la imagen
   * @param cols columnas de la imagen

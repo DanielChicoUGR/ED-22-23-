@@ -7,32 +7,34 @@
 #include <cstring>
 #include <cassert>
 #include <iostream>
-
+#include <math.h>
 #include <image.h>
 #include <imageIO.h>
 
 using namespace std;
 
+static const imagen::byte MAX_BYTE= 255U;
+
 /********************************
       FUNCIONES PRIVADAS
 ********************************/
-void Image::Allocate(int nrows, int ncols, byte * buffer){
+void Image::Allocate(int nrows, int ncols, imagen::byte * buffer){
     rows = nrows;
     cols = ncols;
 
-    img = new byte * [rows];
+    img = new imagen::byte * [rows];
 
     if (buffer != 0)
         img[0] = buffer;
     else
-        img[0] = new byte [rows * cols];
+        img[0] = new imagen::byte [rows * cols];
 
     for (int i=1; i < rows; i++)
         img[i] = img[i-1] + cols;
 }
 
 // Función auxiliar para inicializar imágenes con valores por defecto o a partir de un buffer de datos
-void Image::Initialize (int nrows, int ncols, byte * buffer){
+void Image::Initialize (int nrows, int ncols, imagen::byte * buffer){
     if ((nrows == 0) || (ncols == 0)){
         rows = cols = 0;
         img = 0;
@@ -64,7 +66,7 @@ LoadResult Image::LoadFromPGM(const char * file_path){
     if (ReadImageKind(file_path) != IMG_PGM)
         return LoadResult::NOT_PGM;
 
-    byte * buffer = ReadPGMImage(file_path, rows, cols);
+    imagen::byte * buffer = ReadPGMImage(file_path, rows, cols);
     if (!buffer)
         return LoadResult::READING_ERROR;
 
@@ -83,7 +85,7 @@ Image::Image(){
 }
 
 // Constructores con parámetros
-Image::Image (int nrows, int ncols, byte value){
+Image::Image (int nrows, int ncols, imagen::byte value){
     Initialize(nrows, ncols);
     for (int k=0; k<rows*cols; k++) set_pixel(k,value);
 }
@@ -131,31 +133,136 @@ int Image::size() const{
 }
 
 // Métodos básicos de edición de imágenes
-void Image::set_pixel (int i, int j, byte value) {
+void Image::set_pixel (int i, int j, imagen::byte value) {
     img[i][j] = value;
 }
-byte Image::get_pixel (int i, int j) const {
+imagen::byte Image::get_pixel (int i, int j) const {
     return img[i][j];
 }
 
 // This doesn't work if representation changes
-void Image::set_pixel (int k, byte value) {
+void Image::set_pixel (int k, imagen::byte value) {
     // TODO this makes assumptions about the internal representation
     // TODO Can you reuse set_pixel(i,j,value)?
     img[0][k] = value;
+
+    // set_pixel(k/rows,k%rows,value);
 }
 
 // This doesn't work if representation changes
-byte Image::get_pixel (int k) const {
+imagen::byte Image::get_pixel (int k) const {
     // TODO this makes assumptions about the internal representation
     // TODO Can you reuse get_pixel(i,j)?
     return img[0][k];
+
+    // return get_pixel(k/rows,k%rows);
 }
 
 // Métodos para almacenar y cargar imagenes en disco
 bool Image::Save (const char * file_path) const {
     // TODO this makes assumptions about the internal representation
-    byte * p = img[0];
+    imagen::byte * p = img[0];
     return WritePGMImage(file_path, p, rows, cols);
+}
+
+
+void Image::Invert(){
+    for (auto i = 0; i < rows; i++)
+        for(auto j = 0; j < cols; j++)
+            set_pixel(i, j,MAX_BYTE-get_pixel(i,j));
+}
+
+
+Image Image::Crop(int nrow, int ncol, int height, int width) const{
+    if(nrow < 0 || nrow+height > rows || ncol < 0 || ncol+width > cols)     
+        assert(false);
+             
+    Image nueva(height, width);
+    
+    for (auto i = 0; i <nueva.get_rows(); i++)
+        for(auto j = 0; j < nueva.get_cols(); j++)
+            nueva.set_pixel(i, j,this->get_pixel(i+nrow,j+ncol));
+
+    return nueva;
+}
+
+
+
+Image Image::Zoom2X()const{
+    Image nueva((2*get_rows()-1),(2*get_cols()-1));
+    for (auto i=0;i<get_rows();i++)
+        for(auto j=0;j<get_cols();j++)
+            nueva.set_pixel(2*i,2*j,this->get_pixel(i,j));
+        
+    for (auto i=0;i<get_rows();i++)
+        for(auto j=1;j<nueva.get_cols();j+=2){
+            imagen::byte aux=(nueva.get_pixel(2*i,j-1)+nueva.get_pixel(2*i,j+1))/2;
+            nueva.set_pixel(2*i,j,aux);
+    }
+
+    for(auto i=1;i<nueva.get_rows();i+=2)
+        for(auto j=0;j<nueva.get_cols();j++){
+            imagen::byte aux=(nueva.get_pixel(i-1,j)+nueva.get_pixel(i+1,j))/2;
+            nueva.set_pixel(2*i,j,aux);
+        }
+
+    return nueva;
+}
+
+
+double Image::Mean(int i, int j, int height, int width) const{
+    if(i < 0 || i+height > rows || j < 0 || j+width > cols)     
+        assert(false);
+    
+    double media, n;
+    media=0.0f;
+    
+    int aux=0;
+    n=double(height*width);
+
+    for(auto a=0;a<height;a++)
+        for(auto b=0;b<width;b++)
+            aux+=get_pixel(i+a,j+b);
+    
+    media=double(aux);
+
+    return media/n;
+}
+
+
+Image Image::Subsample(int factor) const{
+    
+        assert(factor>0);
+
+    int nueva_fila=get_rows()/factor;
+    int nueva_columa=get_cols()/factor;
+
+    Image nueva(nueva_fila,nueva_columa);
+
+    for(int i=0;i<nueva_fila;i++){
+        int filas=(nueva_fila-i==1)?get_rows()%factor:factor;
+        for(int j=0;j<nueva_columa;j++){
+            int columnas=(nueva_columa-j==1)?get_cols()%factor:factor;
+
+            double valor_pixel=this->Mean(factor*i,factor*j,filas,columnas);
+        
+            nueva.set_pixel(i,j,int(valor_pixel));
+        }
+    }
+
+
+    return nueva;
+}
+
+
+
+
+
+void Image::AdjustContrast(imagen::byte in1, imagen::byte in2, imagen::byte out1, imagen::byte out2){
+    
+    double E1=double(out2-out1)/double(in2-in1);
+
+    for(int i=0;i< get_rows()*get_cols();i++)
+        set_pixel(i,round(out1+(E1*(get_pixel(i)-in1))));
 }
 
