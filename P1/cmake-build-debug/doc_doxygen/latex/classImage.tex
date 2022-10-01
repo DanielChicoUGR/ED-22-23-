@@ -1,0 +1,563 @@
+\hypertarget{classImage}{}\doxysection{Image Class Reference}
+\label{classImage}\index{Image@{Image}}
+
+
+T.\+D.\+A. Imagen.  
+
+
+
+
+{\ttfamily \#include $<$image.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classImage_a58edd1c45b4faeb5f789b0d036d02313}{Image}} ()
+\begin{DoxyCompactList}\small\item\em Constructor por defecto . \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classImage_a320e00604720741acd3212689f2db2db}{Image}} (int nrows, int ncols, imagen\+::byte value=0)
+\begin{DoxyCompactList}\small\item\em Constructor con parámetros. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classImage_abda271aa11b907dda8c8c8176684227d}{Image}} (const \mbox{\hyperlink{classImage}{Image}} \&orig)
+\begin{DoxyCompactList}\small\item\em Constructor de copias. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classImage_a0294f63700543e11c0f0da85601c7ae5}{$\sim$\+Image}} ()
+\begin{DoxyCompactList}\small\item\em Oper ador de tipo destructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classImage}{Image}} \& \mbox{\hyperlink{classImage_aeaa2d687caf48e3c72fc773c70a0e9fa}{operator=}} (const \mbox{\hyperlink{classImage}{Image}} \&orig)
+\begin{DoxyCompactList}\small\item\em Operador de asignación . \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classImage_a0866c8c2e288fd753168a9c691ae17d2}{Empty}} () const
+\begin{DoxyCompactList}\small\item\em Funcion para conocer si una imagen está vacía. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classImage_a19fc606085e6e76dedf57b7de391dfdb}{get\+\_\+rows}} () const
+\begin{DoxyCompactList}\small\item\em Filas de la imagen . \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classImage_ac52444a5ffbbc50d6dde8375ca5f45ea}{get\+\_\+cols}} () const
+\begin{DoxyCompactList}\small\item\em Columnas de la imagen. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classImage_a78068ea10fef9954ea0e91705997652d}{size}} () const
+\begin{DoxyCompactList}\small\item\em Devuelve el número de píxeles de la imagen. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classImage_a218ec2777f6b80725d92eff2fe53b759}{set\+\_\+pixel}} (int i, int j, imagen\+::byte value)
+\begin{DoxyCompactList}\small\item\em Asigna el valor valor al píxel ({\ttfamily i}, {\ttfamily j}) de la imagen. \end{DoxyCompactList}\item 
+imagen\+::byte \mbox{\hyperlink{classImage_a967d533b44152efa8916c11cad5dda55}{get\+\_\+pixel}} (int i, int j) const
+\begin{DoxyCompactList}\small\item\em Consulta el valor del píxel (fil, col) de la imagen. \end{DoxyCompactList}\item 
+imagen\+::byte \mbox{\hyperlink{classImage_a90599efa0e371aa91ecca313dc74fa38}{get\+\_\+pixel}} (int k) const
+\begin{DoxyCompactList}\small\item\em Consulta el valor del píxel k de la imagen desenrrollada. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classImage_ae4bb0a28a3cb1c7b5b56a0d7ede65e85}{set\+\_\+pixel}} (int k, imagen\+::byte value)
+\begin{DoxyCompactList}\small\item\em Asigna el valor valor al píxel k de la imagen desenrollada. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classImage_adde1007dc6359087dae65fa8cae26448}{Save}} (const char $\ast$file\+\_\+path) const
+\begin{DoxyCompactList}\small\item\em Almacena imágenes en disco. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classImage_a997e2d58be54bca2cf8f4da5818bf771}{Load}} (const char $\ast$file\+\_\+path)
+\begin{DoxyCompactList}\small\item\em Carga en memoria una imagen de disco . \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classImage_a6c9c1b3fef7795378f8a56fdd491ffa0}\label{classImage_a6c9c1b3fef7795378f8a56fdd491ffa0}} 
+void \mbox{\hyperlink{classImage_a6c9c1b3fef7795378f8a56fdd491ffa0}{Invert}} ()
+\begin{DoxyCompactList}\small\item\em Invierte los colores de la imagen actual. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classImage_a3a6259ca274725e37362d3e41c526a3a}{Adjust\+Contrast}} (imagen\+::byte in1, imagen\+::byte in2, imagen\+::byte out1, imagen\+::byte out2)
+\begin{DoxyCompactList}\small\item\em Modifica el contraste de una Imagen . \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classImage_a08ac7df75c7bc99da2b3abdc35719203}{Mean}} (int i, int j, int height, int width) const
+\begin{DoxyCompactList}\small\item\em Calcula la media de los píxeles de una imagen entera o de un fragmento de ésta. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classImage}{Image}} \mbox{\hyperlink{classImage_aa00e596a67ec6130922c560049457985}{Subsample}} (int factor) const
+\begin{DoxyCompactList}\small\item\em Genera un icono como reducción de una imagen. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classImage}{Image}} \mbox{\hyperlink{classImage_aad309b582d08dfd826c5106eaf80eb1e}{Crop}} (int nrow, int ncol, int height, int width) const
+\begin{DoxyCompactList}\small\item\em Genera subimagen. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classImage}{Image}} \mbox{\hyperlink{classImage_a290cbb637f4a6140f43086e96fb141f8}{Zoom2X}} (int fila, int columna, int lado) const
+\begin{DoxyCompactList}\small\item\em Genera una subimagen aumentada 2x. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classImage_a27d5bab7af11a729048b82af06f2d0c0}\label{classImage_a27d5bab7af11a729048b82af06f2d0c0}} 
+void {\bfseries Shuffle\+Rows} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+T.\+D.\+A. Imagen. 
+
+Una instancia del tipo de dato abstracto Imagen nos permite almacenar imágenes de intensidades.
+
+El TDA Imagen proporciona además distintas herramientas para la manipulación de dichas imágenes.
+
+Para poder usar el TDA Imagen se debe incluir el fichero
+
+\#include $<$Imagen.\+h$>$
+
+\begin{DoxyAuthor}{Author}
+Javier Abad 
+
+Guillermo Gómez 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+Septiembre 2021 
+\end{DoxyDate}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classImage_a58edd1c45b4faeb5f789b0d036d02313}\label{classImage_a58edd1c45b4faeb5f789b0d036d02313}} 
+\index{Image@{Image}!Image@{Image}}
+\index{Image@{Image}!Image@{Image}}
+\doxysubsubsection{\texorpdfstring{Image()}{Image()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Image\+::\+Image (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructor por defecto . 
+
+\begin{DoxyPostcond}{Postcondition}
+Genera una instancia de la clase Imagen con O filas y O colunmas. 
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Returns}
+Imagen, el objeto imagen creado. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classImage_a320e00604720741acd3212689f2db2db}\label{classImage_a320e00604720741acd3212689f2db2db}} 
+\index{Image@{Image}!Image@{Image}}
+\index{Image@{Image}!Image@{Image}}
+\doxysubsubsection{\texorpdfstring{Image()}{Image()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Image\+::\+Image (\begin{DoxyParamCaption}\item[{int}]{nrows,  }\item[{int}]{ncols,  }\item[{imagen\+::byte}]{value = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+Constructor con parámetros. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nrows} & Número de filas de la imagen. \\
+\hline
+{\em ncols} & Número de columnas de la imagen. \\
+\hline
+{\em value} & defecto Valor con el que inicializar los píxeles de la imagen . Por defecto O. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+n fils $>$ O Y n\+\_\+cols $>$ O 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+La imagen creada es de n\+\_\+fils y n\+\_\+cols columnas. Estará inicializada al valor por defecto. 
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Returns}
+Imagen, el objeto imagen creado. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classImage_abda271aa11b907dda8c8c8176684227d}\label{classImage_abda271aa11b907dda8c8c8176684227d}} 
+\index{Image@{Image}!Image@{Image}}
+\index{Image@{Image}!Image@{Image}}
+\doxysubsubsection{\texorpdfstring{Image()}{Image()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Image\+::\+Image (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classImage}{Image}} \&}]{orig }\end{DoxyParamCaption})}
+
+
+
+Constructor de copias. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em orig} & Referencia a la imagen original que se quiere copiar. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Imagen, el objeto imagen creado. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classImage_a0294f63700543e11c0f0da85601c7ae5}\label{classImage_a0294f63700543e11c0f0da85601c7ae5}} 
+\index{Image@{Image}!````~Image@{$\sim$Image}}
+\index{````~Image@{$\sim$Image}!Image@{Image}}
+\doxysubsubsection{\texorpdfstring{$\sim$Image()}{~Image()}}
+{\footnotesize\ttfamily Image\+::$\sim$\+Image (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Oper ador de tipo destructor. 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+El objeto Imagen destruido no puede usarse salvo que se haga sobre él una operacion Imagen(). 
+\end{DoxyPostcond}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classImage_a3a6259ca274725e37362d3e41c526a3a}\label{classImage_a3a6259ca274725e37362d3e41c526a3a}} 
+\index{Image@{Image}!AdjustContrast@{AdjustContrast}}
+\index{AdjustContrast@{AdjustContrast}!Image@{Image}}
+\doxysubsubsection{\texorpdfstring{AdjustContrast()}{AdjustContrast()}}
+{\footnotesize\ttfamily void Image\+::\+Adjust\+Contrast (\begin{DoxyParamCaption}\item[{imagen\+::byte}]{in1,  }\item[{imagen\+::byte}]{in2,  }\item[{imagen\+::byte}]{out1,  }\item[{imagen\+::byte}]{out2 }\end{DoxyParamCaption})}
+
+
+
+Modifica el contraste de una Imagen . 
+
+
+\begin{DoxyParams}{Parameters}
+{\em in1} & Umbral inferior de la imagen de entrada \\
+\hline
+{\em in2} & Umbral superior de la imagen de entrada \\
+\hline
+{\em out1} & Umbral inferior de la imagen de salida \\
+\hline
+{\em out2} & Umbral superior de la imagen de salida\\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+0$<$= ( {\ttfamily in1}, {\ttfamily in2}, {\ttfamily out1}, {\ttfamily out2}) $<$= 255 
+
+{\ttfamily in1} $<$ {\ttfamily in2} 
+
+{\ttfamily out1} $<$ {\ttfamily out2} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+el objeto que llama la función es modificado. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{classImage_aad309b582d08dfd826c5106eaf80eb1e}\label{classImage_aad309b582d08dfd826c5106eaf80eb1e}} 
+\index{Image@{Image}!Crop@{Crop}}
+\index{Crop@{Crop}!Image@{Image}}
+\doxysubsubsection{\texorpdfstring{Crop()}{Crop()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classImage}{Image}} Image\+::\+Crop (\begin{DoxyParamCaption}\item[{int}]{nrow,  }\item[{int}]{ncol,  }\item[{int}]{height,  }\item[{int}]{width }\end{DoxyParamCaption}) const}
+
+
+
+Genera subimagen. 
+
+\begin{DoxyPrecond}{Precondition}
+{\ttfamily nrow} $>$ 0 
+
+{\ttfamily ncol} $>$ 0 
+
+{\ttfamily ncol+with} $<$ this-\/$>$\mbox{\hyperlink{classImage_ac52444a5ffbbc50d6dde8375ca5f45ea}{get\+\_\+cols()}} 
+
+{\ttfamily nrow+height} $<$ this-\/$>$\mbox{\hyperlink{classImage_a19fc606085e6e76dedf57b7de391dfdb}{get\+\_\+rows()}}
+\end{DoxyPrecond}
+
+\begin{DoxyParams}{Parameters}
+{\em nrow} & Fila inicial a recortar \\
+\hline
+{\em ncol} & Columna inicial sobre la que recortar \\
+\hline
+{\em height} & Numero de filas \\
+\hline
+{\em width} & Numero de columnas\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Imagen con el recorte
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+El objeto que llama a la función no se modifica. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{classImage_a0866c8c2e288fd753168a9c691ae17d2}\label{classImage_a0866c8c2e288fd753168a9c691ae17d2}} 
+\index{Image@{Image}!Empty@{Empty}}
+\index{Empty@{Empty}!Image@{Image}}
+\doxysubsubsection{\texorpdfstring{Empty()}{Empty()}}
+{\footnotesize\ttfamily bool Image\+::\+Empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Funcion para conocer si una imagen está vacía. 
+
+\begin{DoxyReturn}{Returns}
+Si la imagene está vacía 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+la imagen no se modifica. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{classImage_ac52444a5ffbbc50d6dde8375ca5f45ea}\label{classImage_ac52444a5ffbbc50d6dde8375ca5f45ea}} 
+\index{Image@{Image}!get\_cols@{get\_cols}}
+\index{get\_cols@{get\_cols}!Image@{Image}}
+\doxysubsubsection{\texorpdfstring{get\_cols()}{get\_cols()}}
+{\footnotesize\ttfamily int Image\+::get\+\_\+cols (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Columnas de la imagen. 
+
+\begin{DoxyReturn}{Returns}
+El número de columnas de la imagen. 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+la imagen no se modifica. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{classImage_a967d533b44152efa8916c11cad5dda55}\label{classImage_a967d533b44152efa8916c11cad5dda55}} 
+\index{Image@{Image}!get\_pixel@{get\_pixel}}
+\index{get\_pixel@{get\_pixel}!Image@{Image}}
+\doxysubsubsection{\texorpdfstring{get\_pixel()}{get\_pixel()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily imagen\+::byte Image\+::get\+\_\+pixel (\begin{DoxyParamCaption}\item[{int}]{i,  }\item[{int}]{j }\end{DoxyParamCaption}) const}
+
+
+
+Consulta el valor del píxel (fil, col) de la imagen. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & Fila de la imagen en la que se encuentra el píxel a consultar. \\
+\hline
+{\em j} & Columna de la imagen en la que se encuentra el píxel a consultar. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+O $<$= fil $<$ I.\+Num\+\_\+ Filas() II O $<$= col $<$ I.\+Num Columnas() 
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Returns}
+el valor del píxel contenido en (fil,col) 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+La imagen no se modifica. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{classImage_a90599efa0e371aa91ecca313dc74fa38}\label{classImage_a90599efa0e371aa91ecca313dc74fa38}} 
+\index{Image@{Image}!get\_pixel@{get\_pixel}}
+\index{get\_pixel@{get\_pixel}!Image@{Image}}
+\doxysubsubsection{\texorpdfstring{get\_pixel()}{get\_pixel()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily imagen\+::byte Image\+::get\+\_\+pixel (\begin{DoxyParamCaption}\item[{int}]{k }\end{DoxyParamCaption}) const}
+
+
+
+Consulta el valor del píxel k de la imagen desenrrollada. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em k} & Índice del píxel \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+0 $<$= k $<$ filas$\ast$columnas 
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Returns}
+el valor del píxel contenido en (k/filas,kfilas) 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+La imagen no se modifica. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{classImage_a19fc606085e6e76dedf57b7de391dfdb}\label{classImage_a19fc606085e6e76dedf57b7de391dfdb}} 
+\index{Image@{Image}!get\_rows@{get\_rows}}
+\index{get\_rows@{get\_rows}!Image@{Image}}
+\doxysubsubsection{\texorpdfstring{get\_rows()}{get\_rows()}}
+{\footnotesize\ttfamily int Image\+::get\+\_\+rows (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Filas de la imagen . 
+
+\begin{DoxyReturn}{Returns}
+El número de filas de la i magen. 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+la imagen no se modifica. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{classImage_a997e2d58be54bca2cf8f4da5818bf771}\label{classImage_a997e2d58be54bca2cf8f4da5818bf771}} 
+\index{Image@{Image}!Load@{Load}}
+\index{Load@{Load}!Image@{Image}}
+\doxysubsubsection{\texorpdfstring{Load()}{Load()}}
+{\footnotesize\ttfamily bool Image\+::\+Load (\begin{DoxyParamCaption}\item[{const char $\ast$}]{file\+\_\+path }\end{DoxyParamCaption})}
+
+
+
+Carga en memoria una imagen de disco . 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+\_\+path} & Ruta donde se encuentra el archivo desde el que cargar la imagen. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+{\ttfamily file\+\_\+path} debe ser una ruta válida que contenga un fichero . pgm 
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Returns}
+Devuelve {\bfseries{true}} si la imagen se carga con éxito y {\bfseries{false}} en caso contrario. 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+La imagen previamente almacenada en el objeto que llama a la función se destruye. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{classImage_a08ac7df75c7bc99da2b3abdc35719203}\label{classImage_a08ac7df75c7bc99da2b3abdc35719203}} 
+\index{Image@{Image}!Mean@{Mean}}
+\index{Mean@{Mean}!Image@{Image}}
+\doxysubsubsection{\texorpdfstring{Mean()}{Mean()}}
+{\footnotesize\ttfamily double Image\+::\+Mean (\begin{DoxyParamCaption}\item[{int}]{i,  }\item[{int}]{j,  }\item[{int}]{height,  }\item[{int}]{width }\end{DoxyParamCaption}) const}
+
+
+
+Calcula la media de los píxeles de una imagen entera o de un fragmento de ésta. 
+
+\begin{DoxyPrecond}{Precondition}
+{\ttfamily nrow} $>$ 0 
+
+{\ttfamily ncol} $>$ 0 
+
+{\ttfamily ncol+with} $<$ this-\/$>$\mbox{\hyperlink{classImage_ac52444a5ffbbc50d6dde8375ca5f45ea}{get\+\_\+cols()}} 
+
+{\ttfamily nrow+height} $<$ this-\/$>$\mbox{\hyperlink{classImage_a19fc606085e6e76dedf57b7de391dfdb}{get\+\_\+rows()}}
+\end{DoxyPrecond}
+
+\begin{DoxyParams}{Parameters}
+{\em i} & Fila inicial para ahcer el calculo \\
+\hline
+{\em j} & Columna inicial para hacer el calculo \\
+\hline
+{\em height} & Numero de filas \\
+\hline
+{\em width} & Numero de columnas\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+LA imagen no se modifica. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{classImage_aeaa2d687caf48e3c72fc773c70a0e9fa}\label{classImage_aeaa2d687caf48e3c72fc773c70a0e9fa}} 
+\index{Image@{Image}!operator=@{operator=}}
+\index{operator=@{operator=}!Image@{Image}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classImage}{Image}} \& Image\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classImage}{Image}} \&}]{orig }\end{DoxyParamCaption})}
+
+
+
+Operador de asignación . 
+
+
+\begin{DoxyParams}{Parameters}
+{\em orig} & Referencia a la imagen original que desea copiarse. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Una referencia al objeto imagen modificado. 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+Destroy cualquier información que contuviera previamente la imagen que llama al operador de asignación. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{classImage_adde1007dc6359087dae65fa8cae26448}\label{classImage_adde1007dc6359087dae65fa8cae26448}} 
+\index{Image@{Image}!Save@{Save}}
+\index{Save@{Save}!Image@{Image}}
+\doxysubsubsection{\texorpdfstring{Save()}{Save()}}
+{\footnotesize\ttfamily bool Image\+::\+Save (\begin{DoxyParamCaption}\item[{const char $\ast$}]{file\+\_\+path }\end{DoxyParamCaption}) const}
+
+
+
+Almacena imágenes en disco. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+\_\+path} & Ruta donde se almacenará la imagen. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+file path debe ser una ruta válida donde almacenar el fichero de salida. 
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Returns}
+Devuelve true si la imagen se almacenó con éxito y false en caso contrario. 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+La imagen no se modifica. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{classImage_a218ec2777f6b80725d92eff2fe53b759}\label{classImage_a218ec2777f6b80725d92eff2fe53b759}} 
+\index{Image@{Image}!set\_pixel@{set\_pixel}}
+\index{set\_pixel@{set\_pixel}!Image@{Image}}
+\doxysubsubsection{\texorpdfstring{set\_pixel()}{set\_pixel()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Image\+::set\+\_\+pixel (\begin{DoxyParamCaption}\item[{int}]{i,  }\item[{int}]{j,  }\item[{imagen\+::byte}]{value }\end{DoxyParamCaption})}
+
+
+
+Asigna el valor valor al píxel ({\ttfamily i}, {\ttfamily j}) de la imagen. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & Fila de la imagen en la que se encuentra el píxel a escribir . @pa\+Imagen\+::byte contraste\+\_\+pixel(\+Imagen\+::byte z,\+Imagen\+::byte min,\+Imagen\+::byte max,\+Imagen\+::byte a, Imagen\+::byte b)ram j Columna de la imagen en la que se encuentra el píxel a escribir. \\
+\hline
+{\em value} & Valor que se escribirá en el píxel ({\ttfamily i}, {\ttfamily j}) . \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+O $<$= {\ttfamily i} $<$ \mbox{\hyperlink{classImage_a19fc606085e6e76dedf57b7de391dfdb}{get\+\_\+rows()}} 
+
+O $<$= {\ttfamily j} $<$ \mbox{\hyperlink{classImage_ac52444a5ffbbc50d6dde8375ca5f45ea}{get\+\_\+cols()}} 
+
+O $<$= {\ttfamily value} $<$= 255 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+El píxel ({\ttfamily i}, {\ttfamily j}) de la imagen se modificará y contendrá valor {\ttfamily value}. Los demás píxeles permanecerán iguales. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{classImage_ae4bb0a28a3cb1c7b5b56a0d7ede65e85}\label{classImage_ae4bb0a28a3cb1c7b5b56a0d7ede65e85}} 
+\index{Image@{Image}!set\_pixel@{set\_pixel}}
+\index{set\_pixel@{set\_pixel}!Image@{Image}}
+\doxysubsubsection{\texorpdfstring{set\_pixel()}{set\_pixel()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Image\+::set\+\_\+pixel (\begin{DoxyParamCaption}\item[{int}]{k,  }\item[{imagen\+::byte}]{value }\end{DoxyParamCaption})}
+
+
+
+Asigna el valor valor al píxel k de la imagen desenrollada. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em k} & Índice del píxel a escribir . \\
+\hline
+{\em value} & Valor que se escribirá en el píxel k. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+0 $<$= k $<$ filas$\ast$columnas \&\& O $<$= valor $<$= 255 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+El píxel k se modificará con el valor de value. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{classImage_a78068ea10fef9954ea0e91705997652d}\label{classImage_a78068ea10fef9954ea0e91705997652d}} 
+\index{Image@{Image}!size@{size}}
+\index{size@{size}!Image@{Image}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily int Image\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Devuelve el número de píxeles de la imagen. 
+
+\begin{DoxyReturn}{Returns}
+número de píxeles de la imagen. 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+la imagen no se modifica. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{classImage_aa00e596a67ec6130922c560049457985}\label{classImage_aa00e596a67ec6130922c560049457985}} 
+\index{Image@{Image}!Subsample@{Subsample}}
+\index{Subsample@{Subsample}!Image@{Image}}
+\doxysubsubsection{\texorpdfstring{Subsample()}{Subsample()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classImage}{Image}} Image\+::\+Subsample (\begin{DoxyParamCaption}\item[{int}]{factor }\end{DoxyParamCaption}) const}
+
+
+
+Genera un icono como reducción de una imagen. 
+
+\begin{DoxyPrecond}{Precondition}
+{\ttfamily factor} $>$0 
+\end{DoxyPrecond}
+
+\begin{DoxyParams}{Parameters}
+{\em factor} & FActor de reducción de la imagen originalk con respecto al icono \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classImage}{Image}} LA imagen iconizada
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+La imagen original no se modifica 
+
+La imagen resultanet tendrá el tamaño int(filas/factor) X int (columnas/factor) descartando los decimales de la división 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{classImage_a290cbb637f4a6140f43086e96fb141f8}\label{classImage_a290cbb637f4a6140f43086e96fb141f8}} 
+\index{Image@{Image}!Zoom2X@{Zoom2X}}
+\index{Zoom2X@{Zoom2X}!Image@{Image}}
+\doxysubsubsection{\texorpdfstring{Zoom2X()}{Zoom2X()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classImage}{Image}} Image\+::\+Zoom2X (\begin{DoxyParamCaption}\item[{int}]{fila,  }\item[{int}]{columna,  }\item[{int}]{lado }\end{DoxyParamCaption}) const}
+
+
+
+Genera una subimagen aumentada 2x. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em fila} & Fila inicial a recortar \\
+\hline
+{\em columna} & Columna inicial \\
+\hline
+{\em lado} & Lado del cuadrado a recortar\\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+{\ttfamily fila} $>$ 0 and {\ttfamily fila} $<$ nrows -\/ {\ttfamily lado} 
+
+{\ttfamily columna} $>$ 0 and {\ttfamily columna} $<$ncols -\/ {\ttfamily lado} 
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Returns}
+Subimagen al doble de tamaño
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+La imagen original no se modifica 
+\end{DoxyPostcond}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{image_8h}{image.\+h}}\item 
+src/\mbox{\hyperlink{image_8cpp}{image.\+cpp}}\end{DoxyCompactItemize}

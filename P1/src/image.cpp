@@ -4,10 +4,10 @@
  *
  */
 
-#include <cstring>
+//#include <cstring>
 #include <cassert>
 #include <iostream>
-#include <math.h>
+#include <cmath>
 #include <image.h>
 #include <imageIO.h>
 
@@ -273,7 +273,7 @@ void Image::AdjustContrast(imagen::byte in1, imagen::byte in2, imagen::byte out1
     
     double E1=double(out2-out1)/double(in2-in1);
 
-    for(int i=0;i< get_rows()*get_cols();i++)
+    for(int i=0;i< size();i++)
         set_pixel(i,round(out1+(E1*(get_pixel(i)-in1))));
 }
 

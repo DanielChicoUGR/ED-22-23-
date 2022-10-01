@@ -1,0 +1,13 @@
+# ninja log v5
+0	156	0	CMakeFiles/doc_doxygen	74a4917bbf1010e4
+0	62	1664613986347984490	build.ninja	cf859004528e5679
+0	204	1664613710349627970	CMakeFiles/image.dir/src/image.cpp.o	3ee9b53c9c94245a
+211	256	1664613710401628414	negativo	8a4e6bb466f0a5df
+1	163	1664613710309627628	CMakeFiles/negativo.dir/src/negativo.cpp.o	fa169d0df5bba617
+0	207	1664613710353628004	CMakeFiles/image.dir/src/imageop.cpp.o	c8bff078316a1cf6
+207	211	1664613710357628038	libimage.a	32318eddb12cf4f8
+0	156	0	/home/daniel/Proyectos/Ed/P1/cmake-build-debug/CMakeFiles/doc_doxygen	74a4917bbf1010e4
+0	186	1664613710333627833	CMakeFiles/image.dir/src/imageIO.cpp.o	91cf978ae1e47f64
+0	236	1664614192313743055	CMakeFiles/image.dir/src/image.cpp.o	3ee9b53c9c94245a
+236	241	1664614192317743089	libimage.a	32318eddb12cf4f8
+241	303	1664614192377743601	negativo	8a4e6bb466f0a5df
