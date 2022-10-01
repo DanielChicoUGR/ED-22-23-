@@ -18,7 +18,8 @@
 						0,
 						1,
 						2,
-						3
+						3,
+						4
 					]
 				}
 			],
@@ -36,7 +37,8 @@
 						0,
 						1,
 						2,
-						3
+						3,
+						4
 					]
 				}
 			],
@@ -51,8 +53,15 @@
 				},
 				{
 					"directoryIndex" : 0,
+					"id" : "icono::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-icono-Debug-e779e479ad72f6c51f30.json",
+					"name" : "icono",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
 					"id" : "image::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-image-Debug-33c468885e38db05ae59.json",
+					"jsonFile" : "target-image-Debug-7eef80405d375ec5ae2a.json",
 					"name" : "image",
 					"projectIndex" : 0
 				},

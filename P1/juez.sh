@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/zsh
 
 TELEGRAM_USER_ID=201772081
 USER_ID=26508525
@@ -81,6 +81,7 @@ then
 fi
 
 echo "Comprimiendo los archivos de la práctica..."
+
 zip -r submission.zip Doxyfile.in estudiante
 
 echo "Enviando los archivos al juez online..."

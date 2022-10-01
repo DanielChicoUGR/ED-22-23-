@@ -70,6 +70,13 @@ build CMakeFiles/image.dir/src/imageIO.cpp.o: CXX_COMPILER__image_Debug /home/da
   OBJECT_DIR = CMakeFiles/image.dir
   OBJECT_FILE_DIR = CMakeFiles/image.dir/src
 
+build CMakeFiles/image.dir/src/icono.cpp.o: CXX_COMPILER__image_Debug /home/daniel/Proyectos/Ed/P1/src/icono.cpp || cmake_object_order_depends_target_image
+  DEP_FILE = CMakeFiles/image.dir/src/icono.cpp.o.d
+  FLAGS = -g -std=gnu++14
+  INCLUDES = -I/home/daniel/Proyectos/Ed/P1/./include
+  OBJECT_DIR = CMakeFiles/image.dir
+  OBJECT_FILE_DIR = CMakeFiles/image.dir/src
+
 
 # =============================================================================
 # Link build statements for STATIC_LIBRARY target image
@@ -78,7 +85,7 @@ build CMakeFiles/image.dir/src/imageIO.cpp.o: CXX_COMPILER__image_Debug /home/da
 #############################################
 # Link the static library libimage.a
 
-build libimage.a: CXX_STATIC_LIBRARY_LINKER__image_Debug CMakeFiles/image.dir/src/image.cpp.o CMakeFiles/image.dir/src/imageop.cpp.o CMakeFiles/image.dir/src/imageIO.cpp.o
+build libimage.a: CXX_STATIC_LIBRARY_LINKER__image_Debug CMakeFiles/image.dir/src/image.cpp.o CMakeFiles/image.dir/src/imageop.cpp.o CMakeFiles/image.dir/src/imageIO.cpp.o CMakeFiles/image.dir/src/icono.cpp.o
   LANGUAGE_COMPILE_FLAGS = -g
   OBJECT_DIR = CMakeFiles/image.dir
   POST_BUILD = :
@@ -152,6 +159,39 @@ build zoom: CXX_EXECUTABLE_LINKER__zoom_Debug CMakeFiles/zoom.dir/src/zoom.cpp.o
   TARGET_FILE = zoom
   TARGET_PDB = zoom.dbg
 
+# =============================================================================
+# Object build statements for EXECUTABLE target icono
+
+
+#############################################
+# Order-only phony target for icono
+
+build cmake_object_order_depends_target_icono: phony || cmake_object_order_depends_target_image
+
+build CMakeFiles/icono.dir/src/icono.cpp.o: CXX_COMPILER__icono_Debug /home/daniel/Proyectos/Ed/P1/src/icono.cpp || cmake_object_order_depends_target_icono
+  DEP_FILE = CMakeFiles/icono.dir/src/icono.cpp.o.d
+  FLAGS = -g -std=gnu++14
+  INCLUDES = -I/home/daniel/Proyectos/Ed/P1/./include
+  OBJECT_DIR = CMakeFiles/icono.dir
+  OBJECT_FILE_DIR = CMakeFiles/icono.dir/src
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target icono
+
+
+#############################################
+# Link the executable icono
+
+build icono: CXX_EXECUTABLE_LINKER__icono_Debug CMakeFiles/icono.dir/src/icono.cpp.o | libimage.a || libimage.a
+  FLAGS = -g
+  LINK_LIBRARIES = libimage.a
+  OBJECT_DIR = CMakeFiles/icono.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = icono
+  TARGET_PDB = icono.dbg
+
 
 #############################################
 # Utility command for doc_doxygen
@@ -203,7 +243,7 @@ build image: phony libimage.a
 #############################################
 # Folder: /home/daniel/Proyectos/Ed/P1/cmake-build-debug
 
-build all: phony libimage.a negativo zoom doc_doxygen
+build all: phony libimage.a negativo zoom icono doc_doxygen
 
 # =============================================================================
 # Built-in targets

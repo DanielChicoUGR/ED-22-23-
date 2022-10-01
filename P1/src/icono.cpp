@@ -15,12 +15,12 @@ int main (int argc, char *argv[]){
     char *origen, *destino; // nombres de los ficheros
     Image image;
 
-    int fila,col,lado;
+    int factor;
 
     // Comprobar validez de la llamada
-    if (argc != 6){
+    if (argc != 4){
         cerr << "Error: Numero incorrecto de parametros.\n";
-        cerr << "Uso: zoom <FichImagenOriginal> <FichImagenDestino> <fila> <columna> <lado>\n";
+        cerr << "Uso: zoom <FichImagenOriginal> <FichImagenDestino> <FactorReduccion>\n";
         exit (1);
     }
 
@@ -28,17 +28,14 @@ int main (int argc, char *argv[]){
     origen  = argv[1];
     destino = argv[2];
 
-    fila= stoi(argv[3]);
-    col= stoi(argv[4]);
-    lado= stoi(argv[5]);
+    factor= stoi(argv[3]);
 
     // Mostramos argumentos
     cout << endl;
     cout << "Fichero origen: " << origen << endl;
     cout << "Fichero resultado: " << destino << endl;
-    cout<<"Filas: "<<fila<<endl;
-    cout<<"Columnas: "<<col<<endl;
-    cout<<"Lado: "<<lado<<endl;
+    cout<<"Factor reduccion: "<<factor<<endl;
+
 
     // Leer la imagen del fichero de entrada
     if (!image.Load(origen)){
@@ -52,7 +49,7 @@ int main (int argc, char *argv[]){
     cout << "Dimensiones de " << origen << ":" << endl;
     cout << "   Imagen   = " << image.get_rows()  << " filas x " << image.get_cols() << " columnas " << endl;
 
-    auto nueva=image.Zoom2X(fila,col,lado);
+    auto nueva=image.Subsample(factor);
 
     // Guardar la imagen resultado en el fichero
     if (nueva.Save(destino))
