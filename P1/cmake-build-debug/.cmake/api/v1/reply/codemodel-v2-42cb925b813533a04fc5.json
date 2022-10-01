@@ -19,7 +19,9 @@
 						1,
 						2,
 						3,
-						4
+						4,
+						5,
+						6
 					]
 				}
 			],
@@ -38,12 +40,21 @@
 						1,
 						2,
 						3,
-						4
+						4,
+						5,
+						6
 					]
 				}
 			],
 			"targets" : 
 			[
+				{
+					"directoryIndex" : 0,
+					"id" : "contraste::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-contraste-Debug-5ae3b48b0347914f0109.json",
+					"name" : "contraste",
+					"projectIndex" : 0
+				},
 				{
 					"directoryIndex" : 0,
 					"id" : "doc_doxygen::@6890427a1f51a3e7e1df",
@@ -61,7 +72,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "image::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-image-Debug-7eef80405d375ec5ae2a.json",
+					"jsonFile" : "target-image-Debug-f1f2c1072669850279f3.json",
 					"name" : "image",
 					"projectIndex" : 0
 				},
@@ -70,6 +81,13 @@
 					"id" : "negativo::@6890427a1f51a3e7e1df",
 					"jsonFile" : "target-negativo-Debug-90a38031ef7c2dab97c0.json",
 					"name" : "negativo",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "subimagen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-subimagen-Debug-a7daebd51f2dca6a8008.json",
+					"name" : "subimagen",
 					"projectIndex" : 0
 				},
 				{

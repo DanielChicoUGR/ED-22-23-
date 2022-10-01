@@ -81,7 +81,8 @@ then
 fi
 
 echo "Comprimiendo los archivos de la práctica..."
-
+cp -r src estudiante
+cp -r include estudiante
 zip -r submission.zip Doxyfile.in estudiante
 
 echo "Enviando los archivos al juez online..."

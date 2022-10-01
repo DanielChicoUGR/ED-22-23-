@@ -77,6 +77,20 @@ build CMakeFiles/image.dir/src/icono.cpp.o: CXX_COMPILER__image_Debug /home/dani
   OBJECT_DIR = CMakeFiles/image.dir
   OBJECT_FILE_DIR = CMakeFiles/image.dir/src
 
+build CMakeFiles/image.dir/src/subimagen.cpp.o: CXX_COMPILER__image_Debug /home/daniel/Proyectos/Ed/P1/src/subimagen.cpp || cmake_object_order_depends_target_image
+  DEP_FILE = CMakeFiles/image.dir/src/subimagen.cpp.o.d
+  FLAGS = -g -std=gnu++14
+  INCLUDES = -I/home/daniel/Proyectos/Ed/P1/./include
+  OBJECT_DIR = CMakeFiles/image.dir
+  OBJECT_FILE_DIR = CMakeFiles/image.dir/src
+
+build CMakeFiles/image.dir/src/contraste.cpp.o: CXX_COMPILER__image_Debug /home/daniel/Proyectos/Ed/P1/src/contraste.cpp || cmake_object_order_depends_target_image
+  DEP_FILE = CMakeFiles/image.dir/src/contraste.cpp.o.d
+  FLAGS = -g -std=gnu++14
+  INCLUDES = -I/home/daniel/Proyectos/Ed/P1/./include
+  OBJECT_DIR = CMakeFiles/image.dir
+  OBJECT_FILE_DIR = CMakeFiles/image.dir/src
+
 
 # =============================================================================
 # Link build statements for STATIC_LIBRARY target image
@@ -85,7 +99,7 @@ build CMakeFiles/image.dir/src/icono.cpp.o: CXX_COMPILER__image_Debug /home/dani
 #############################################
 # Link the static library libimage.a
 
-build libimage.a: CXX_STATIC_LIBRARY_LINKER__image_Debug CMakeFiles/image.dir/src/image.cpp.o CMakeFiles/image.dir/src/imageop.cpp.o CMakeFiles/image.dir/src/imageIO.cpp.o CMakeFiles/image.dir/src/icono.cpp.o
+build libimage.a: CXX_STATIC_LIBRARY_LINKER__image_Debug CMakeFiles/image.dir/src/image.cpp.o CMakeFiles/image.dir/src/imageop.cpp.o CMakeFiles/image.dir/src/imageIO.cpp.o CMakeFiles/image.dir/src/icono.cpp.o CMakeFiles/image.dir/src/subimagen.cpp.o CMakeFiles/image.dir/src/contraste.cpp.o
   LANGUAGE_COMPILE_FLAGS = -g
   OBJECT_DIR = CMakeFiles/image.dir
   POST_BUILD = :
@@ -125,6 +139,46 @@ build negativo: CXX_EXECUTABLE_LINKER__negativo_Debug CMakeFiles/negativo.dir/sr
   PRE_LINK = :
   TARGET_FILE = negativo
   TARGET_PDB = negativo.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target subimagen
+
+
+#############################################
+# Order-only phony target for subimagen
+
+build cmake_object_order_depends_target_subimagen: phony || cmake_object_order_depends_target_image
+
+build CMakeFiles/subimagen.dir/src/subimagen.cpp.o: CXX_COMPILER__subimagen_Debug /home/daniel/Proyectos/Ed/P1/src/subimagen.cpp || cmake_object_order_depends_target_subimagen
+  DEP_FILE = CMakeFiles/subimagen.dir/src/subimagen.cpp.o.d
+  FLAGS = -g -std=gnu++14
+  INCLUDES = -I/home/daniel/Proyectos/Ed/P1/./include
+  OBJECT_DIR = CMakeFiles/subimagen.dir
+  OBJECT_FILE_DIR = CMakeFiles/subimagen.dir/src
+
+build CMakeFiles/subimagen.dir/src/icono.cpp.o: CXX_COMPILER__subimagen_Debug /home/daniel/Proyectos/Ed/P1/src/icono.cpp || cmake_object_order_depends_target_subimagen
+  DEP_FILE = CMakeFiles/subimagen.dir/src/icono.cpp.o.d
+  FLAGS = -g -std=gnu++14
+  INCLUDES = -I/home/daniel/Proyectos/Ed/P1/./include
+  OBJECT_DIR = CMakeFiles/subimagen.dir
+  OBJECT_FILE_DIR = CMakeFiles/subimagen.dir/src
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target subimagen
+
+
+#############################################
+# Link the executable subimagen
+
+build subimagen: CXX_EXECUTABLE_LINKER__subimagen_Debug CMakeFiles/subimagen.dir/src/subimagen.cpp.o CMakeFiles/subimagen.dir/src/icono.cpp.o | libimage.a || libimage.a
+  FLAGS = -g
+  LINK_LIBRARIES = libimage.a
+  OBJECT_DIR = CMakeFiles/subimagen.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = subimagen
+  TARGET_PDB = subimagen.dbg
 
 # =============================================================================
 # Object build statements for EXECUTABLE target zoom
@@ -192,6 +246,39 @@ build icono: CXX_EXECUTABLE_LINKER__icono_Debug CMakeFiles/icono.dir/src/icono.c
   TARGET_FILE = icono
   TARGET_PDB = icono.dbg
 
+# =============================================================================
+# Object build statements for EXECUTABLE target contraste
+
+
+#############################################
+# Order-only phony target for contraste
+
+build cmake_object_order_depends_target_contraste: phony || cmake_object_order_depends_target_image
+
+build CMakeFiles/contraste.dir/src/contraste.cpp.o: CXX_COMPILER__contraste_Debug /home/daniel/Proyectos/Ed/P1/src/contraste.cpp || cmake_object_order_depends_target_contraste
+  DEP_FILE = CMakeFiles/contraste.dir/src/contraste.cpp.o.d
+  FLAGS = -g -std=gnu++14
+  INCLUDES = -I/home/daniel/Proyectos/Ed/P1/./include
+  OBJECT_DIR = CMakeFiles/contraste.dir
+  OBJECT_FILE_DIR = CMakeFiles/contraste.dir/src
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target contraste
+
+
+#############################################
+# Link the executable contraste
+
+build contraste: CXX_EXECUTABLE_LINKER__contraste_Debug CMakeFiles/contraste.dir/src/contraste.cpp.o | libimage.a || libimage.a
+  FLAGS = -g
+  LINK_LIBRARIES = libimage.a
+  OBJECT_DIR = CMakeFiles/contraste.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = contraste
+  TARGET_PDB = contraste.dbg
+
 
 #############################################
 # Utility command for doc_doxygen
@@ -243,7 +330,7 @@ build image: phony libimage.a
 #############################################
 # Folder: /home/daniel/Proyectos/Ed/P1/cmake-build-debug
 
-build all: phony libimage.a negativo zoom icono doc_doxygen
+build all: phony libimage.a negativo subimagen zoom icono contraste doc_doxygen
 
 # =============================================================================
 # Built-in targets
