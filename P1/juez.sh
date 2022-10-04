@@ -68,7 +68,8 @@ then
     echo "dicho archivo si continúas. Si deseas conservar ese archivo, muévelo"
     echo "antes de continuar o cambia su nombre. Si no quieres guardar el"
     echo "archivo, puedes continuar sin problemas."
-    read -p "Quieres continuar con el envío de la práctica? [Y/N]: " -n 1 -r
+    echo "Quieres continuar con el envío de la práctica? [Y/N]: "
+    read REPLY
     echo    # (optional) move to a new line
     if [[ $REPLY =~ ^[Yy]$ ]]
     then

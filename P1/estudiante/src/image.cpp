@@ -10,6 +10,7 @@
 #include <cmath>
 #include <image.h>
 #include <imageIO.h>
+#include <map>
 
 using namespace std;
 
@@ -198,7 +199,9 @@ Image Image::Zoom2X(int fila,int columna, int lado)const{
 
 
     Image ret(2 * image.get_rows()-1 , 2 * image.get_cols()-1);
+
     double x[ret.get_rows()][ret.get_cols()];
+
     for (auto i=0; i < image.get_rows(); i++)
         for(auto j=0; j < image.get_cols(); j++) {
             x[2*i][2*j]=image.get_pixel(i, j);
@@ -225,16 +228,22 @@ Image Image::Zoom2X(int fila,int columna, int lado)const{
 
 
 double Image::Mean(int i, int j, int height, int width) const{
-    if(i < 0 || i+height > rows || j < 0 || j+width > cols)     
+    if(i < 0 || j < 0 )
         assert(false);
     
     double  n;
-    
+
+    if (i+height >= get_rows()) //Si se pasa de filas, se fuerza a que no
+        height=get_rows()-i;
+
+    if (j+width >= get_cols()) //Si se pasa de columnas, se fuerza a que no
+        width =get_cols()-j;
+
     int aux=0;
     n=double(height*width);
 
-    for(auto a=0;a<height;a++)
-        for(auto b=0;b<width;b++)
+    for(auto a=0;a<height ;a++)
+        for(auto b=0;b<width ;b++)
             aux+=get_pixel(i+a,j+b);
     
 
@@ -242,10 +251,9 @@ double Image::Mean(int i, int j, int height, int width) const{
     return double(aux)/n;
 }
 
-//Posible fallo si factor no divide a las filas/columnas de la imagen?
+//Posible fallo si factor no divide a las filas/columnas de la imagen? -> Solution
 Image Image::Subsample(int factor) const{
-    
-        assert(factor>0);
+    assert(factor>0);
 
     int nueva_fila=(get_rows()/ (factor));
     int nueva_columa=(get_cols()/(factor));
@@ -254,13 +262,8 @@ Image Image::Subsample(int factor) const{
 
     for(auto i=0; i < nueva_fila; i++){
 
-        int filas,columnas;
-
-             filas=factor;
         for(auto j=0;j<nueva_columa;j++){
-                 columnas=factor;
-
-            double valor_pixel=this->Mean(factor*i,factor*j,filas,columnas);
+            double valor_pixel=this->Mean(factor*i,factor*j,factor,factor);
         
             nueva.set_pixel(i,j,round(valor_pixel));
         }
@@ -275,11 +278,31 @@ Image Image::Subsample(int factor) const{
 
 
 void Image::AdjustContrast(imagen::byte in1, imagen::byte in2, imagen::byte out1, imagen::byte out2){
-    
-    double E1=double(out2-out1)/double(in2-in1);
+    if(in1>=in2 or out1>=out2 or in1<0 or in2<0 or out1<0 or out2<0)
+        assert(false);
 
-    for(int i=0;i< size();i++)
-        set_pixel(i,round(out1+(E1*(get_pixel(i)-in1))));
+    map<short,double> cte;
+    cte.clear();
+    const double E0=double(out1-0)/double(in1-0);
+    const double E1=double(out2-out1)/double(in2-in1);
+    const double E2=double(255-out2)/double(255-in2);
+    double E3;
+//    for(int i=0;i< size();i++)
+//        set_pixel(i,round(out1+(E1*(get_pixel(i)-in1))));
+    for(auto i=0;i<get_rows();i++){
+        for(auto j=0;j<get_cols();j++){
+            imagen::byte valor_pixel=get_pixel(i,j);
+            if(valor_pixel < in1)
+                E3=0.0f+(E0*double(valor_pixel-0));
+            else if(valor_pixel > in2)
+                E3=double(out2)+(E2*double(valor_pixel-in2));
+            else
+                E3=double(out1)+(E1*double(valor_pixel-in1));
+
+            E3=round(E3);
+            set_pixel(i,j,E3);
+        }
+    }
 }
 
 
