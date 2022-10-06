@@ -4,6 +4,7 @@
 /home/daniel/Proyectos/Ed/P1/cmake-build-debug/CMakeFiles/zoom.dir
 /home/daniel/Proyectos/Ed/P1/cmake-build-debug/CMakeFiles/icono.dir
 /home/daniel/Proyectos/Ed/P1/cmake-build-debug/CMakeFiles/contraste.dir
+/home/daniel/Proyectos/Ed/P1/cmake-build-debug/CMakeFiles/barajar.dir
 /home/daniel/Proyectos/Ed/P1/cmake-build-debug/CMakeFiles/doc_doxygen.dir
 /home/daniel/Proyectos/Ed/P1/cmake-build-debug/CMakeFiles/edit_cache.dir
 /home/daniel/Proyectos/Ed/P1/cmake-build-debug/CMakeFiles/rebuild_cache.dir

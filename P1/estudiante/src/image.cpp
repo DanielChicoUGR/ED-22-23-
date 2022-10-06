@@ -11,7 +11,7 @@
 #include <image.h>
 #include <imageIO.h>
 #include <map>
-
+#include <cstring>
 using namespace std;
 
 static const imagen::byte MAX_BYTE= 255U;
@@ -19,26 +19,26 @@ static const imagen::byte MAX_BYTE= 255U;
 /********************************
       FUNCIONES PRIVADAS
 ********************************/
+
+
 void Image::Allocate(int nrows, int ncols, imagen::byte * buffer){
     rows = nrows;
     cols = ncols;
-
+    bool Ebuffer= buffer==0;
     img = new imagen::byte * [rows];
+    for(auto i=0;i<rows;i++){
+        img[i] = new imagen::byte[cols];
+        if(Ebuffer)
+            memcpy(img[i],buffer+i*rows,cols);
+    }
 
-    if (buffer != 0)
-        img[0] = buffer;
-    else
-        img[0] = new imagen::byte [rows * cols];
-
-    for (int i=1; i < rows; i++)
-        img[i] = img[i-1] + cols;
 }
 
 // Función auxiliar para inicializar imágenes con valores por defecto o a partir de un buffer de datos
 void Image::Initialize (int nrows, int ncols, imagen::byte * buffer){
     if ((nrows == 0) || (ncols == 0)){
         rows = cols = 0;
-        img = 0;
+        img = nullptr;
     }
     else Allocate(nrows, ncols, buffer);
 }
@@ -47,21 +47,29 @@ void Image::Initialize (int nrows, int ncols, imagen::byte * buffer){
 
 void Image::Copy(const Image & orig){
     Initialize(orig.rows,orig.cols);
-    for (int k=0; k<rows*cols;k++)
-        set_pixel(k,orig.get_pixel(k));
+    for (auto i=0; i<rows;i++)
+        for(auto j=0; j<cols;j++)
+            set_pixel(i,j,orig.get_pixel(i,j));
 }
 
 // Función auxiliar para destruir objetos Imagen
 bool Image::Empty() const{
     return (rows == 0) || (cols == 0);
 }
-
+//Cambiar la manera en la que se destruye la memoria
 void Image::Destroy(){
     if (!Empty()){
-        delete [] img[0];
+        for(auto i=0; i<rows; i++)
+            delete [] img[i];
         delete [] img;
+        img=nullptr;
+        rows=0;
+        cols=0;
     }
-}
+
+
+    }
+
 
 LoadResult Image::LoadFromPGM(const char * file_path){
     if (ReadImageKind(file_path) != IMG_PGM)
@@ -86,6 +94,7 @@ Image::Image(){
 }
 
 // Constructores con parámetros
+
 Image::Image (int nrows, int ncols, imagen::byte value){
     Initialize(nrows, ncols);
     for (int k=0; k<rows*cols; k++) set_pixel(k,value);
@@ -143,26 +152,28 @@ imagen::byte Image::get_pixel (int i, int j) const {
 
 // This doesn't work if representation changes
 void Image::set_pixel (int k, imagen::byte value) {
-    // TODO this makes assumptions about the internal representation
-    // TODO Can you reuse set_pixel(i,j,value)?
-    img[0][k] = value;
 
-    // set_pixel(k/rows,k%rows,value);
+//    img[0][k] = value;
+
+     set_pixel(k/rows,k%rows,value);
 }
 
 // This doesn't work if representation changes
 imagen::byte Image::get_pixel (int k) const {
-    // TODO this makes assumptions about the internal representation
-    // TODO Can you reuse get_pixel(i,j)?
-    return img[0][k];
 
-    // return get_pixel(k/rows,k%rows);
+//    return img[0][k];
+
+    return get_pixel(k / rows, k % rows);
 }
 
 // Métodos para almacenar y cargar imagenes en disco
 bool Image::Save (const char * file_path) const {
-    // TODO this makes assumptions about the internal representation
-    imagen::byte * p = img[0];
+
+    auto *p=new imagen::byte[rows*cols];
+
+    for(int i=0;i<rows; i++){
+        memcpy(p+(i*rows),img[i],cols);
+    }
     return WritePGMImage(file_path, p, rows, cols);
 }
 
@@ -306,6 +317,17 @@ void Image::AdjustContrast(imagen::byte in1, imagen::byte in2, imagen::byte out1
 }
 
 
+//TODO Terminar modificacion funcion
 
+void Image::ShuffleRows(){
+    const int p = 9973;
+    
+    Image temp(rows,cols);
+    int newr;
+    for (int r=0; r<rows; r++){
+        newr = r*p % rows;
+        temp.img[newr]=img[p];
+    }
 
-
+    Copy(temp);
+}
