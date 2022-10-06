@@ -306,6 +306,20 @@ void Image::AdjustContrast(imagen::byte in1, imagen::byte in2, imagen::byte out1
 }
 
 
+void Image::ShuffleRows() {
+    const int p = 9973;
+    
+    Image temp(rows,cols);
+    
+    int newr;
+    
+    for (int r=0; r<rows; r++){
+        newr = r*p % rows;
+        for (int c=0; c<cols;c++)
+            temp.set_pixel(r,c,get_pixel(newr,c));
+    }
 
+    Copy(temp);
+}
 
 
