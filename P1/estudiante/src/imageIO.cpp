@@ -59,7 +59,7 @@ bool ReadHeader (ifstream& f, int& rows, int& cols){
       getline(f,linea);
     f >> cols >> rows >> maxvalor;
     
-    if (/*str &&*/ f && rows>0 && rows<5000 && cols>0 && cols<5000){
+    if (/*str &&*/ f && rows>0 && rows<5500 && cols>0 && cols<5500){
         f.get(); // Saltamos separador
         return true;
     }

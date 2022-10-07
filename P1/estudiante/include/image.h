@@ -340,7 +340,12 @@ public:
      */
     Image Zoom2X(int fila,int columna, int lado) const;
 
-    // Baraja pseudoaleatoriamente las filas de una imagen.
+
+    /**
+     * @brief Altera el orden de las filas de la imagen
+     *
+     * @pre \p rows < 9973
+     */
     void ShuffleRows();
 };
 

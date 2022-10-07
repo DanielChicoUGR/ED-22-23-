@@ -24,16 +24,13 @@ static const imagen::byte MAX_BYTE= 255U;
 void Image::Allocate(int nrows, int ncols, imagen::byte * buffer){
     rows = nrows;
     cols = ncols;
-    std::cout<<"\t\t1\n";
     bool Ebuffer= buffer!=0;
     img = new imagen::byte * [rows];
-    std::cout<<"\t\t2\n";
     for(auto i=0;i<rows;i++){
 
         img[i] = new imagen::byte[cols];
         if(Ebuffer)  memcpy(img[i],buffer+i*cols,sizeof (imagen::byte) *cols );
     }
-    std::cout<<"\t\t3\n";
 }
 
 // Función auxiliar para inicializar imágenes con valores por defecto o a partir de un buffer de datos
@@ -44,7 +41,6 @@ void Image::Initialize (int nrows, int ncols, imagen::byte * buffer){
     }
 
     else {
-        std::cout<<"\t\t1\n";
         Allocate(nrows, ncols, buffer);
     }
 }
@@ -52,15 +48,12 @@ void Image::Initialize (int nrows, int ncols, imagen::byte * buffer){
 // Función auxiliar para copiar objetos Imagen
 
 void Image::Copy(const Image & orig){
-    std::cout<<"\tentrando copy\n";
     Initialize(orig.get_rows(),orig.get_cols());
     for (auto i=0; i<rows;i++)
         for(auto j=0; j<cols;j++) {
-            std::cout<<"\t\t\t\t\t"<<i<<"\t"<<j<<"\n";
             set_pixel(i, j, orig.get_pixel(i, j));
 
         }
-    std::cout<<"\tsaliendo copy\n";
 }
 
 // Función auxiliar para destruir objetos Imagen
@@ -109,7 +102,6 @@ Image::Image(){
 Image::Image (int nrows, int ncols, imagen::byte value){
 
     Initialize(nrows, ncols);
-    std::cout<<"\t1\n";
     for (int k=0; k<nrows*ncols; k++) set_pixel(k,value);
 }
 
@@ -135,7 +127,6 @@ Image::~Image(){
 
 Image & Image::operator= (const Image & orig){
     if (this != &orig){
-        cout<<"Operador de Asignación"<<endl;
         Destroy();
         Copy(orig);
     }
@@ -190,19 +181,14 @@ imagen::byte Image::get_pixel (int k) const {
 
 // Métodos para almacenar y cargar imagenes en disco
 bool Image::Save (const char * file_path) const {
-    cout<<"Entra almacenar\n";
     auto *p=new imagen::byte[size()];
-    cout<<endl;
     size_t tam=sizeof(imagen::byte)*cols;
-    cout<<"1\n";
     for(int i=0;i<get_rows(); i++){
-//        cout<<"2";
-//        memcpy(p+(i*cols),img[i],tam);
-//        cout<<"\t2\n";
-        for(int j=0;j<get_cols();j++)
-            p[i*cols+j]= get_pixel(i,j);
+
+        memcpy(p+(i*cols),img[i],tam);
+
     }
-    cout<<"copia terminada \n";
+
     return WritePGMImage(file_path, p, rows, cols);
 }
 
@@ -215,18 +201,17 @@ void Image::Invert(){
 
 
 Image Image::Crop(int nrow, int ncol, int height, int width) const{
-    if(nrow < 0 || nrow+height > rows || ncol < 0 || ncol+width > cols)     
+    if(nrow < 0 || ncol < 0 )
         assert(false);
              
     Image nueva(height, width);
-    
-    for (auto i = 0; i < nueva.get_rows(); i++) {
 
-        for (auto j = 0; j < nueva.get_cols(); j++) {
+    for (auto i = 0; i <nueva.get_rows() and nrow+i<get_rows(); i++)
+        for(auto j = 0; j < nueva.get_cols() and ncol+i<get_cols(); j++)
 
             nueva.set_pixel(i, j, get_pixel(i + nrow, j + ncol));
-        }
-    }
+
+
     return nueva;
 }
 

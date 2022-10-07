@@ -21,9 +21,6 @@ Por último, lo hemos visto en clase y hay suficientes ejemplos en el código fu
 mayor parte de la sintaxis de Doxygen para comentar código en su
 [documentación](https://www.doxygen.nl/manual/docblocks.html).
 
-# Introducción
-
-A RELLENAR POR EL ESTUDIANTE
 
 # Ejecutables
 
@@ -36,6 +33,117 @@ Calcula el negativo de una imagen
 @param "<FichImagenOriginal>" Imagen PGM a la que se va a calcular
 @param <FichImagenDestino> Imagen PGM resultado de calcular el negativo
 
+
+
+## Subimagen
+Extrae una subimagen dada una imagen dada de un tamaño igual o menor a la original
+
+> __subimagen__ \<FichImagenOriginal\> \<FichImagenDestino\> \<fila\> \<columna\> \<fila_sub\> \<col_sub\>
+
+@param "<FichImagenOriginal>" Imagen PGM a la que se va a calcular
+@param <FichImagenDestino> Imagen PGM resultado de extraer subimagen
+@param <fila> coordenada vertical de la imagen
+@param <columna> coordenada horizontal de la imagen
+
+    Son las coordenadas de la esquina superior izquierda de la nueva imagen
+ @param <fila_sub> numero de filas de la nueva imagen
+ @param <col_sub> numero de columnas de la nueva imagen
+
+
+
+ ## icono
+
+ realiza un zoom X2 a una porcion de la imagen pasada por parametros.
+
+ > __zoom__ \<FichImagenOriginal\> \<FichImagenDestino\> \<fila\> \<columna\> \<lado\>
+
+@param "<FichImagenOriginal>" Imagen PGM a la que se va a calcular
+@param <FichImagenDestino> Imagen PGM resultado de extraer subimagen
+@param <fila> coordenada vertical de la imagen
+@param <columna> coordenada horizontal de la imagen
+@param <lado> cantidad de filas/columnas de la nueva imagen
+
+
+
+## icono
+
+    Crea una imagen de tamaño reducido a partir de una mayor pasado por parametros
+
+ > __icono__ \<FichImagenOriginal\> \<FichImagenDestino\> \<factor\>
+
+@param "<FichImagenOriginal>" Imagen PGM a la que se va a calcular
+@param <FichImagenDestino> Imagen PGM resultado de extraer subimagen
+@param <factor> factor de reduccion de la imagen La imagen resultante tendrá floor(filas/factor), floor(columnas/factor)
+
+
+## contraste
+
+Altera el contraste de una imagen dados unos parametros de entrada
+> __contraste__ \<FichImagenOriginal\> \<FichImagenDestino\> \<in1\> \<in2\> \<out1\> \<out2\>
+@param "<FichImagenOriginal>" Imagen PGM a la que se va a calcular
+@param <FichImagenDestino> Imagen PGM resultado de extraer subimagen
+@param <in1> umbral inferior de la imagen de entrada
+@param <in2> umbral superior de la imagen de entrada
+ @param <out1> umbral inferior de la imagen de salida
+ @param <out2> umbral superior de la imagen de salida
+
+ ## barajar
+
+ Altera el orden de las filas de una imagen dada
+ > __barajar__ \<FichImagenOriginal\> \<FichImagenDestino\>
+ @param "<FichImagenOriginal>" Imagen PGM a la que se va a calcular
+ @param <FichImagenDestino> Imagen PGM resultado de barajar las filas
+
+*/
+
+
+/**
+@page EJERCICIO 5
+
+@section "Implementacion 1D"
+
+codigo:
+
+void Image::ShuffleRows() {
+    const int p = 9973; CTE
+
+    Image temp(rows,cols); CTE
+
+    int newr; CTE
+
+    for (int r=0; r<rows; r++){ 3*CTE
+        newr = r*p % rows;3*CTE
+        for (int c=0; c<cols;c++)
+            temp.set_pixel(r,c,get_pixel(newr,c));  set_pixel-> O1  get_pixel-> O1
+    }
+
+    Copy(temp); = O(Filas*Columnas) -> Copia los pixeles 1 a 1 ...
+}
+
+Complejidad teorica ->  O(Filas*Columnas)+O(Filas*Columnas) = O(2*filas*columnas)
+
+
+@section "Implementacion 2D"
+
+codigo:
+
+void Image::ShuffleRows(){
+    const int p = 9973; CTE
+
+    imagen::byte **im; CTE
+    im=new imagen::byte * [get_rows()]; CTE
+
+    int newr; CTE
+
+    for (int r=0; r<get_rows(); r++){ Filas*( 3
+        newr = r*p % get_rows(); 3
+        im[r]=this->img[newr]; 2
+    }) -> O(Filas)
+
+    this->img=im; cte
+}
+
+complejidad teorica -> O(Filas)
 
 
 */

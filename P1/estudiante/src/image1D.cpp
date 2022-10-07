@@ -19,7 +19,7 @@ static const imagen::byte MAX_BYTE= 255U;
 /********************************
       FUNCIONES PRIVADAS
 ********************************/
-void Image::Allocate(int nrows, int ncols, imagen::byte * buffer){
+void Image1D::Allocate(int nrows, int ncols, imagen::byte * buffer){
     rows = nrows;
     cols = ncols;
 
@@ -35,7 +35,7 @@ void Image::Allocate(int nrows, int ncols, imagen::byte * buffer){
 }
 
 // Función auxiliar para inicializar imágenes con valores por defecto o a partir de un buffer de datos
-void Image::Initialize (int nrows, int ncols, imagen::byte * buffer){
+void Image1D::Initialize (int nrows, int ncols, imagen::byte * buffer){
     if ((nrows == 0) || (ncols == 0)){
         rows = cols = 0;
         img = 0;
@@ -45,25 +45,25 @@ void Image::Initialize (int nrows, int ncols, imagen::byte * buffer){
 
 // Función auxiliar para copiar objetos Imagen
 
-void Image::Copy(const Image & orig){
+void Image1D::Copy(const Image1D & orig){
     Initialize(orig.rows,orig.cols);
     for (int k=0; k<rows*cols;k++)
         set_pixel(k,orig.get_pixel(k));
 }
 
 // Función auxiliar para destruir objetos Imagen
-bool Image::Empty() const{
+bool Image1D::Empty() const{
     return (rows == 0) || (cols == 0);
 }
 
-void Image::Destroy(){
+void Image1D::Destroy(){
     if (!Empty()){
         delete [] img[0];
         delete [] img;
     }
 }
 
-LoadResult Image::LoadFromPGM(const char * file_path){
+LoadResult Image1D::LoadFromPGM(const char * file_path){
     if (ReadImageKind(file_path) != IMG_PGM)
         return LoadResult::NOT_PGM;
 
@@ -81,37 +81,37 @@ LoadResult Image::LoadFromPGM(const char * file_path){
 
 // Constructor por defecto
 
-Image::Image(){
+Image1D::Image1D(){
     Initialize();
 }
 
 // Constructores con parámetros
-Image::Image (int nrows, int ncols, imagen::byte value){
+Image1D::Image1D (int nrows, int ncols, imagen::byte value){
     Initialize(nrows, ncols);
     for (int k=0; k<rows*cols; k++) set_pixel(k,value);
 }
 
-bool Image::Load (const char * file_path) {
+bool Image1D::Load (const char * file_path) {
     Destroy();
     return LoadFromPGM(file_path) == LoadResult::SUCCESS;
 }
 
 // Constructor de copias
 
-Image::Image (const Image & orig){
+Image1D::Image1D (const Image1D & orig){
     assert (this != &orig);
     Copy(orig);
 }
 
 // Destructor
 
-Image::~Image(){
+Image1D::~Image1D(){
     Destroy();
 }
 
 // Operador de Asignación
 
-Image & Image::operator= (const Image & orig){
+Image1D & Image1D::operator= (const Image1D & orig){
     if (this != &orig){
         Destroy();
         Copy(orig);
@@ -121,28 +121,28 @@ Image & Image::operator= (const Image & orig){
 
 // Métodos de acceso a los campos de la clase
 
-int Image::get_rows() const {
+int Image1D::get_rows() const {
     return rows;
 }
 
-int Image::get_cols() const {
+int Image1D::get_cols() const {
     return cols;
 }
 
-int Image::size() const{
+int Image1D::size() const{
     return get_rows()*get_cols();
 }
 
 // Métodos básicos de edición de imágenes
-void Image::set_pixel (int i, int j, imagen::byte value) {
+void Image1D::set_pixel (int i, int j, imagen::byte value) {
     img[i][j] = value;
 }
-imagen::byte Image::get_pixel (int i, int j) const {
+imagen::byte Image1D::get_pixel (int i, int j) const {
     return img[i][j];
 }
 
 // This doesn't work if representation changes
-void Image::set_pixel (int k, imagen::byte value) {
+void Image1D::set_pixel (int k, imagen::byte value) {
     // TODO this makes assumptions about the internal representation
     // TODO Can you reuse set_pixel(i,j,value)?
     img[0][k] = value;
@@ -151,7 +151,7 @@ void Image::set_pixel (int k, imagen::byte value) {
 }
 
 // This doesn't work if representation changes
-imagen::byte Image::get_pixel (int k) const {
+imagen::byte Image1D::get_pixel (int k) const {
     // TODO this makes assumptions about the internal representation
     // TODO Can you reuse get_pixel(i,j)?
     return img[0][k];
@@ -160,28 +160,28 @@ imagen::byte Image::get_pixel (int k) const {
 }
 
 // Métodos para almacenar y cargar imagenes en disco
-bool Image::Save (const char * file_path) const {
+bool Image1D::Save (const char * file_path) const {
     // TODO this makes assumptions about the internal representation
     imagen::byte * p = img[0];
     return WritePGMImage(file_path, p, rows, cols);
 }
 
 
-void Image::Invert(){
+void Image1D::Invert(){
     for (auto i = 0; i < rows; i++)
         for(auto j = 0; j < cols; j++)
             set_pixel(i, j,MAX_BYTE-get_pixel(i,j));
 }
 
 
-Image Image::Crop(int nrow, int ncol, int height, int width) const{
-    if(nrow < 0 || nrow+height > rows || ncol < 0 || ncol+width > cols)     
+Image1D Image1D::Crop(int nrow, int ncol, int height, int width) const{
+    if(nrow < 0  || ncol < 0 )
         assert(false);
-             
-    Image nueva(height, width);
+
+    Image1D nueva(height, width);
     
-    for (auto i = 0; i <nueva.get_rows(); i++)
-        for(auto j = 0; j < nueva.get_cols(); j++)
+    for (auto i = 0; i <nueva.get_rows() and nrow+i<get_rows(); i++)
+        for(auto j = 0; j < nueva.get_cols() and ncol+i<get_cols(); j++)
             nueva.set_pixel(i, j,this->get_pixel(i+nrow,j+ncol));
 
     return nueva;
@@ -189,16 +189,16 @@ Image Image::Crop(int nrow, int ncol, int height, int width) const{
 
 
 
-Image Image::Zoom2X(int fila,int columna, int lado)const{
+Image1D Image1D::Zoom2X(int fila,int columna, int lado)const{
     if(fila < 0 || fila+lado > rows || columna < 0 || columna + lado > cols)
         assert(false);
 
 
-    Image image(this->Crop(fila, columna, lado, lado));
+    Image1D image(this->Crop(fila, columna, lado, lado));
 
 
 
-    Image ret(2 * image.get_rows()-1 , 2 * image.get_cols()-1);
+    Image1D ret(2 * image.get_rows()-1 , 2 * image.get_cols()-1);
 
     double x[ret.get_rows()][ret.get_cols()];
 
@@ -227,7 +227,7 @@ Image Image::Zoom2X(int fila,int columna, int lado)const{
 }
 
 
-double Image::Mean(int i, int j, int height, int width) const{
+double Image1D::Mean(int i, int j, int height, int width) const{
     if(i < 0 || j < 0 )
         assert(false);
     
@@ -252,13 +252,13 @@ double Image::Mean(int i, int j, int height, int width) const{
 }
 
 //Posible fallo si factor no divide a las filas/columnas de la imagen? -> Solution
-Image Image::Subsample(int factor) const{
+Image1D Image1D::Subsample(int factor) const{
     assert(factor>0);
 
     int nueva_fila=(get_rows()/ (factor));
     int nueva_columa=(get_cols()/(factor));
 
-    Image nueva(nueva_fila,nueva_columa);
+    Image1D nueva(nueva_fila,nueva_columa);
 
     for(auto i=0; i < nueva_fila; i++){
 
@@ -277,7 +277,7 @@ Image Image::Subsample(int factor) const{
 
 
 
-void Image::AdjustContrast(imagen::byte in1, imagen::byte in2, imagen::byte out1, imagen::byte out2){
+void Image1D::AdjustContrast(imagen::byte in1, imagen::byte in2, imagen::byte out1, imagen::byte out2){
     if(in1>=in2 or out1>=out2 or in1<0 or in2<0 or out1<0 or out2<0)
         assert(false);
 
@@ -305,10 +305,10 @@ void Image::AdjustContrast(imagen::byte in1, imagen::byte in2, imagen::byte out1
 }
 
 
-void Image::ShuffleRows() {
+void Image1D::ShuffleRows() {
     const int p = 9973;
-    
-    Image temp(rows,cols);
+
+    Image1D temp(rows,cols);
     
     int newr;
     

@@ -46,14 +46,11 @@ int main (int argc, char *argv[]){
     cout << "   Imagen   = " << image.get_rows()  << " filas x " << image.get_cols() << " columnas " << endl;
 
     image.ShuffleRows();
-    cout<<"Saliendo shuffle\n";
 
     // Guardar la imagen resultado en el fichero
     if (image.Save(destino)) {
-        cout << "1\n";
         cout << "La imagen se guardo en " << destino << endl;
     }else{
-        cout<<"2\n";
         cerr << "Error: No pudo guardarse la imagen." << endl;
         cerr << "Terminando la ejecucion del programa." << endl;
         return 1;

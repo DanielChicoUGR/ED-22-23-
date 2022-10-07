@@ -1,13 +1,13 @@
-#ifndef _IMAGEN_H_
-#define _IMAGEN_H_
+#ifndef _IMAGEN1D_H_
+#define _IMAGEN1D_H_
 
 #include <cstdlib>
 #include "imageIO.h"
 
 namespace imagen{
     typedef unsigned char byte;
-
 }
+
 enum LoadResult : unsigned char
 {
     SUCCESS,
@@ -32,7 +32,7 @@ enum LoadResult : unsigned char
 
 **/
 
-class Image
+class Image1D
 {
 
     /**
@@ -85,7 +85,7 @@ private:
       @pre Asume que no hay memoria reservada o se ha llamado antes a Destroy()
       @pre Asume this != &orig
     **/
-    void Copy(const Image &orig);
+    void Copy(const Image1D &orig);
 
     /**
       @brief Reserva o copia en memoria una imagen.
@@ -111,7 +111,7 @@ public:
      * @post Genera una instancia de la clase Imagen con O filas y O colunmas.
      * @return Imagen, el objeto imagen creado.
      */
-    Image();
+    Image1D();
 
     /**
      * @brief Constructor con parámetros.
@@ -123,21 +123,21 @@ public:
      * @return Imagen, el objeto imagen creado.
      */
 
-    Image(int nrows, int ncols, imagen::byte value = 0);
+    Image1D(int nrows, int ncols, imagen::byte value = 0);
 
     /**
      * @brief Constructor de copias.
      * @param orig Referencia a la imagen original que se quiere copiar.
      * @return Imagen, el objeto imagen creado.
      */
-    Image(const Image &orig);
+    Image1D(const Image1D &orig);
 
     /**
      * @brief Oper ador de tipo destructor.
      * @return void
      * @post El objeto Imagen destruido no puede usarse salvo que se haga sobre él una operacion Imagen().
      */
-    ~Image();
+    ~Image1D();
 
     /**
      * @brief Operador de asignación .
@@ -145,7 +145,7 @@ public:
      * @return Una referencia al objeto imagen modificado.
      * @post Destroy cualquier información que contuviera previamente la imagen que llama al operador de asignación.
      */
-    Image &operator=(const Image &orig);
+    Image1D &operator=(const Image1D &orig);
 
     /**
      * @brief Funcion para conocer si una imagen está vacía.
@@ -260,7 +260,7 @@ public:
      */
     void AdjustContrast(imagen::byte in1, imagen::byte in2, imagen::byte out1, imagen::byte out2);
 
-    // Calcula la media de los píxeles de una imagen entera o de un fragmento de ésta.
+    // Calcula la media de los píxe// Baraja pseudoaleatoriamente las filas de una imagen.les de una imagen entera o de un fragmento de ésta.
     /**
      * @brief Calcula la media de los píxeles de una imagen entera o de un
      *  fragmento de ésta
@@ -297,7 +297,7 @@ public:
      * @post La imagen resultanet tendrá el tamaño int(filas/factor) X int (columnas/factor)
      *      descartando los decimales de la división
      */
-    Image Subsample(int factor) const;
+    Image1D Subsample(int factor) const;
 
     // Genera una subimagen.
     /**
@@ -317,7 +317,7 @@ public:
      *
      * @post El objeto que llama a la función no se modifica.
      */
-    Image Crop(int nrow, int ncol, int height, int width) const;
+    Image1D Crop(int nrow, int ncol, int height, int width) const;
 
 
     /**
@@ -332,10 +332,14 @@ public:
      *
      * @post La imagen original no se modifica
      */
-    Image Zoom2X(int fila,int columna, int lado) const;
+    Image1D Zoom2X(int fila,int columna, int lado) const;
 
-    // Baraja pseudoaleatoriamente las filas de una imagen.
+    /**
+     * @brief Altera el orden de las filas de la imagen
+     *
+     * @pre \p rows < 9973
+     */
     void ShuffleRows();
 };
 
-#endif // _IMAGEN_H_
+#endif // _IMAGEN1D_H_
