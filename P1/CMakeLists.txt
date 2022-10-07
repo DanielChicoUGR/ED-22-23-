@@ -8,6 +8,8 @@ include_directories(${BASE_FOLDER}/include)
 #add_library(imageio ${BASE_FOLDER}/src/imageio.cpp)
 add_library(image ${BASE_FOLDER}/src/image.cpp ${BASE_FOLDER}/src/imageop.cpp ${BASE_FOLDER}/src/imageIO.cpp estudiante/src/barajar.cpp)
 
+add_library(image1D ${BASE_FOLDER}/src/image1D.cpp ${BASE_FOLDER}/src/imageop.cpp ${BASE_FOLDER}/src/imageIO.cpp estudiante/src/barajar.cpp estudiante/src/toma_tempos1D.cpp)
+
 if (EXISTS ${CMAKE_SOURCE_DIR}/${BASE_FOLDER}/src/negativo.cpp)
 add_executable(negativo ${BASE_FOLDER}/src/negativo.cpp)
 target_link_libraries(negativo LINK_PUBLIC image)
@@ -36,6 +38,17 @@ endif()
 if (EXISTS ${CMAKE_SOURCE_DIR}/${BASE_FOLDER}/src/barajar.cpp)
 add_executable(barajar ${BASE_FOLDER}/src/barajar.cpp estudiante/src/barajar.cpp)
 target_link_libraries(barajar LINK_PUBLIC image)
+endif()
+
+if (EXISTS ${CMAKE_SOURCE_DIR}/${BASE_FOLDER}/src/toma_tempos1D.cpp)
+    add_executable(toma_tempos1D ${BASE_FOLDER}/src/toma_tempos1D.cpp estudiante/src/toma_tempos1D.cpp estudiante/src/toma_tempos1D.cpp)
+    target_link_libraries(toma_tempos1D LINK_PUBLIC image1D)
+endif()
+
+
+if (EXISTS ${CMAKE_SOURCE_DIR}/${BASE_FOLDER}/src/toma_tempos2D.cpp)
+    add_executable(toma_tempos2D ${BASE_FOLDER}/src/toma_tempos2D.cpp estudiante/src/toma_tempos2D.cpp)
+    target_link_libraries(toma_tempos2D LINK_PUBLIC image)
 endif()
 
 # check if Doxygen is installed

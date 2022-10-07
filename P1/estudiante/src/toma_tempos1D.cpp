@@ -1,4 +1,7 @@
 //
+// Created by daniel on 10/7/22.
+//
+//
 // Created by daniel on 10/6/22.
 // Fichero: barajar.cpp
 // baraja las columnas de una imagen PGM
@@ -8,7 +11,7 @@
 #include <cstring>
 #include <cstdlib>
 
-#include <image.h>
+#include <image1D.h>
 
 using namespace std;
 

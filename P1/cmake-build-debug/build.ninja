@@ -94,6 +94,66 @@ build libimage.a: CXX_STATIC_LIBRARY_LINKER__image_Debug CMakeFiles/image.dir/es
   TARGET_PDB = image.a.dbg
 
 # =============================================================================
+# Object build statements for STATIC_LIBRARY target image1D
+
+
+#############################################
+# Order-only phony target for image1D
+
+build cmake_object_order_depends_target_image1D: phony || CMakeFiles/image1D.dir
+
+build CMakeFiles/image1D.dir/estudiante/src/image1D.cpp.o: CXX_COMPILER__image1D_Debug /home/daniel/Proyectos/Ed/P1/estudiante/src/image1D.cpp || cmake_object_order_depends_target_image1D
+  DEP_FILE = CMakeFiles/image1D.dir/estudiante/src/image1D.cpp.o.d
+  FLAGS = -g -std=gnu++14
+  INCLUDES = -I/home/daniel/Proyectos/Ed/P1/estudiante/include
+  OBJECT_DIR = CMakeFiles/image1D.dir
+  OBJECT_FILE_DIR = CMakeFiles/image1D.dir/estudiante/src
+
+build CMakeFiles/image1D.dir/estudiante/src/imageop.cpp.o: CXX_COMPILER__image1D_Debug /home/daniel/Proyectos/Ed/P1/estudiante/src/imageop.cpp || cmake_object_order_depends_target_image1D
+  DEP_FILE = CMakeFiles/image1D.dir/estudiante/src/imageop.cpp.o.d
+  FLAGS = -g -std=gnu++14
+  INCLUDES = -I/home/daniel/Proyectos/Ed/P1/estudiante/include
+  OBJECT_DIR = CMakeFiles/image1D.dir
+  OBJECT_FILE_DIR = CMakeFiles/image1D.dir/estudiante/src
+
+build CMakeFiles/image1D.dir/estudiante/src/imageIO.cpp.o: CXX_COMPILER__image1D_Debug /home/daniel/Proyectos/Ed/P1/estudiante/src/imageIO.cpp || cmake_object_order_depends_target_image1D
+  DEP_FILE = CMakeFiles/image1D.dir/estudiante/src/imageIO.cpp.o.d
+  FLAGS = -g -std=gnu++14
+  INCLUDES = -I/home/daniel/Proyectos/Ed/P1/estudiante/include
+  OBJECT_DIR = CMakeFiles/image1D.dir
+  OBJECT_FILE_DIR = CMakeFiles/image1D.dir/estudiante/src
+
+build CMakeFiles/image1D.dir/estudiante/src/barajar.cpp.o: CXX_COMPILER__image1D_Debug /home/daniel/Proyectos/Ed/P1/estudiante/src/barajar.cpp || cmake_object_order_depends_target_image1D
+  DEP_FILE = CMakeFiles/image1D.dir/estudiante/src/barajar.cpp.o.d
+  FLAGS = -g -std=gnu++14
+  INCLUDES = -I/home/daniel/Proyectos/Ed/P1/estudiante/include
+  OBJECT_DIR = CMakeFiles/image1D.dir
+  OBJECT_FILE_DIR = CMakeFiles/image1D.dir/estudiante/src
+
+build CMakeFiles/image1D.dir/estudiante/src/toma_tempos1D.cpp.o: CXX_COMPILER__image1D_Debug /home/daniel/Proyectos/Ed/P1/estudiante/src/toma_tempos1D.cpp || cmake_object_order_depends_target_image1D
+  DEP_FILE = CMakeFiles/image1D.dir/estudiante/src/toma_tempos1D.cpp.o.d
+  FLAGS = -g -std=gnu++14
+  INCLUDES = -I/home/daniel/Proyectos/Ed/P1/estudiante/include
+  OBJECT_DIR = CMakeFiles/image1D.dir
+  OBJECT_FILE_DIR = CMakeFiles/image1D.dir/estudiante/src
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target image1D
+
+
+#############################################
+# Link the static library libimage1D.a
+
+build libimage1D.a: CXX_STATIC_LIBRARY_LINKER__image1D_Debug CMakeFiles/image1D.dir/estudiante/src/image1D.cpp.o CMakeFiles/image1D.dir/estudiante/src/imageop.cpp.o CMakeFiles/image1D.dir/estudiante/src/imageIO.cpp.o CMakeFiles/image1D.dir/estudiante/src/barajar.cpp.o CMakeFiles/image1D.dir/estudiante/src/toma_tempos1D.cpp.o
+  LANGUAGE_COMPILE_FLAGS = -g
+  OBJECT_DIR = CMakeFiles/image1D.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = libimage1D.a
+  TARGET_PDB = image1D.a.dbg
+
+# =============================================================================
 # Object build statements for EXECUTABLE target negativo
 
 
@@ -291,6 +351,39 @@ build barajar: CXX_EXECUTABLE_LINKER__barajar_Debug CMakeFiles/barajar.dir/estud
   TARGET_FILE = barajar
   TARGET_PDB = barajar.dbg
 
+# =============================================================================
+# Object build statements for EXECUTABLE target toma_tempos1D
+
+
+#############################################
+# Order-only phony target for toma_tempos1D
+
+build cmake_object_order_depends_target_toma_tempos1D: phony || cmake_object_order_depends_target_image1D
+
+build CMakeFiles/toma_tempos1D.dir/estudiante/src/toma_tempos1D.cpp.o: CXX_COMPILER__toma_tempos1D_Debug /home/daniel/Proyectos/Ed/P1/estudiante/src/toma_tempos1D.cpp || cmake_object_order_depends_target_toma_tempos1D
+  DEP_FILE = CMakeFiles/toma_tempos1D.dir/estudiante/src/toma_tempos1D.cpp.o.d
+  FLAGS = -g -std=gnu++14
+  INCLUDES = -I/home/daniel/Proyectos/Ed/P1/estudiante/include
+  OBJECT_DIR = CMakeFiles/toma_tempos1D.dir
+  OBJECT_FILE_DIR = CMakeFiles/toma_tempos1D.dir/estudiante/src
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target toma_tempos1D
+
+
+#############################################
+# Link the executable toma_tempos1D
+
+build toma_tempos1D: CXX_EXECUTABLE_LINKER__toma_tempos1D_Debug CMakeFiles/toma_tempos1D.dir/estudiante/src/toma_tempos1D.cpp.o | libimage1D.a || libimage1D.a
+  FLAGS = -g
+  LINK_LIBRARIES = libimage1D.a
+  OBJECT_DIR = CMakeFiles/toma_tempos1D.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = toma_tempos1D
+  TARGET_PDB = toma_tempos1D.dbg
+
 
 #############################################
 # Utility command for doc_doxygen
@@ -334,6 +427,8 @@ build CMakeFiles/doc_doxygen | ${cmake_ninja_workdir}CMakeFiles/doc_doxygen: CUS
 
 build image: phony libimage.a
 
+build image1D: phony libimage1D.a
+
 # =============================================================================
 # Folder targets.
 
@@ -342,7 +437,7 @@ build image: phony libimage.a
 #############################################
 # Folder: /home/daniel/Proyectos/Ed/P1/cmake-build-debug
 
-build all: phony libimage.a negativo subimagen zoom icono contraste barajar doc_doxygen
+build all: phony libimage.a libimage1D.a negativo subimagen zoom icono contraste barajar toma_tempos1D doc_doxygen
 
 # =============================================================================
 # Built-in targets
