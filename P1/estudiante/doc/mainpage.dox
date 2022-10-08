@@ -98,7 +98,7 @@ Altera el contraste de una imagen dados unos parametros de entrada
 
 
 /**
-@page EJERCICIO 5
+@page EJERCICIO_5
 
 @section "Implementacion 1D"
 
@@ -145,5 +145,10 @@ void Image::ShuffleRows(){
 
 complejidad teorica -> O(Filas)
 
+
+@image Comparacion_columnas.png "Comparacion en tiempos de ejecucion de las dos implementacion de la imagen para un numero de columnas fijas y un numero variable de filas"
+
+
+@image Comparacion_filas_cte.png "Comparacion en tiempos de ejecucion de las dos implementaciones de la imagen para un numero fijo de filas y un numero variable de columnas"
 
 */

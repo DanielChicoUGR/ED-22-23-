@@ -12,7 +12,7 @@
 #include <unordered_map>
 #include <chrono>
 
-#include <image1D.h>
+#include <image.h>
 #include <fstream>
 
 using namespace std;
@@ -65,33 +65,38 @@ int main (int argc, char *argv[]){
     for(auto i=1;i*INCREMENTO<image.get_cols();i++){
         buffer_columnas[i*INCREMENTO]=image.Crop(fila,columna,image.get_rows(),INCREMENTO*i);
     }
-    ofstream f("estudiante/data/datos2D.dat");
+    ofstream f("estudiante/data/datos2D_filasCTE.dat");
     if(f) {
 //     Testeo distinto numero de filas
-        f << "Filas constantes\n";
+//        f << "Filas constantes\n";
 
         for (auto im: buffer_filas) {
-            Image aux = im.second;
+            auto aux = im.second;
             auto start = chrono::high_resolution_clock::now();
             aux.ShuffleRows();
             auto stop = chrono::high_resolution_clock::now();
-            chrono::duration<double> elapsed = start - stop;
+            chrono::duration<double> elapsed = stop - start;
             f << im.first << "\t" << elapsed.count() << endl;
         }
 
-        f << "Columnas constantes\n";
+        f.close();
+    }
+
+    ofstream p("estudiante/data/datos2D_colCTE.dat");
+    if(p) {
 
         for (auto im: buffer_columnas) {
-            Image aux = im.second;
+            auto aux = im.second;
             auto start = chrono::high_resolution_clock::now();
             aux.ShuffleRows();
             auto stop = chrono::high_resolution_clock::now();
 
-            chrono::duration<double> elapsed = start - stop;
-            f << im.first << "\t" << elapsed.count() << endl;
+            chrono::duration<double> elapsed = stop - start;
+            p << im.first << "\t" << elapsed.count() << endl;
 
 
         }
+        p.close();
 
     }
 
