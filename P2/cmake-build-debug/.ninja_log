@@ -1,0 +1,21 @@
+# ninja log v5
+0	207	1666005652493087224	CMakeFiles/pila_max.dir/estudiante/src/pila_max.cpp.o	e8e06de69d3f3914
+0	218	1666005670289392389	CMakeFiles/maxstack.dir/estudiante/src/maxstack.cpp.o	affc8bd803e6e971
+218	225	1666005670297392526	libmaxstack.a	15af6067d1074915
+225	260	1666005670333393144	pila_max	b16730d47a811941
+0	191	1666005771639127964	CMakeFiles/pila_max.dir/estudiante/src/pila_max.cpp.o	e8e06de69d3f3914
+0	222	1666005771671128511	CMakeFiles/maxstack.dir/estudiante/src/maxstack.cpp.o	affc8bd803e6e971
+222	228	1666005771675128579	libmaxstack.a	15af6067d1074915
+228	272	1666005771719129331	pila_max	b16730d47a811941
+1	194	1666006184806186470	CMakeFiles/pila_max.dir/estudiante/src/pila_max.cpp.o	e8e06de69d3f3914
+0	239	1666006184850187221	CMakeFiles/maxstack.dir/estudiante/src/maxstack.cpp.o	affc8bd803e6e971
+239	244	1666006184854187290	libmaxstack.a	15af6067d1074915
+244	278	1666006184890187905	pila_max	b16730d47a811941
+1	218	1666006475407151068	CMakeFiles/pila_max.dir/estudiante/src/pila_max.cpp.o	e8e06de69d3f3914
+0	243	1666006475431151478	CMakeFiles/maxstack.dir/estudiante/src/maxstack.cpp.o	affc8bd803e6e971
+243	248	1666006475439151615	libmaxstack.a	15af6067d1074915
+248	291	1666006475483152367	pila_max	b16730d47a811941
+0	191	1666006562792643953	CMakeFiles/pila_max.dir/estudiante/src/pila_max.cpp.o	e8e06de69d3f3914
+0	226	1666006562824644500	CMakeFiles/maxstack.dir/estudiante/src/maxstack.cpp.o	affc8bd803e6e971
+226	231	1666006562832644637	libmaxstack.a	15af6067d1074915
+231	267	1666006562868645252	pila_max	b16730d47a811941

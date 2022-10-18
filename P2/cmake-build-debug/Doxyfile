@@ -1,0 +1,6 @@
+PROJECT_NAME           = "Práctica 2. Pilas y Colas"
+OUTPUT_DIRECTORY       = /home/daniel/Proyectos/Ed/P2/cmake-build-debug/doc_doxygen/
+INPUT                  = /home/daniel/Proyectos/Ed/P2/estudiante/include /home/daniel/Proyectos/Ed/P2/estudiante/src /home/daniel/Proyectos/Ed/P2/estudiante/doc
+GENERATE_LATEX         = NO
+IMAGE_PATH             = /home/daniel/Proyectos/Ed/P2/estudiante/doc
+EXTRACT_PRIVATE	       = NO
