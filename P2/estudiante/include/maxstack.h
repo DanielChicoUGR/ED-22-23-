@@ -9,24 +9,7 @@
 #define TDA_MAXSTACK_H
 #include <queue>
 
-/**
- * @brief Unidades de almacenamiento de la informacion de la pila
- */
-struct Element {
-    int value; // Current value to store
-    int maximum; // Current max value in the structure
 
-    /**
-     * @brief SSObrecarga operador de salida
-     * @param f Flujo de salida
-     * @param otro Dato a escribir en el flujo
-     * @return Flujo de salida.
-     */
-    inline friend std::ostream & operator<<(std::ostream & f,const Element  & otro){
-        f<<otro.value<<","<<otro.maximum;
-        return f;
-    }
-};
 
 /**
  * @brief T.D.A. MaxStack
@@ -45,9 +28,27 @@ class MaxStack{
     /**
      * @page page_repMaxStack Representación del TDA MaxStack
      *
-     * @section
      */
 public:
+
+    /**
+    * @brief Unidades de almacenamiento de la informacion de la pila
+    */
+    struct Element {
+        int value; // Current value to store
+        int maximum; // Current max value in the structure
+
+        /**
+         * @brief SSObrecarga operador de salida
+         * @param f Flujo de salida
+         * @param otro Dato a escribir en el flujo
+         * @return Flujo de salida.
+         */
+        inline friend std::ostream & operator<<(std::ostream & f,const Element  & otro){
+                f<<otro.value<<","<<otro.maximum;
+                return f;
+            }
+        };
 
     /**
      * @brief Constructor por defecto del TDA MaxStack. Genera una pila vacía
@@ -60,6 +61,10 @@ public:
      */
     MaxStack( MaxStack& other);
 
+    MaxStack(const MaxStack& other);
+
+    MaxStack& operator=(const MaxStack& other);
+
     /**
      * @brief Consulta la cantidad de elementos almacenados en el TDA MaxStack
      * @return Tamaño de la pila
@@ -70,7 +75,7 @@ public:
      * @brief Consulta el ultimo elemento insertado en la pila.
      * @return Ultimo elemento de la pila
      */
-    Element top() const;
+    MaxStack::Element top() const;
 
     /**
      * @brief Consulta el valor del ultimo elemento insertado en la pila.
@@ -111,9 +116,10 @@ private:
      * @brief Copia los elementos de un vector de Elementos.
      *
      */
-    void copia( std::queue<Element> &otro);
+    void copia(const std::queue<Element> &otro);
 
     std::queue<Element> pila;
+
 
 
 

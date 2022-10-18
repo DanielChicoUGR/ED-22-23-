@@ -19,3 +19,16 @@
 0	226	1666006562824644500	CMakeFiles/maxstack.dir/estudiante/src/maxstack.cpp.o	affc8bd803e6e971
 226	231	1666006562832644637	libmaxstack.a	15af6067d1074915
 231	267	1666006562868645252	pila_max	b16730d47a811941
+1	197	1666117835213854172	CMakeFiles/pila_max.dir/estudiante/src/pila_max.cpp.o	e8e06de69d3f3914
+0	197	1666117889842500728	CMakeFiles/pila_max.dir/estudiante/src/pila_max.cpp.o	e8e06de69d3f3914
+0	318	1666117889962502149	CMakeFiles/maxstack.dir/estudiante/src/maxstack.cpp.o	affc8bd803e6e971
+318	325	1666117889970502242	libmaxstack.a	15af6067d1074915
+325	375	1666117890018502811	pila_max	b16730d47a811941
+0	213	1666120103004550224	CMakeFiles/cola_max.dir/estudiante/src/cola_max.cpp.o	2f651072ba2f70d8
+0	190	1666120207793778000	CMakeFiles/cola_max.dir/estudiante/src/cola_max.cpp.o	2f651072ba2f70d8
+0	305	1666120268934494323	CMakeFiles/maxqueue.dir/estudiante/src/maxqueue.cpp.o	59cb2638f164c603
+305	311	1666120268938494370	libmaxqueue.a	4d447ea116bbaeef
+311	357	1666120268986494932	cola_max	bc003ebdace43711
+0	306	1666120578638122882	CMakeFiles/maxqueue.dir/estudiante/src/maxqueue.cpp.o	59cb2638f164c603
+306	313	1666120578646122974	libmaxqueue.a	4d447ea116bbaeef
+313	351	1666120578682123396	cola_max	bc003ebdace43711

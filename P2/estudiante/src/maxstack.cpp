@@ -11,6 +11,8 @@
 //}
 
 MaxStack::MaxStack( MaxStack &other) {
+    clear();
+
     copia(other.pila);
 
 }
@@ -19,7 +21,7 @@ unsigned int MaxStack::size() const {
     return pila.size();
 }
 
-Element MaxStack::top() const {
+MaxStack::Element MaxStack::top() const {
     return pila.front();
 }
 
@@ -38,25 +40,25 @@ bool MaxStack::isEmpty() const {
 }
 
 void MaxStack::push(int number) {
-    auto aux=new std::queue<Element>();
+    auto aux=std::queue<Element>();
     int max;
     if(pila.front().maximum>number)
         max=pila.front().maximum;
     else
         max=number;
 
-    aux->push({number,max});
+    aux.push({number,max});
     while(!pila.empty()) {
-        aux->push(pila.front());
+        aux.push(pila.front());
         pila.pop();
     }
-    pila.swap(*aux);
+    pila.swap(aux);
 
-    delete aux;
+//    delete aux;
 }
 
-void MaxStack::copia( std::queue<Element> &otro) {
-    pila.swap(otro);
+void MaxStack::copia( const std::queue<Element> &otro) {
+    pila=otro;
 }
 
 void MaxStack::pop() {
@@ -66,4 +68,15 @@ void MaxStack::pop() {
 
 int MaxStack::top_value() const {
     return pila.front().value;
+}
+
+MaxStack::MaxStack(const MaxStack &other) {
+    clear();
+    copia(other.pila);
+
+}
+
+MaxStack &MaxStack::operator=(const MaxStack &other) {
+    new MaxStack(other);
+    return *this;
 }
