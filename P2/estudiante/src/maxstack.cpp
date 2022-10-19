@@ -40,20 +40,24 @@ bool MaxStack::isEmpty() const {
 }
 
 void MaxStack::push(int number) {
-    auto aux=std::queue<Element>();
-    int max;
-    if(pila.front().maximum>number)
-        max=pila.front().maximum;
-    else
-        max=number;
 
-    aux.push({number,max});
-    while(!pila.empty()) {
-        aux.push(pila.front());
-        pila.pop();
+    if(isEmpty()){
+        pila.push({number,number});
+    }else {
+        auto aux=std::queue<Element>();
+        int max;
+        if (pila.front().maximum > number)
+            max = pila.front().maximum;
+        else
+            max = number;
+
+        aux.push({number, max});
+        while (!pila.empty()) {
+            aux.push(pila.front());
+            pila.pop();
+        }
+        pila.swap(aux);
     }
-    pila.swap(aux);
-
 //    delete aux;
 }
 

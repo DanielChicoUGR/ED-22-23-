@@ -20,26 +20,40 @@
  * Para poder usar el TDA MaxStack se debe incluir el fichero
  * \#include "maxstack.h"
  *
+ *
+ * @section .
+ *  TDA MaxStack
+ *
+ *  Se trata de un TDA en forma lista LIFO (Last In First Out) o pila en la que se puede consultar
+ *  el mayor elemento almacenado en la lista.
+ *
+ *
+ *
  * @author Daniel Chico Valderas
  * @date 2022
  */
 
 class MaxStack{
-    /**
-     * @page page_repMaxStack Representación del TDA MaxStack
-     *
-     */
+
 public:
 
     /**
     * @brief Unidades de almacenamiento de la informacion de la pila
+     *
+     *  @section
+     *
+     *
+     *      Unidad minima que almacena la pila. Almacena el numero y el elemanto mayor almacenado en la pila.
+     *          Element.value -> valor
+     *          Element.->maximum -> valor maximo almacenado en la pila.
+     *
     */
     struct Element {
         int value; // Current value to store
         int maximum; // Current max value in the structure
 
         /**
-         * @brief SSObrecarga operador de salida
+         * @brief Sobrecarga operador de salida
          * @param f Flujo de salida
          * @param otro Dato a escribir en el flujo
          * @return Flujo de salida.
@@ -57,7 +71,7 @@ public:
 
     /**
      * @brief Constructor de copia del TDA MaxStack
-     * @param other
+     * @param other -> Elemento a copiar.
      */
     MaxStack( MaxStack& other);
 
@@ -105,6 +119,11 @@ public:
      * @return False -> No hay elementos almacenados
      */
     bool isEmpty() const;
+
+    /**
+     * @brief insertar elemento en la pila
+     * @param number Elemento a insertar.
+     */
 
     void push(int number);
 

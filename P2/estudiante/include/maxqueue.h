@@ -15,33 +15,42 @@
 
 
 /**
- * @brief T.D.A. MaxStack
+ * @brief T.D.A. MaxQueue
  *
- * Una instancia del T.D.A. MAXSTACK nos permite almacenar una Cola de enteros en el que
+ * Una instancia del T.D.A. MAXQUEUE nos permite almacenar una Cola de enteros en el que
  * se pueda consultar el mayor elemento almacenado en el TDA
  *
- * Para poder usar el TDA MaxStack se debe incluir el fichero
- * \#include "maxstack.h"
+ * Para poder usar el TDA MaxQueue se debe incluir el fichero
+ * \#include "maxqueue.h"
+ *
+ * @section
+ *  Representacion del TDA MaxQueue
+ *
+ *  Se trata de un TDA en forma lista FIFO (First In First Out) o cola en la que se puede consultar
+ *  el mayor elemento almacenado en la lista.
  *
  * @author Daniel Chico Valderas
  * @date 2022
  */
 
 class MaxQueue {
-/**
- * @page page_repMaxStack Representación del TDA MaxStack
- *
- */
+
 public:
     /**
     * @brief Unidades de almacenamiento de la informacion de la cola
+     *
+     *
+     *      Unidad minima que almacena la cola. Almacena el numero y el elemanto mayor almacenado en la cola.
+     *          Element.value -> valor
+     *          Element.->maximum -> valor maximo almacenado en la cola.
+     *
     */
     struct Element {
         int value; // Current value to store
         int maximum; // Current max value in the structure
 
         /**
-         * @brief SSObrecarga operador de salida
+         * @brief Sobrecarga operador de salida
          * @param f Flujo de salida
          * @param otro Dato a escribir en el flujo
          * @return Flujo de salida.
@@ -58,6 +67,10 @@ public:
      * @param other
      */
     MaxQueue( MaxQueue& other);
+
+    MaxQueue(const MaxQueue& other);
+
+    MaxQueue& operator=(const MaxQueue& other);
 
     /**
      * @brief Consulta la cantidad de elementos almacenados en el TDA MaxStack
@@ -99,6 +112,11 @@ public:
      * @return False -> No hay elementos almacenados
      */
     bool isEmpty() const;
+
+    /**
+    * @brief insertar elemento en la Cola
+    * @param number Elemento a insertar.
+    */
 
     void push(int number);
 

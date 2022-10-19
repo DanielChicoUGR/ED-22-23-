@@ -63,5 +63,15 @@ void MaxQueue::clear() {
     }
 }
 
+MaxQueue::MaxQueue(const MaxQueue &other) {
+    clear();
+    copia(other.cola);
+}
+
+MaxQueue &MaxQueue::operator=(const MaxQueue &other) {
+    new MaxQueue(other);
+    return *this;
+}
+
 
 
