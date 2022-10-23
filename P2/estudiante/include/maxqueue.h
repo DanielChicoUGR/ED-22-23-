@@ -68,7 +68,20 @@ public:
      */
     MaxQueue( MaxQueue& other);
 
+
+    /**
+ * @brief Constructor de copia constante del TDA MaxQueue
+ * @param other -> Elemento a copiar.
+ */
+
     MaxQueue(const MaxQueue& other);
+
+    /**
+ * @brief Operador de asignacion del TDA MaxQueue
+ * @param other Elemento a asignar
+ * @return Copia de \e other
+ */
+
 
     MaxQueue& operator=(const MaxQueue& other);
 

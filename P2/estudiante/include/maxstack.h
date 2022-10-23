@@ -75,7 +75,17 @@ public:
      */
     MaxStack( MaxStack& other);
 
+    /**
+     * @brief Constructor de copia constante del TDA MaxStack
+     * @param other
+     */
     MaxStack(const MaxStack& other);
+
+    /**
+     * @brief Operador de asignacion del TDA MaxStack
+     * @param other Elemento a asignar
+     * @return Copia de \e other
+     */
 
     MaxStack& operator=(const MaxStack& other);
 

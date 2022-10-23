@@ -1,11 +1,32 @@
-/*! \mainpage Título de la página principal
+/*! \mainpage Practica 2 ED 22/23
 
 # Introducción
 
-A RELLENAR POR EL ESTUDIANTE
+En esta practica se quiere ver si el estudiante obtiene conocimiento sobre la costrucción de TDAs respetando los pricipios de ocultación de información y abstracción.
+
+En concreto en esta práctica, se ha pedido al estudiante que desarrolle 2 TDAs, una pila y una cola (listas con políticas de acceso FIFO y LIFO respectivamente) de enteros en el que se puede acceder
+al mayor elemento almacenado en el contenedor. Para ello, la pila con máximo de debía implementar usando colas de la biblioteca STL de C++ y la cola con una pila de la misma biblioteca.
+
 
 # Ejecutables
 
-A RELLENAR POR EL ESTUDIANTE
 
+##Ejecutable Cola Max.
+Este ejecutable recive por parametros una lista de números y puntos. cada vez que aparece un punto extrae un elemento. Sino, introduce el numero en el contenedor.
+
+###Ejemplo de ejecución:
+    Argumentos entrada: 1 2 . 3 4 . . .
+
+    Salida Programa:
+    @image html max_Queue.png "Salido programa MaxQueue"
+
+
+##Ejecutable Pila Max
+Este ejecutable recive por parametros una lista de numeros y puntos. Cada vez que aparece un punto extrae un elemento. Sino, inserta el elemento.
+
+###Ejemplo Ejecucion:
+    Argumentos entrada:  1 2 3 . . .
+
+    Salida Programa:
+    @image html max_stack.png "Salida programa Max_Stack"
 */
