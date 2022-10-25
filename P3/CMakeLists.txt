@@ -7,34 +7,36 @@ set(BASE_FOLDER estudiante)
 
 include_directories(${BASE_FOLDER}/include)
 
+
+
 if (EXISTS ${CMAKE_SOURCE_DIR}/${BASE_FOLDER}/src/conjunto_letras.cpp)
   add_executable(conjunto_letras
     ${BASE_FOLDER}/src/conjunto_letras.cpp
-    ${BASE_FOLDER}/src/letters_set.cpp)
+    ${BASE_FOLDER}/src/letters_set.cpp estudiante/src/conjunto_letras.cpp)
 endif()
 
 if (EXISTS ${CMAKE_SOURCE_DIR}/${BASE_FOLDER}/src/bolsa.cpp)
-  add_executable(bolsa ${BASE_FOLDER}/src/bolsa.cpp)
+  add_executable(bolsa ${BASE_FOLDER}/src/bolsa.cpp estudiante/src/conjunto_letras.cpp)
 endif()
 
 if (EXISTS ${CMAKE_SOURCE_DIR}/${BASE_FOLDER}/src/bolsa_letras.cpp)
   add_executable(bolsa_letras
     ${BASE_FOLDER}/src/bolsa_letras.cpp
     ${BASE_FOLDER}/src/letters_bag.cpp
-    ${BASE_FOLDER}/src/letters_set.cpp)
+    ${BASE_FOLDER}/src/letters_set.cpp estudiante/src/bolsa_letras.cpp)
 endif()
 
 if (EXISTS ${CMAKE_SOURCE_DIR}/${BASE_FOLDER}/src/cantidad_letras.cpp)
   add_executable(cantidad_letras
     ${BASE_FOLDER}/src/cantidad_letras.cpp
     ${BASE_FOLDER}/src/dictionary.cpp
-    ${BASE_FOLDER}/src/letters_set.cpp)
+    ${BASE_FOLDER}/src/letters_set.cpp estudiante/src/cantidad_letras.cpp)
 endif()
 
 if (EXISTS ${CMAKE_SOURCE_DIR}/${BASE_FOLDER}/src/palabras_longitud.cpp)
   add_executable(palabras_longitud
     ${BASE_FOLDER}/src/palabras_longitud.cpp
-    ${BASE_FOLDER}/src/dictionary.cpp)
+    ${BASE_FOLDER}/src/dictionary.cpp estudiante/src/palabras_longitud.cpp)
 endif()
 
 # check if Doxygen is installed

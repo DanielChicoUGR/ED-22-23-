@@ -1,0 +1,7 @@
+# ninja log v5
+0	54	1666727284697105825	build.ninja	5d360199adb79839
+0	230	1666724841401386157	CMakeFiles/conjunto_letras.dir/estudiante/src/conjunto_letras.cpp.o	7293da095486066f
+230	276	1666724841445386656	conjunto_letras	b07dc560dba590c5
+0	274	1666724794456853542	CMakeFiles/conjunto_letras.dir/estudiante/src/letters_set.cpp.o	c90267ab3afa334
+0	145	1666717886730504672	CMakeFiles/bolsa.dir/estudiante/src/bolsa.cpp.o	c287b63b688cbeff
+146	203	1666717886786505245	bolsa	dbbc39af2bf35802
