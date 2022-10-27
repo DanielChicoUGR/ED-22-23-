@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.13)
 project(p04_tdas_no_lineales)
 
-set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_CXX_STANDARD 23)
 
 set(BASE_FOLDER estudiante)
 
@@ -16,7 +16,7 @@ if (EXISTS ${CMAKE_SOURCE_DIR}/${BASE_FOLDER}/src/conjunto_letras.cpp)
 endif()
 
 if (EXISTS ${CMAKE_SOURCE_DIR}/${BASE_FOLDER}/src/bolsa.cpp)
-  add_executable(bolsa ${BASE_FOLDER}/src/bolsa.cpp estudiante/src/conjunto_letras.cpp)
+  add_executable(bolsa ${BASE_FOLDER}/src/bolsa.cpp )
 endif()
 
 if (EXISTS ${CMAKE_SOURCE_DIR}/${BASE_FOLDER}/src/bolsa_letras.cpp)
@@ -30,7 +30,7 @@ if (EXISTS ${CMAKE_SOURCE_DIR}/${BASE_FOLDER}/src/cantidad_letras.cpp)
   add_executable(cantidad_letras
     ${BASE_FOLDER}/src/cantidad_letras.cpp
     ${BASE_FOLDER}/src/dictionary.cpp
-    ${BASE_FOLDER}/src/letters_set.cpp estudiante/src/cantidad_letras.cpp)
+    ${BASE_FOLDER}/src/letters_set.cpp estudiante/src/cantidad_letras.cpp estudiante/src/cantidad_letras.cpp)
 endif()
 
 if (EXISTS ${CMAKE_SOURCE_DIR}/${BASE_FOLDER}/src/palabras_longitud.cpp)

@@ -2,7 +2,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "bolsa_letras"
+			"path" : "palabras_longitud"
 		}
 	],
 	"backtrace" : 1,
@@ -25,7 +25,7 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 24,
+				"line" : 37,
 				"parent" : 0
 			},
 			{
@@ -45,7 +45,7 @@
 					"fragment" : "-g"
 				},
 				{
-					"fragment" : "-std=gnu++14"
+					"fragment" : "-std=gnu++23"
 				}
 			],
 			"includes" : 
@@ -62,17 +62,16 @@
 				[
 					1
 				],
-				"standard" : "14"
+				"standard" : "23"
 			},
 			"sourceIndexes" : 
 			[
 				0,
-				1,
-				2
+				1
 			]
 		}
 	],
-	"id" : "bolsa_letras::@6890427a1f51a3e7e1df",
+	"id" : "palabras_longitud::@6890427a1f51a3e7e1df",
 	"link" : 
 	{
 		"commandFragments" : 
@@ -88,8 +87,8 @@
 		],
 		"language" : "CXX"
 	},
-	"name" : "bolsa_letras",
-	"nameOnDisk" : "bolsa_letras",
+	"name" : "palabras_longitud",
+	"nameOnDisk" : "palabras_longitud",
 	"paths" : 
 	{
 		"build" : ".",
@@ -102,8 +101,7 @@
 			"sourceIndexes" : 
 			[
 				0,
-				1,
-				2
+				1
 			]
 		}
 	],
@@ -112,19 +110,13 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "estudiante/src/bolsa_letras.cpp",
+			"path" : "estudiante/src/palabras_longitud.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "estudiante/src/letters_bag.cpp",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "estudiante/src/letters_set.cpp",
+			"path" : "estudiante/src/dictionary.cpp",
 			"sourceGroupIndex" : 0
 		}
 	],

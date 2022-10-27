@@ -1,6 +1,7 @@
 /home/daniel/Proyectos/Ed/P3/cmake-build-debug/CMakeFiles/conjunto_letras.dir
 /home/daniel/Proyectos/Ed/P3/cmake-build-debug/CMakeFiles/bolsa.dir
 /home/daniel/Proyectos/Ed/P3/cmake-build-debug/CMakeFiles/bolsa_letras.dir
+/home/daniel/Proyectos/Ed/P3/cmake-build-debug/CMakeFiles/cantidad_letras.dir
 /home/daniel/Proyectos/Ed/P3/cmake-build-debug/CMakeFiles/palabras_longitud.dir
 /home/daniel/Proyectos/Ed/P3/cmake-build-debug/CMakeFiles/doc_doxygen.dir
 /home/daniel/Proyectos/Ed/P3/cmake-build-debug/CMakeFiles/edit_cache.dir

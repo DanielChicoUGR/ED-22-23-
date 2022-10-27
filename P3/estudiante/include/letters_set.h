@@ -130,5 +130,150 @@ public:
      */
     friend std::istream &operator>>(std::istream &is, LetterSet &cl);
 
+
+    class iterator{
+    private:
+        std::map<char, LetterInfo>::iterator pos;
+
+        iterator()=default;
+
+    public:
+        /**
+         * @brief Constructor de copia por defecto
+         * @param other Iterador a copiar
+         */
+        iterator(const iterator &other)= default;
+        /**
+         * @brief Sobrecarga operador *
+         * @return Pareja Letra/LetterInfo referente a la posicion que apunta
+         */
+        std::pair<char, LetterInfo> operator*(){
+            return *pos;
+        }
+        /**
+         * @brief Sobrecarga operador siguiente
+         * @return referencia a \e *this
+         */
+
+        iterator& operator++(){
+            ++pos;
+            return *this;
+        }
+
+        /**
+         * @brief Sobrecarga operador anterior
+         * @return referencia a \e *this
+         */
+
+        iterator& operator--(){
+            --pos;
+            return *this;
+        }
+
+        /**
+         * @brief Sobrecarga del operador de igualdad
+         * @param other \e Iterator que comparar
+         * @return  true si apuntan a la misma posición, falso en otro caso
+         */
+        bool operator==(iterator &other){
+            return pos==other.pos;
+        }
+
+        /**
+         * @brief Sobrecarga operador desigualdad
+         * @param other \e Iterator que comprar
+         * @return Devuelve true si NO apuntan a la misma direccion, false en tro caso
+         */
+
+        bool operator!=(iterator &other){
+            return pos!=other.pos;
+        }
+        friend class LetterSet;
+    };
+
+
+    class const_iterator{
+    private:
+        std::map<char, LetterInfo>::const_iterator pos;
+
+        const_iterator()=default;
+
+    public:
+        /**
+         * @brief Constructor de copia por defecto
+         * @param other Iterador a copiar
+         */
+        const_iterator(const const_iterator &other)=default;
+        /**
+         * @brief Sobrecarga operador *
+         * @return Pareja Letra/LetterInfo referente a la posicion que apunta
+         */
+        std::pair<char, LetterInfo> operator*(){return *pos;}
+        /**
+         * @brief Sobrecarga operador siguiente
+         * @return referencia a \e *this
+         */
+        const_iterator& operator++(){
+            ++pos;
+            return *this;
+        }
+        /**
+         * @brief Sobrecarga operador anterior
+         * @return referencia a \e *this
+         */
+        const_iterator& operator--(){
+            --pos;
+            return *this;
+        }
+        /**
+         * @brief Sobrecarga del operador de igualdad
+         * @param other \e Iterator que comparar
+         * @return  true si apuntan a la misma posición, falso en otro caso
+         */
+        bool operator==(const_iterator &other){
+            return pos==other.pos;
+        }
+        /**
+         * @brief Sobrecarga operador desigualdad
+         * @param other \e Iterator que comprar
+         * @return Devuelve true si NO apuntan a la misma direccion, false en tro caso
+         */
+        bool operator!=(const_iterator &other){
+            return pos!=other.pos;
+        }
+        friend class LetterSet;
+    };
+
+    /**
+     * @brief Devuelve un objeto de la clase iterador apuntando al primer elemento del Letterset
+     * @return iterador
+     */
+    inline iterator begin(){
+        iterator pos;
+        pos.pos=letters.begin();
+        return pos;
+    }
+    /**
+ * @brief Devuelve un objeto de la clase iterador apuntando al primer elemento del Letterset
+ * @return iterador
+ */
+    inline iterator end(){
+        iterator pos;
+        pos.pos=letters.end();
+        return pos;
+    }
+
+    inline const_iterator cbegin(){
+        const_iterator pos;
+        pos.pos=letters.cbegin();
+        return pos;
+    }
+
+    inline const_iterator cend(){
+        const_iterator pos;
+        pos.pos=letters.cend();
+        return pos;
+    }
+
 };
 #endif

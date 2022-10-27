@@ -41,6 +41,7 @@ public:
      *
      */
     inline T get(){
+//        srand(time(NULL));
         int elemento=rand()%v.size();
 
         T ret=v[elemento];
