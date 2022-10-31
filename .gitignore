@@ -30,3 +30,7 @@
 *.exe
 *.out
 *.app
+
+
+#cmake_folders
+*/cmake-bulild-debug/*
