@@ -1,5 +1,5 @@
-/home/daniel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/home/daniel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/bin/ninja/linux/ninja -G Ninja -S /home/daniel/Proyectos/Ed/P3 -B /home/daniel/Proyectos/Ed/P3/cmake-build-debug
+/app/extra/clion/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" -S /home/dachival/Proyectos/ED/P3 -B /home/dachival/Proyectos/ED/P3/cmake-build-debug
 Doxygen build started
 -- Configuring done
 -- Generating done
--- Build files have been written to: /home/daniel/Proyectos/Ed/P3/cmake-build-debug
+-- Build files have been written to: /home/dachival/Proyectos/ED/P3/cmake-build-debug

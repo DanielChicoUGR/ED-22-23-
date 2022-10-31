@@ -88,7 +88,12 @@ public:
      */
     std::vector<std::string> wordsOfLenght(const int length);
 
-
+    /**
+     * @brief Sobrecarga operador de entrada
+     * @param is Operador sobre el que se extrae la información
+     * @param a Diccionario a escribir
+     * @return Referencia al flujo de entrada
+     */
     friend std::istream& operator>>(std::istream&is, Dictionary& a);
 };
 

@@ -1,0 +1,105 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "p04_tdas_no_lineales",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "bolsa::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-bolsa-Debug-b58c17561e2b9cf2c449.json",
+					"name" : "bolsa",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "bolsa_letras::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-bolsa_letras-Debug-d7100291caad5b49bbd2.json",
+					"name" : "bolsa_letras",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "cantidad_letras::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-cantidad_letras-Debug-f8a8323ab65f67da087c.json",
+					"name" : "cantidad_letras",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "conjunto_letras::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-conjunto_letras-Debug-b531db19493fe884c241.json",
+					"name" : "conjunto_letras",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "doc_doxygen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-doc_doxygen-Debug-c9181207274f88195b38.json",
+					"name" : "doc_doxygen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "palabras_longitud::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-palabras_longitud-Debug-fe476474a07ee264042b.json",
+					"name" : "palabras_longitud",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/dachival/Proyectos/ED/P3/cmake-build-debug",
+		"source" : "/home/dachival/Proyectos/ED/P3"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 4
+	}
+}

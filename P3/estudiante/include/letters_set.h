@@ -130,7 +130,9 @@ public:
      */
     friend std::istream &operator>>(std::istream &is, LetterSet &cl);
 
-
+    /**
+     * Iterador a elementos de \e LetterSet
+     */
     class iterator{
     private:
         std::map<char, LetterInfo>::iterator pos;
@@ -191,7 +193,9 @@ public:
         friend class LetterSet;
     };
 
-
+    /**
+     * Iterador constante a elementos del \e LetterSet
+     */
     class const_iterator{
     private:
         std::map<char, LetterInfo>::const_iterator pos;
@@ -254,7 +258,7 @@ public:
         return pos;
     }
     /**
- * @brief Devuelve un objeto de la clase iterador apuntando al primer elemento del Letterset
+ * @brief Devuelve un objeto de la clase iterador apuntando al final del Letterset
  * @return iterador
  */
     inline iterator end(){
@@ -262,14 +266,22 @@ public:
         pos.pos=letters.end();
         return pos;
     }
-
-    inline const_iterator cbegin(){
+    /**
+    * @brief Devuelve un objeto de la clase iterador apuntando al primer elemento del Letterset
+    * @return iterador
+    */
+    __attribute__((unused)) inline const_iterator cbegin(){
         const_iterator pos;
         pos.pos=letters.cbegin();
         return pos;
     }
 
-    inline const_iterator cend(){
+    /**
+    * @brief Devuelve un objeto de la clase const_iterador apuntando al final del Letterset
+     * @return iterador
+    */
+
+    __attribute__((unused)) inline const_iterator cend(){
         const_iterator pos;
         pos.pos=letters.cend();
         return pos;
