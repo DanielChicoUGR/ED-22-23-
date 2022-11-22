@@ -53,10 +53,10 @@ RM = /app/extra/clion/bin/cmake/linux/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/dachival/Proyectos/ED/P3
+CMAKE_SOURCE_DIR = /home/daniel/Proyectos/ED/P3
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/dachival/Proyectos/ED/P3/cmake-build-debug
+CMAKE_BINARY_DIR = /home/daniel/Proyectos/ED/P3/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/palabras_longitud.dir/depend.make
@@ -72,30 +72,30 @@ include CMakeFiles/palabras_longitud.dir/flags.make
 CMakeFiles/palabras_longitud.dir/estudiante/src/palabras_longitud.cpp.o: CMakeFiles/palabras_longitud.dir/flags.make
 CMakeFiles/palabras_longitud.dir/estudiante/src/palabras_longitud.cpp.o: ../estudiante/src/palabras_longitud.cpp
 CMakeFiles/palabras_longitud.dir/estudiante/src/palabras_longitud.cpp.o: CMakeFiles/palabras_longitud.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dachival/Proyectos/ED/P3/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/palabras_longitud.dir/estudiante/src/palabras_longitud.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/palabras_longitud.dir/estudiante/src/palabras_longitud.cpp.o -MF CMakeFiles/palabras_longitud.dir/estudiante/src/palabras_longitud.cpp.o.d -o CMakeFiles/palabras_longitud.dir/estudiante/src/palabras_longitud.cpp.o -c /home/dachival/Proyectos/ED/P3/estudiante/src/palabras_longitud.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/daniel/Proyectos/ED/P3/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/palabras_longitud.dir/estudiante/src/palabras_longitud.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/palabras_longitud.dir/estudiante/src/palabras_longitud.cpp.o -MF CMakeFiles/palabras_longitud.dir/estudiante/src/palabras_longitud.cpp.o.d -o CMakeFiles/palabras_longitud.dir/estudiante/src/palabras_longitud.cpp.o -c /home/daniel/Proyectos/ED/P3/estudiante/src/palabras_longitud.cpp
 
 CMakeFiles/palabras_longitud.dir/estudiante/src/palabras_longitud.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/palabras_longitud.dir/estudiante/src/palabras_longitud.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/dachival/Proyectos/ED/P3/estudiante/src/palabras_longitud.cpp > CMakeFiles/palabras_longitud.dir/estudiante/src/palabras_longitud.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/daniel/Proyectos/ED/P3/estudiante/src/palabras_longitud.cpp > CMakeFiles/palabras_longitud.dir/estudiante/src/palabras_longitud.cpp.i
 
 CMakeFiles/palabras_longitud.dir/estudiante/src/palabras_longitud.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/palabras_longitud.dir/estudiante/src/palabras_longitud.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dachival/Proyectos/ED/P3/estudiante/src/palabras_longitud.cpp -o CMakeFiles/palabras_longitud.dir/estudiante/src/palabras_longitud.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/daniel/Proyectos/ED/P3/estudiante/src/palabras_longitud.cpp -o CMakeFiles/palabras_longitud.dir/estudiante/src/palabras_longitud.cpp.s
 
 CMakeFiles/palabras_longitud.dir/estudiante/src/dictionary.cpp.o: CMakeFiles/palabras_longitud.dir/flags.make
 CMakeFiles/palabras_longitud.dir/estudiante/src/dictionary.cpp.o: ../estudiante/src/dictionary.cpp
 CMakeFiles/palabras_longitud.dir/estudiante/src/dictionary.cpp.o: CMakeFiles/palabras_longitud.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dachival/Proyectos/ED/P3/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/palabras_longitud.dir/estudiante/src/dictionary.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/palabras_longitud.dir/estudiante/src/dictionary.cpp.o -MF CMakeFiles/palabras_longitud.dir/estudiante/src/dictionary.cpp.o.d -o CMakeFiles/palabras_longitud.dir/estudiante/src/dictionary.cpp.o -c /home/dachival/Proyectos/ED/P3/estudiante/src/dictionary.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/daniel/Proyectos/ED/P3/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/palabras_longitud.dir/estudiante/src/dictionary.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/palabras_longitud.dir/estudiante/src/dictionary.cpp.o -MF CMakeFiles/palabras_longitud.dir/estudiante/src/dictionary.cpp.o.d -o CMakeFiles/palabras_longitud.dir/estudiante/src/dictionary.cpp.o -c /home/daniel/Proyectos/ED/P3/estudiante/src/dictionary.cpp
 
 CMakeFiles/palabras_longitud.dir/estudiante/src/dictionary.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/palabras_longitud.dir/estudiante/src/dictionary.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/dachival/Proyectos/ED/P3/estudiante/src/dictionary.cpp > CMakeFiles/palabras_longitud.dir/estudiante/src/dictionary.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/daniel/Proyectos/ED/P3/estudiante/src/dictionary.cpp > CMakeFiles/palabras_longitud.dir/estudiante/src/dictionary.cpp.i
 
 CMakeFiles/palabras_longitud.dir/estudiante/src/dictionary.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/palabras_longitud.dir/estudiante/src/dictionary.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dachival/Proyectos/ED/P3/estudiante/src/dictionary.cpp -o CMakeFiles/palabras_longitud.dir/estudiante/src/dictionary.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/daniel/Proyectos/ED/P3/estudiante/src/dictionary.cpp -o CMakeFiles/palabras_longitud.dir/estudiante/src/dictionary.cpp.s
 
 # Object files for target palabras_longitud
 palabras_longitud_OBJECTS = \
@@ -109,7 +109,7 @@ palabras_longitud: CMakeFiles/palabras_longitud.dir/estudiante/src/palabras_long
 palabras_longitud: CMakeFiles/palabras_longitud.dir/estudiante/src/dictionary.cpp.o
 palabras_longitud: CMakeFiles/palabras_longitud.dir/build.make
 palabras_longitud: CMakeFiles/palabras_longitud.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/dachival/Proyectos/ED/P3/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable palabras_longitud"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/daniel/Proyectos/ED/P3/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable palabras_longitud"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/palabras_longitud.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -121,6 +121,6 @@ CMakeFiles/palabras_longitud.dir/clean:
 .PHONY : CMakeFiles/palabras_longitud.dir/clean
 
 CMakeFiles/palabras_longitud.dir/depend:
-	cd /home/dachival/Proyectos/ED/P3/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/dachival/Proyectos/ED/P3 /home/dachival/Proyectos/ED/P3 /home/dachival/Proyectos/ED/P3/cmake-build-debug /home/dachival/Proyectos/ED/P3/cmake-build-debug /home/dachival/Proyectos/ED/P3/cmake-build-debug/CMakeFiles/palabras_longitud.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/daniel/Proyectos/ED/P3/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/daniel/Proyectos/ED/P3 /home/daniel/Proyectos/ED/P3 /home/daniel/Proyectos/ED/P3/cmake-build-debug /home/daniel/Proyectos/ED/P3/cmake-build-debug /home/daniel/Proyectos/ED/P3/cmake-build-debug/CMakeFiles/palabras_longitud.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/palabras_longitud.dir/depend
 

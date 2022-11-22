@@ -1,6 +1,6 @@
 PROJECT_NAME           = "Práctica 3. Contenedores no lineales - Juego de las Letras"
-OUTPUT_DIRECTORY       = /home/dachival/Proyectos/ED/P3/cmake-build-debug/doc_doxygen/
-INPUT                  = /home/dachival/Proyectos/ED/P3/estudiante/include /home/dachival/Proyectos/ED/P3/estudiante/src /home/dachival/Proyectos/ED/P3/estudiante/doc
+OUTPUT_DIRECTORY       = /home/daniel/Proyectos/ED/P3/cmake-build-debug/doc_doxygen/
+INPUT                  = /home/daniel/Proyectos/ED/P3/estudiante/include /home/daniel/Proyectos/ED/P3/estudiante/src /home/daniel/Proyectos/ED/P3/estudiante/doc
 GENERATE_LATEX         = NO
-IMAGE_PATH             = /home/dachival/Proyectos/ED/P3/estudiante/doc
+IMAGE_PATH             = /home/daniel/Proyectos/ED/P3/estudiante/doc
 EXTRACT_PRIVATE	       = NO

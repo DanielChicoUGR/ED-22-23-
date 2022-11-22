@@ -53,10 +53,10 @@ RM = /app/extra/clion/bin/cmake/linux/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/dachival/Proyectos/ED/P3
+CMAKE_SOURCE_DIR = /home/daniel/Proyectos/ED/P3
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/dachival/Proyectos/ED/P3/cmake-build-debug
+CMAKE_BINARY_DIR = /home/daniel/Proyectos/ED/P3/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/bolsa_letras.dir/depend.make
@@ -72,44 +72,44 @@ include CMakeFiles/bolsa_letras.dir/flags.make
 CMakeFiles/bolsa_letras.dir/estudiante/src/bolsa_letras.cpp.o: CMakeFiles/bolsa_letras.dir/flags.make
 CMakeFiles/bolsa_letras.dir/estudiante/src/bolsa_letras.cpp.o: ../estudiante/src/bolsa_letras.cpp
 CMakeFiles/bolsa_letras.dir/estudiante/src/bolsa_letras.cpp.o: CMakeFiles/bolsa_letras.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dachival/Proyectos/ED/P3/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/bolsa_letras.dir/estudiante/src/bolsa_letras.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/bolsa_letras.dir/estudiante/src/bolsa_letras.cpp.o -MF CMakeFiles/bolsa_letras.dir/estudiante/src/bolsa_letras.cpp.o.d -o CMakeFiles/bolsa_letras.dir/estudiante/src/bolsa_letras.cpp.o -c /home/dachival/Proyectos/ED/P3/estudiante/src/bolsa_letras.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/daniel/Proyectos/ED/P3/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/bolsa_letras.dir/estudiante/src/bolsa_letras.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/bolsa_letras.dir/estudiante/src/bolsa_letras.cpp.o -MF CMakeFiles/bolsa_letras.dir/estudiante/src/bolsa_letras.cpp.o.d -o CMakeFiles/bolsa_letras.dir/estudiante/src/bolsa_letras.cpp.o -c /home/daniel/Proyectos/ED/P3/estudiante/src/bolsa_letras.cpp
 
 CMakeFiles/bolsa_letras.dir/estudiante/src/bolsa_letras.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/bolsa_letras.dir/estudiante/src/bolsa_letras.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/dachival/Proyectos/ED/P3/estudiante/src/bolsa_letras.cpp > CMakeFiles/bolsa_letras.dir/estudiante/src/bolsa_letras.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/daniel/Proyectos/ED/P3/estudiante/src/bolsa_letras.cpp > CMakeFiles/bolsa_letras.dir/estudiante/src/bolsa_letras.cpp.i
 
 CMakeFiles/bolsa_letras.dir/estudiante/src/bolsa_letras.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/bolsa_letras.dir/estudiante/src/bolsa_letras.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dachival/Proyectos/ED/P3/estudiante/src/bolsa_letras.cpp -o CMakeFiles/bolsa_letras.dir/estudiante/src/bolsa_letras.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/daniel/Proyectos/ED/P3/estudiante/src/bolsa_letras.cpp -o CMakeFiles/bolsa_letras.dir/estudiante/src/bolsa_letras.cpp.s
 
 CMakeFiles/bolsa_letras.dir/estudiante/src/letters_bag.cpp.o: CMakeFiles/bolsa_letras.dir/flags.make
 CMakeFiles/bolsa_letras.dir/estudiante/src/letters_bag.cpp.o: ../estudiante/src/letters_bag.cpp
 CMakeFiles/bolsa_letras.dir/estudiante/src/letters_bag.cpp.o: CMakeFiles/bolsa_letras.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dachival/Proyectos/ED/P3/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/bolsa_letras.dir/estudiante/src/letters_bag.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/bolsa_letras.dir/estudiante/src/letters_bag.cpp.o -MF CMakeFiles/bolsa_letras.dir/estudiante/src/letters_bag.cpp.o.d -o CMakeFiles/bolsa_letras.dir/estudiante/src/letters_bag.cpp.o -c /home/dachival/Proyectos/ED/P3/estudiante/src/letters_bag.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/daniel/Proyectos/ED/P3/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/bolsa_letras.dir/estudiante/src/letters_bag.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/bolsa_letras.dir/estudiante/src/letters_bag.cpp.o -MF CMakeFiles/bolsa_letras.dir/estudiante/src/letters_bag.cpp.o.d -o CMakeFiles/bolsa_letras.dir/estudiante/src/letters_bag.cpp.o -c /home/daniel/Proyectos/ED/P3/estudiante/src/letters_bag.cpp
 
 CMakeFiles/bolsa_letras.dir/estudiante/src/letters_bag.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/bolsa_letras.dir/estudiante/src/letters_bag.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/dachival/Proyectos/ED/P3/estudiante/src/letters_bag.cpp > CMakeFiles/bolsa_letras.dir/estudiante/src/letters_bag.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/daniel/Proyectos/ED/P3/estudiante/src/letters_bag.cpp > CMakeFiles/bolsa_letras.dir/estudiante/src/letters_bag.cpp.i
 
 CMakeFiles/bolsa_letras.dir/estudiante/src/letters_bag.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/bolsa_letras.dir/estudiante/src/letters_bag.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dachival/Proyectos/ED/P3/estudiante/src/letters_bag.cpp -o CMakeFiles/bolsa_letras.dir/estudiante/src/letters_bag.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/daniel/Proyectos/ED/P3/estudiante/src/letters_bag.cpp -o CMakeFiles/bolsa_letras.dir/estudiante/src/letters_bag.cpp.s
 
 CMakeFiles/bolsa_letras.dir/estudiante/src/letters_set.cpp.o: CMakeFiles/bolsa_letras.dir/flags.make
 CMakeFiles/bolsa_letras.dir/estudiante/src/letters_set.cpp.o: ../estudiante/src/letters_set.cpp
 CMakeFiles/bolsa_letras.dir/estudiante/src/letters_set.cpp.o: CMakeFiles/bolsa_letras.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dachival/Proyectos/ED/P3/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/bolsa_letras.dir/estudiante/src/letters_set.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/bolsa_letras.dir/estudiante/src/letters_set.cpp.o -MF CMakeFiles/bolsa_letras.dir/estudiante/src/letters_set.cpp.o.d -o CMakeFiles/bolsa_letras.dir/estudiante/src/letters_set.cpp.o -c /home/dachival/Proyectos/ED/P3/estudiante/src/letters_set.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/daniel/Proyectos/ED/P3/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/bolsa_letras.dir/estudiante/src/letters_set.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/bolsa_letras.dir/estudiante/src/letters_set.cpp.o -MF CMakeFiles/bolsa_letras.dir/estudiante/src/letters_set.cpp.o.d -o CMakeFiles/bolsa_letras.dir/estudiante/src/letters_set.cpp.o -c /home/daniel/Proyectos/ED/P3/estudiante/src/letters_set.cpp
 
 CMakeFiles/bolsa_letras.dir/estudiante/src/letters_set.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/bolsa_letras.dir/estudiante/src/letters_set.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/dachival/Proyectos/ED/P3/estudiante/src/letters_set.cpp > CMakeFiles/bolsa_letras.dir/estudiante/src/letters_set.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/daniel/Proyectos/ED/P3/estudiante/src/letters_set.cpp > CMakeFiles/bolsa_letras.dir/estudiante/src/letters_set.cpp.i
 
 CMakeFiles/bolsa_letras.dir/estudiante/src/letters_set.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/bolsa_letras.dir/estudiante/src/letters_set.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dachival/Proyectos/ED/P3/estudiante/src/letters_set.cpp -o CMakeFiles/bolsa_letras.dir/estudiante/src/letters_set.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/daniel/Proyectos/ED/P3/estudiante/src/letters_set.cpp -o CMakeFiles/bolsa_letras.dir/estudiante/src/letters_set.cpp.s
 
 # Object files for target bolsa_letras
 bolsa_letras_OBJECTS = \
@@ -125,7 +125,7 @@ bolsa_letras: CMakeFiles/bolsa_letras.dir/estudiante/src/letters_bag.cpp.o
 bolsa_letras: CMakeFiles/bolsa_letras.dir/estudiante/src/letters_set.cpp.o
 bolsa_letras: CMakeFiles/bolsa_letras.dir/build.make
 bolsa_letras: CMakeFiles/bolsa_letras.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/dachival/Proyectos/ED/P3/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable bolsa_letras"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/daniel/Proyectos/ED/P3/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable bolsa_letras"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/bolsa_letras.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -137,6 +137,6 @@ CMakeFiles/bolsa_letras.dir/clean:
 .PHONY : CMakeFiles/bolsa_letras.dir/clean
 
 CMakeFiles/bolsa_letras.dir/depend:
-	cd /home/dachival/Proyectos/ED/P3/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/dachival/Proyectos/ED/P3 /home/dachival/Proyectos/ED/P3 /home/dachival/Proyectos/ED/P3/cmake-build-debug /home/dachival/Proyectos/ED/P3/cmake-build-debug /home/dachival/Proyectos/ED/P3/cmake-build-debug/CMakeFiles/bolsa_letras.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/daniel/Proyectos/ED/P3/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/daniel/Proyectos/ED/P3 /home/daniel/Proyectos/ED/P3 /home/daniel/Proyectos/ED/P3/cmake-build-debug /home/daniel/Proyectos/ED/P3/cmake-build-debug /home/daniel/Proyectos/ED/P3/cmake-build-debug/CMakeFiles/bolsa_letras.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/bolsa_letras.dir/depend
 

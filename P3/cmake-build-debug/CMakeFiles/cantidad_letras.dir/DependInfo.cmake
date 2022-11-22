@@ -8,9 +8,9 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/dachival/Proyectos/ED/P3/estudiante/src/cantidad_letras.cpp" "CMakeFiles/cantidad_letras.dir/estudiante/src/cantidad_letras.cpp.o" "gcc" "CMakeFiles/cantidad_letras.dir/estudiante/src/cantidad_letras.cpp.o.d"
-  "/home/dachival/Proyectos/ED/P3/estudiante/src/dictionary.cpp" "CMakeFiles/cantidad_letras.dir/estudiante/src/dictionary.cpp.o" "gcc" "CMakeFiles/cantidad_letras.dir/estudiante/src/dictionary.cpp.o.d"
-  "/home/dachival/Proyectos/ED/P3/estudiante/src/letters_set.cpp" "CMakeFiles/cantidad_letras.dir/estudiante/src/letters_set.cpp.o" "gcc" "CMakeFiles/cantidad_letras.dir/estudiante/src/letters_set.cpp.o.d"
+  "/home/daniel/Proyectos/ED/P3/estudiante/src/cantidad_letras.cpp" "CMakeFiles/cantidad_letras.dir/estudiante/src/cantidad_letras.cpp.o" "gcc" "CMakeFiles/cantidad_letras.dir/estudiante/src/cantidad_letras.cpp.o.d"
+  "/home/daniel/Proyectos/ED/P3/estudiante/src/dictionary.cpp" "CMakeFiles/cantidad_letras.dir/estudiante/src/dictionary.cpp.o" "gcc" "CMakeFiles/cantidad_letras.dir/estudiante/src/dictionary.cpp.o.d"
+  "/home/daniel/Proyectos/ED/P3/estudiante/src/letters_set.cpp" "CMakeFiles/cantidad_letras.dir/estudiante/src/letters_set.cpp.o" "gcc" "CMakeFiles/cantidad_letras.dir/estudiante/src/letters_set.cpp.o.d"
   )
 
 # Targets to which this target links.

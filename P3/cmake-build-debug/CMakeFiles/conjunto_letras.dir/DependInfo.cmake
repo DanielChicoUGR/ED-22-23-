@@ -8,8 +8,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/dachival/Proyectos/ED/P3/estudiante/src/conjunto_letras.cpp" "CMakeFiles/conjunto_letras.dir/estudiante/src/conjunto_letras.cpp.o" "gcc" "CMakeFiles/conjunto_letras.dir/estudiante/src/conjunto_letras.cpp.o.d"
-  "/home/dachival/Proyectos/ED/P3/estudiante/src/letters_set.cpp" "CMakeFiles/conjunto_letras.dir/estudiante/src/letters_set.cpp.o" "gcc" "CMakeFiles/conjunto_letras.dir/estudiante/src/letters_set.cpp.o.d"
+  "/home/daniel/Proyectos/ED/P3/estudiante/src/conjunto_letras.cpp" "CMakeFiles/conjunto_letras.dir/estudiante/src/conjunto_letras.cpp.o" "gcc" "CMakeFiles/conjunto_letras.dir/estudiante/src/conjunto_letras.cpp.o.d"
+  "/home/daniel/Proyectos/ED/P3/estudiante/src/letters_set.cpp" "CMakeFiles/conjunto_letras.dir/estudiante/src/letters_set.cpp.o" "gcc" "CMakeFiles/conjunto_letras.dir/estudiante/src/letters_set.cpp.o.d"
   )
 
 # Targets to which this target links.

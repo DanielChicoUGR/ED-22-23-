@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/dachival/Proyectos/ED/P3/estudiante/src/bolsa.cpp" "CMakeFiles/bolsa.dir/estudiante/src/bolsa.cpp.o" "gcc" "CMakeFiles/bolsa.dir/estudiante/src/bolsa.cpp.o.d"
+  "/home/daniel/Proyectos/ED/P3/estudiante/src/bolsa.cpp" "CMakeFiles/bolsa.dir/estudiante/src/bolsa.cpp.o" "gcc" "CMakeFiles/bolsa.dir/estudiante/src/bolsa.cpp.o.d"
   )
 
 # Targets to which this target links.

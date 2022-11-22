@@ -8,8 +8,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/dachival/Proyectos/ED/P3/estudiante/src/dictionary.cpp" "CMakeFiles/palabras_longitud.dir/estudiante/src/dictionary.cpp.o" "gcc" "CMakeFiles/palabras_longitud.dir/estudiante/src/dictionary.cpp.o.d"
-  "/home/dachival/Proyectos/ED/P3/estudiante/src/palabras_longitud.cpp" "CMakeFiles/palabras_longitud.dir/estudiante/src/palabras_longitud.cpp.o" "gcc" "CMakeFiles/palabras_longitud.dir/estudiante/src/palabras_longitud.cpp.o.d"
+  "/home/daniel/Proyectos/ED/P3/estudiante/src/dictionary.cpp" "CMakeFiles/palabras_longitud.dir/estudiante/src/dictionary.cpp.o" "gcc" "CMakeFiles/palabras_longitud.dir/estudiante/src/dictionary.cpp.o.d"
+  "/home/daniel/Proyectos/ED/P3/estudiante/src/palabras_longitud.cpp" "CMakeFiles/palabras_longitud.dir/estudiante/src/palabras_longitud.cpp.o" "gcc" "CMakeFiles/palabras_longitud.dir/estudiante/src/palabras_longitud.cpp.o.d"
   )
 
 # Targets to which this target links.
