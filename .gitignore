@@ -33,4 +33,13 @@
 
 
 #cmake_folders
-*/cmake-bulild-debug/*
+P1/cmake-bulild-debug/*
+P2/cmake-bulild-debug/*
+P3/cmake-bulild-debug/*
+P4/cmake-bulild-debug/*
+P0/cmake-bulild-debug/*
+
+
+*.htl
+*.css
+*.js
