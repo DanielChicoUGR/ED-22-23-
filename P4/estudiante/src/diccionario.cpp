@@ -23,10 +23,11 @@ int main(int argc, char *argv[])
   Dictionary diccionario;
   f_diccionario >> diccionario;
 
-  cout<<"aaa"<<endl;
+
   for (Dictionary::iterator it = diccionario.begin(); it != diccionario.end(); ++it){
     cout << *it << endl;
   }
-
+  cout<<diccionario.getTotalUsages('b')<<endl;
+    f_diccionario.close();
   return 0;
 }

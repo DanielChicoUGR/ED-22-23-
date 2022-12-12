@@ -5,40 +5,35 @@
 
 LetterInfo &LetterSet::operator[](const char &ket) {
 
-    if(letters.find(ket) != letters.end()) return letters[ket];
+    if(letters.find(ket) == letters.end()) letters.insert({ket,{0,0}});
 
-    LetterInfo aux={0,0};
-
-    return aux;
+    return letters[ket];
 }
 
 
 LetterSet& LetterSet::operator=(const LetterSet &other)=default; //Al ser un operador de asignación trivial, el compilador recomineda usar el default.
-//LetterSet& LetterSet::operator=(const LetterSet &other) {
-//    letters=other.letters;
-//
-//    return *this;
-//}
+
 
 
 int LetterSet::getScore(const std::string &palabra) const {
-    int score=0;
-    for(auto letra:palabra) {
-        score+=letters.at(letra).score;
+    auto p=0;
+    for(auto item:palabra) {
+        if(letters.find(item)!=letters.end())
+            p+=letters.at(item).score;
     }
-    return score;
+    return p;
 }
 
 std::istream &operator>>(std::istream &is, LetterSet &cl) {
 
     std::string primera_linea;
-    std::getline(is, primera_linea);
+    std::getline(is, primera_linea,'\n');
 //    is>>primera_linea;
     char letra;
     int catidad,puntos;
     while(is){
         is>>letra>>catidad>>puntos;
-        letra=std::toupper(letra);
+        letra=std::tolower(letra);
         cl.letters.insert({letra, {catidad, puntos}});
     }
     return is;

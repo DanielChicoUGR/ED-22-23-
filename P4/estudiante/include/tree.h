@@ -319,8 +319,9 @@ public:
   preorder_iterator end_preorder();
 
   /**
-   * @brief Constant preorder iterator. Allows to iterate over the tree using preorder
+   * @brief Constant preorder iterator. Allows to iterate over the tree using preoletrarder
    */
+
   class const_preorder_iterator {
   public:
     const_preorder_iterator();
@@ -354,8 +355,8 @@ public:
       node father;
       node l_child;
       node r_sibling;
-      nodewrapper()
-	: father(0), l_child(0), r_sibling(0) {}
+      nodewrapper(): father(0), l_child(0), r_sibling(0) {}
+
       nodewrapper(const T &label) { this->label = label; }
     };
     nodewrapper * wrap;

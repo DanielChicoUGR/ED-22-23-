@@ -228,9 +228,9 @@ public:
         friend class Dictionary;
     };
 
-    iterator begin() ;
+    iterator begin() const;
 
-    iterator end() ;
+    iterator end() const;
 
     ///////////////////////////////////////////////// Letters Iterator /////////////////////////////////////////////////
 
@@ -258,6 +258,11 @@ public:
         node current_node;
         string current_word;
 
+        static bool existe_hi(node current);
+        static bool existe_herm(node current);
+        static  bool existe_padre(node current);
+
+        friend Dictionary;
     };
 
     possible_words_iterator possible_words_begin(vector<char> available_characters) const;

@@ -270,7 +270,7 @@ public:
     * @brief Devuelve un objeto de la clase iterador apuntando al primer elemento del Letterset
     * @return iterador
     */
-    __attribute__((unused)) inline const_iterator cbegin(){
+    __attribute__((unused)) inline const_iterator cbegin()const {
         const_iterator pos;
         pos.pos=letters.cbegin();
         return pos;
@@ -281,7 +281,7 @@ public:
      * @return iterador
     */
 
-    __attribute__((unused)) inline const_iterator cend(){
+    __attribute__((unused)) inline const_iterator cend()const {
         const_iterator pos;
         pos.pos=letters.cend();
         return pos;

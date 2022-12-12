@@ -9,13 +9,14 @@ using namespace std;
 
 int main(int argc, char *argv[])
 {
-/*  srand(time(NULL));
+ srand(time(NULL));
 
   ifstream dict_file(argv[1]);
   vector <char> available_letters;
   for (int i = 2; i < argc; ++i) {
     available_letters.push_back(std::tolower(argv[i][0]));
   }
+
   if(!dict_file){
     cerr << "No puedo abrir el fichero " << argv[1] << endl;
     return 0;
@@ -31,7 +32,7 @@ int main(int argc, char *argv[])
 
   for (auto word: available_words){
     cout << word << endl;
-  }*/
+  }
 
   return 0;
 }
