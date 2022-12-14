@@ -24,22 +24,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="62b86148-4a26-446f-b27f-04128dc30022" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/diccionario_mediano.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/diccionario_mediano.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/estudiante/include/dictionary.h" beforeDir="false" afterPath="$PROJECT_DIR$/estudiante/include/dictionary.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/estudiante/include/solver.h" beforeDir="false" afterPath="$PROJECT_DIR$/estudiante/include/solver.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/estudiante/include/tree.tpp" beforeDir="false" afterPath="$PROJECT_DIR$/estudiante/include/tree.tpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/estudiante/src/cantidad_letras.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/estudiante/src/cantidad_letras.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/estudiante/src/diccionario.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/estudiante/src/diccionario.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/estudiante/src/dictionary.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/estudiante/src/dictionary.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/estudiante/src/letters_bag.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/estudiante/src/letters_bag.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/estudiante/src/palabras_validas_diccionario.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/estudiante/src/palabras_validas_diccionario.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/estudiante/src/partida_letras.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/estudiante/src/partida_letras.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/estudiante/src/solver.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/estudiante/src/solver.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/submission.zip" beforeDir="false" afterPath="$PROJECT_DIR$/submission.zip" afterDir="false" />
-    </list>
+    <list default="true" id="62b86148-4a26-446f-b27f-04128dc30022" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -133,7 +118,7 @@
       <workItem from="1671015206633" duration="293000" />
       <workItem from="1671015507093" duration="268000" />
       <workItem from="1671015783764" duration="1294000" />
-      <workItem from="1671017084921" duration="5808000" />
+      <workItem from="1671017084921" duration="5912000" />
     </task>
     <servers />
   </component>
