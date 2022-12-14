@@ -10,7 +10,7 @@
 
 
 
-//TODO: Arreglar para que el LetterSet sea CTE
+
 
 
 LettersBag::LettersBag(LetterSet &letterSet) {

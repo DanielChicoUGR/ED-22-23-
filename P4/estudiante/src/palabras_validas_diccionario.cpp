@@ -34,5 +34,7 @@ int main(int argc, char *argv[])
     cout << word << endl;
   }
 
+  dict_file.close();
+
   return 0;
 }

@@ -8,8 +8,7 @@
 #include "dictionary.h"
 #include "letters_set.h"
 #include "letters_bag.h"
-#include <functional>
-#include <functional>
+
 
 
 class Solver {
@@ -49,6 +48,8 @@ public:
      */
     std::pair<vector<string>,int> getSolutions(const std::vector<char>avalible_letters,bool score_game)const;
 
+
+	std::pair<vector<string>,int> getSolucioneseficiente(const std::vector<char> avalible_letters, bool score_game) const;
 private:
     /**
      * devuelve una solución para el modo de juego basado en la puntuación de las palabras
@@ -64,6 +65,22 @@ private:
      */
 
     std::pair<vector<string>,int> score_longitud(const std::vector<char>avalible_letters)const;
+
+
+	/**
+     * devuelve una solución para el modo de juego basado en la puntuación de las palabras
+     * @param avalible_letters Conjunto de letras sobre las que formar una solución
+     * @return par <vector<string>,int>, con el vector de palabras se constituyen las mejores soluciones (puede haber empate) y la puntuación que obtienen.
+     */
+	std::pair<vector<string>,int> score_puntuacion_eficiente(const std::vector<char>&avalible_letters)const;
+
+	/**
+	 * devuelve una solución para el modo de juego basado en la longitud de las palabras
+	 * @param avalible_letters Conjunto de letras sobre las que formar una solución
+	 * @return par <vector<string>,int>, con el vector de palabras se constituyen las mejores soluciones (puede haber empate) y la puntuación que obtienen.
+	 */
+
+	std::pair<vector<string>,int> score_longitud_eficiente(const std::vector<char>&avalible_letters)const;
 
 
     /**

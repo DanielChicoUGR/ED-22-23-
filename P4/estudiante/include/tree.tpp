@@ -262,22 +262,35 @@ typename tree<T>::preorder_iterator &
 tree<T>::preorder_iterator::operator++() {
   if (!this->current.is_null()) {
     if (!this->current.left_child().is_null()) {
+
       this->current = this->current.left_child();
       this->level++;
+
     } else if (!this->current.right_sibling().is_null()) {
-      this->current = this->current.right_sibling();
+
+        this->current = this->current.right_sibling();
+
     } else {
+
       while (!this->current.parent().is_null() &&
-	     (this->current.parent().right_sibling().is_null() || this->current.parent().right_sibling() == this->current)){
+              (this->current.parent().right_sibling().is_null() || this->current.parent().right_sibling() == this->current))
+      {
+
           this->current = this->current.parent();
           this->level--;
-              }
-              if (this->current.parent().is_null()){
+
+      }
+      if (this->current.parent().is_null()){
+
           this->current = node();
-              } else {
+
+      } else {
+
           this->current = this->current.parent().right_sibling();
           this->level--;
-              }
+
+      }
+
     }
   }
   return *this;

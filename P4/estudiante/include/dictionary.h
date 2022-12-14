@@ -207,20 +207,54 @@ public:
 
     public:
 
-        iterator();
+        /**
+         * @brief Constructor por defecto de la clase iterador.
+         */
+         iterator();
 
+         /**
+          * @brief constructor por parametros.
+          * @param iter Iterador de un \e TDA \e Tree parametrizado con TDA char_info
+          */
          explicit iterator( tree<char_info>::const_preorder_iterator &iter);
 
-        iterator(iterator const &other);
+         /**
+          * @brief Construtor de copia
+          * @param other Iterador a copiar
+          */
+         iterator(iterator const &other);
 
+         /**
+          * @brief Operador de seleccion
+          * @return String a la palabra a la que el iterador apunta.
+          */
         std::string operator*();
 
+        /**
+         * @brief Operador de incremento. Modifica su estado interno para que apunte a la siguiente palabra en el diccionario
+         * @return Referencia a si mismo.
+         */
         iterator &operator++();
-
+        /**
+         * @brief Operador de igualdad. Comprueba que los iteradores apuntan a la misma "palabra"
+         * (no es asi exactamente pero no deberia de haber mas info sobre la implementación no?)
+         * @param other Iterador a comparar
+         * @return True si son iguales, false en otro caso
+         */
         bool operator==(const iterator &other);
 
+        /**
+         * @brief Operador de desigualdad. Comprueba que los iteradores apuntan a palabras distintas
+         * @param other Iterador a comparar
+         * @return True si NO son iguales, false en otro caso
+         */
         bool operator!=(const iterator &other);
 
+        /**
+         * @brief Operador de asignación, copia el contenido de \e other en \e this
+         * @param other Iterador a copiar
+         * @return Referencia a \e this
+         */
         iterator operator=(const iterator &other);
 
 //        iterator(iterator &other);
@@ -228,28 +262,68 @@ public:
         friend class Dictionary;
     };
 
+    /**
+     *
+     * @return Iterador al inicio del diccionario con los valores internos inicializados para dicho caso
+     */
     iterator begin() const;
 
+    /**
+     *
+     * @return Iterador al final del diccionario con los valores internos inicializados para dicho caso.
+     */
     iterator end() const;
 
     ///////////////////////////////////////////////// Letters Iterator /////////////////////////////////////////////////
 
     class possible_words_iterator {
     public:
+        /**
+         * @brief Constructor por defecto
+         */
         possible_words_iterator();
 
+        /**
+         * @brief Constructor por parametros
+         * @param current_node Nodo perteneciente a un Tree sober el que se quiere empezar a iterar
+         * @param available_letters Conjunto de letras sobre las que se quiere trabajar
+         */
         possible_words_iterator(node current_node, vector<char> available_letters);
 
+        /**
+         * @brief Constructor de copia
+         * @param other Iterador a copiar
+         */
         possible_words_iterator(const possible_words_iterator &other);
 
+        /**
+         * @brief Operador de asignación. Copia el contenido de \e other en \e this
+         * @param other Iterador a copiar
+         * @return Referencia a this
+         */
         possible_words_iterator &operator=(const possible_words_iterator &other);
-
+        /**
+         * @brief Operador de igualdad. Comprueba si se esta apuntando a la misma palabra
+         * @param other Iterador a comparar.
+         * @return True si son iguales, False en otro caso
+         */
         bool operator==(const possible_words_iterator &other) const;
-
+        /**
+         *@brief @brief Operador de desigualdad. Comprueba si NO estan apuntando a la misma palabra
+         * @param other Iterador a comparar
+         * @return True si NO son iguales, False en otro caso
+         */
         bool operator!=(const possible_words_iterator &other) const;
 
+        /**
+         * @brief Operador de incremento. "mueve" el iterador hasta la proxima palabra formable con las letras almacenadas
+         * @return Referencia a this
+         */
         possible_words_iterator &operator++();
-
+        /**
+         *
+         * @return Palabra a la que está apuntando el iterador en el momento de la llamada.
+         */
         std::string operator*() const;
 
     private:
@@ -258,6 +332,13 @@ public:
         node current_node;
         string current_word;
 
+        bool gestion_hi(node nodo);
+
+        bool gestion_hermd(node nodo);
+
+        void gestion_backtrack();
+
+
         static bool existe_hi(node current);
         static bool existe_herm(node current);
         static  bool existe_padre(node current);
@@ -265,8 +346,16 @@ public:
         friend Dictionary;
     };
 
-    possible_words_iterator possible_words_begin(vector<char> available_characters) const;
+    /**
+     * @param available_characters Conjunto de letras sobre las que se quieren buscar palabras.
+     * @return Devuelve un iterador al inicio del diccionario y almacena los caracteres pasados por  parametros para iterar siolo por las palabras formables.
+     */
+    possible_words_iterator possible_words_begin(vector<char> &available_characters) const;
 
+    /**
+     *
+     * @return Devuelve un iterador al final del Diccionario.
+     */
     possible_words_iterator possible_words_end() const;
 };
 

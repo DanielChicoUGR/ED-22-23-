@@ -16,7 +16,7 @@ int main(int argc, char *argv[])
   ifstream f_diccionario(argv[1]);
 
   if(!f_diccionario){
-    cout << "No puedo abrir el fichero " << argv[1] << endl;
+    cerr << "No puedo abrir el fichero " << argv[1] << endl;
     return 0;
   }
 
@@ -27,7 +27,7 @@ int main(int argc, char *argv[])
   for (Dictionary::iterator it = diccionario.begin(); it != diccionario.end(); ++it){
     cout << *it << endl;
   }
-  cout<<diccionario.getTotalUsages('b')<<endl;
+
     f_diccionario.close();
   return 0;
 }

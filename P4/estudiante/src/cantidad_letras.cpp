@@ -28,10 +28,14 @@ int main(int argc, char **argv) {
     dic>>diccionario;
 
     letras>>letters;
-    std::cout<<"letra\tUsos\tOcurrencias\n";
+    std::cout<<"\nletra\tUsos\tOcurrencias\n";
     for(auto &&letra:letters){
-        std::cout<<letra.first<<"\t\t"<<diccionario.getTotalUsages(letra.first)<<"\t"<<diccionario.getOccurrences(letra.first)<<std::endl;
+        std::cout<<letra.first<<"\t"<<diccionario.getTotalUsages(letra.first)<<"\t"<<diccionario.getOccurrences(letra.first)<<std::endl;
     }
+
+    dic.close();
+
+    letras.close();
 
 
 
