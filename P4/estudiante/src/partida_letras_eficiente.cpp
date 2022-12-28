@@ -67,22 +67,23 @@ int main(int argc, char *argv[])
 
 
 //  std::vector<char> letras_partida={'A' ,'M' ,'A' ,'r' ,'o' ,'c' ,'b' ,'e' ,'u' };
+//	std::vector<char> letras_partida={'c' ,'s' ,'u' ,'c' ,'y' ,'e' ,'s' ,'e' ,'i'};
 
 
   std::for_each(letras_partida.begin(),letras_partida.end(),[](char & x){ if(x<='Z')  x= std::tolower(x);});
 
   auto sol=s.getSolucioneseficiente(letras_partida, modo_j == 'p');
 
-  std::cout<<"\nLETRAS DISPONIBLES:\n";
+  std::cout<<"LETRAS DISPONIBLES:\n";
   for(auto l:letras_partida)
-	std::cout<<char(toupper(l))<<" ";
+	std::cout<<l<<" ";
 
-  std::cout<<"\nSOLUCIONES\n";
+  std::cout<<"\nSOLUCIONES:\n";
 
 
-  for(auto s:sol.first)
-	std::cout<<s<<std::endl;
-  std::cout<<"PUNTUACION\n"<<sol.second<<std::endl;
+  for(auto solucion:sol.first)
+	std::cout<<solucion<<std::endl;
+  std::cout<<"PUNTUACION:\n"<<sol.second<<std::endl;
 
   return 0;
 }

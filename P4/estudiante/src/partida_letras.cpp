@@ -73,16 +73,16 @@ int main(int argc, char *argv[])
 
     auto sol=s.getSolutions(letras_partida, modo_j == 'p');
 
-    std::cout<<"\nLETRAS DISPONIBLES:\n";
+    std::cout<<"LETRAS DISPONIBLES:\n";
     for(auto l:letras_partida)
-        std::cout<<char(toupper(l))<<" ";
+        std::cout<<l<<" ";
 
-    std::cout<<"\nSOLUCIONES\n";
+    std::cout<<"\nSOLUCIONES:\n";
 
 
     for(auto s:sol.first)
         std::cout<<s<<std::endl;
-    std::cout<<"PUNTUACION\n"<<sol.second<<std::endl;
+    std::cout<<"PUNTUACION:\n"<<sol.second<<std::endl;
 
     return 0;
 }

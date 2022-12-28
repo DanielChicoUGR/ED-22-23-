@@ -25,13 +25,17 @@ int main(int argc, char *argv[])
   Dictionary dictionary;
   dict_file >> dictionary;
 
+#ifdef Debug
+  std::cout<<dictionary<<std::endl;
+#endif
   vector <string> available_words;
   for (auto it = dictionary.possible_words_begin(available_letters); it != dictionary.possible_words_end(); ++it) {
-    available_words.push_back(*it);
+
+	cout << *it << endl;
   }
 
   for (auto word: available_words){
-    cout << word << endl;
+
   }
 
   dict_file.close();

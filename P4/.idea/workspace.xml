@@ -24,7 +24,22 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="62b86148-4a26-446f-b27f-04128dc30022" name="Changes" comment="" />
+    <list default="true" id="62b86148-4a26-446f-b27f-04128dc30022" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/P4.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compilerexplorer.settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/estudiante/src/cantidad_letras.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/estudiante/src/cantidad_letras.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/estudiante/src/dictionary.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/estudiante/src/dictionary.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/estudiante/src/palabras_validas_diccionario.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/estudiante/src/palabras_validas_diccionario.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/estudiante/src/partida_letras.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/estudiante/src/partida_letras.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/estudiante/src/partida_letras_eficiente.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/estudiante/src/partida_letras_eficiente.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/submission.zip" beforeDir="false" afterPath="$PROJECT_DIR$/submission.zip" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -45,25 +60,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.cidr.known.project.marker": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "cf.first.check.clang-format": "false",
-    "cidr.known.project.marker": "true",
-    "last_opened_file_path": "/home/daniel/Proyectos/ED/P4",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/daniel/Proyectos/ED/P4&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.rainbow.brackets&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
-  <component name="RunManager" selected="CMake Application.partida_letras_eficiente">
+}</component>
+  <component name="RunManager" selected="CMake Application.palabras_validas_diccionario">
     <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="CLION.EXTERNAL.BUILD" enabled="true" />
@@ -79,7 +94,7 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="palabras_validas_diccionario" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="data/diccionario.txt A M A r o o l c l" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" WORKING_DIR="file://$ContentRoot$" PASS_PARENT_ENVS_2="true" PROJECT_NAME="p04_juego_letras" TARGET_NAME="palabras_validas_diccionario" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="p04_juego_letras" RUN_TARGET_NAME="palabras_validas_diccionario">
+    <configuration name="palabras_validas_diccionario" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="data/diccionario_mini.txt c a l o z" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" WORKING_DIR="file://$ContentRoot$" PASS_PARENT_ENVS_2="true" PROJECT_NAME="p04_juego_letras" TARGET_NAME="palabras_validas_diccionario" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="p04_juego_letras" RUN_TARGET_NAME="palabras_validas_diccionario">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -89,7 +104,7 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="partida_letras_eficiente" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="data/diccionario_mediano.txt data/letras_mini.txt l 9" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" WORKING_DIR="file://$ContentRoot$" PASS_PARENT_ENVS_2="true" PROJECT_NAME="p04_juego_letras" TARGET_NAME="partida_letras_eficiente" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="p04_juego_letras" RUN_TARGET_NAME="partida_letras_eficiente">
+    <configuration name="partida_letras_eficiente" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="data/diccionario_medio.txt data/letras.txt l 9" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" WORKING_DIR="file://$ContentRoot$" PASS_PARENT_ENVS_2="true" PROJECT_NAME="p04_juego_letras" TARGET_NAME="partida_letras_eficiente" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="p04_juego_letras" RUN_TARGET_NAME="partida_letras_eficiente">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -118,7 +133,13 @@
       <workItem from="1671015206633" duration="293000" />
       <workItem from="1671015507093" duration="268000" />
       <workItem from="1671015783764" duration="1294000" />
-      <workItem from="1671017084921" duration="5912000" />
+      <workItem from="1671017084921" duration="6220000" />
+      <workItem from="1671094672532" duration="2355000" />
+      <workItem from="1671384072392" duration="777000" />
+      <workItem from="1671384856228" duration="3347000" />
+      <workItem from="1671711426220" duration="1213000" />
+      <workItem from="1671712699505" duration="1576000" />
+      <workItem from="1672246920406" duration="186000" />
     </task>
     <servers />
   </component>
@@ -175,158 +196,188 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/estudiante/src/palabras_validas_diccionario.cpp</url>
-          <line>27</line>
+          <line>30</line>
           <option name="timeStamp" value="16" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/estudiante/src/palabras_validas_diccionario.cpp</url>
-          <line>29</line>
+          <line>33</line>
           <option name="timeStamp" value="37" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/estudiante/src/dictionary.cpp</url>
-          <line>448</line>
+          <line>452</line>
           <option name="timeStamp" value="40" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/estudiante/src/dictionary.cpp</url>
-          <line>350</line>
+          <line>355</line>
           <option name="timeStamp" value="48" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/estudiante/src/dictionary.cpp</url>
-          <line>353</line>
+          <line>358</line>
           <option name="timeStamp" value="49" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/estudiante/src/dictionary.cpp</url>
-          <line>356</line>
+          <line>361</line>
           <option name="timeStamp" value="50" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/estudiante/src/dictionary.cpp</url>
-          <line>357</line>
+          <line>362</line>
           <option name="timeStamp" value="51" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/estudiante/src/dictionary.cpp</url>
-          <line>359</line>
+          <line>364</line>
           <option name="timeStamp" value="52" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/estudiante/src/dictionary.cpp</url>
-          <line>363</line>
+          <line>368</line>
           <option name="timeStamp" value="56" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/estudiante/src/dictionary.cpp</url>
-          <line>415</line>
+          <line>419</line>
           <option name="timeStamp" value="58" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/estudiante/src/dictionary.cpp</url>
-          <line>417</line>
+          <line>421</line>
           <option name="timeStamp" value="59" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/estudiante/src/dictionary.cpp</url>
-          <line>430</line>
+          <line>434</line>
           <option name="timeStamp" value="60" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/estudiante/src/dictionary.cpp</url>
-          <line>367</line>
+          <line>372</line>
           <option name="timeStamp" value="63" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/estudiante/src/dictionary.cpp</url>
-          <line>368</line>
+          <line>373</line>
           <option name="timeStamp" value="64" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/estudiante/src/dictionary.cpp</url>
-          <line>371</line>
+          <line>376</line>
           <option name="timeStamp" value="65" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/estudiante/src/dictionary.cpp</url>
-          <line>361</line>
+          <line>366</line>
           <option name="timeStamp" value="66" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/estudiante/src/dictionary.cpp</url>
-          <line>435</line>
+          <line>439</line>
           <option name="timeStamp" value="68" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/estudiante/src/dictionary.cpp</url>
-          <line>458</line>
+          <line>462</line>
           <option name="timeStamp" value="70" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/estudiante/src/dictionary.cpp</url>
-          <line>373</line>
+          <line>378</line>
           <option name="timeStamp" value="71" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/estudiante/src/dictionary.cpp</url>
-          <line>375</line>
+          <line>380</line>
           <option name="timeStamp" value="72" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/estudiante/src/dictionary.cpp</url>
-          <line>376</line>
+          <line>381</line>
           <option name="timeStamp" value="73" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/estudiante/src/dictionary.cpp</url>
-          <line>378</line>
+          <line>383</line>
           <option name="timeStamp" value="75" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/estudiante/src/dictionary.cpp</url>
-          <line>380</line>
+          <line>385</line>
           <option name="timeStamp" value="77" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/estudiante/src/dictionary.cpp</url>
-          <line>384</line>
+          <line>389</line>
           <option name="timeStamp" value="80" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/estudiante/src/dictionary.cpp</url>
-          <line>386</line>
+          <line>391</line>
           <option name="timeStamp" value="81" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/estudiante/src/dictionary.cpp</url>
-          <line>390</line>
+          <line>395</line>
           <option name="timeStamp" value="82" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/estudiante/src/dictionary.cpp</url>
-          <line>393</line>
+          <line>398</line>
           <option name="timeStamp" value="83" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/estudiante/src/dictionary.cpp</url>
-          <line>394</line>
+          <line>399</line>
           <option name="timeStamp" value="84" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/estudiante/src/dictionary.cpp</url>
-          <line>397</line>
+          <line>401</line>
           <option name="timeStamp" value="85" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/estudiante/src/dictionary.cpp</url>
-          <line>402</line>
+          <line>406</line>
           <option name="timeStamp" value="87" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/estudiante/src/dictionary.cpp</url>
-          <line>405</line>
+          <line>409</line>
           <option name="timeStamp" value="88" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/estudiante/src/dictionary.cpp</url>
+          <line>431</line>
+          <option name="timeStamp" value="89" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/estudiante/src/dictionary.cpp</url>
+          <line>433</line>
+          <option name="timeStamp" value="90" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/estudiante/src/dictionary.cpp</url>
+          <line>412</line>
+          <option name="timeStamp" value="91" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/estudiante/src/dictionary.cpp</url>
+          <line>414</line>
+          <option name="timeStamp" value="92" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/estudiante/src/partida_letras_eficiente.cpp</url>
+          <line>80</line>
+          <option name="timeStamp" value="93" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/estudiante/src/dictionary.cpp</url>
+          <line>352</line>
+          <option name="timeStamp" value="94" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
