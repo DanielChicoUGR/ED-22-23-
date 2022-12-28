@@ -32,13 +32,13 @@
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/estudiante/src/cantidad_letras.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/estudiante/src/cantidad_letras.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/estudiante/src/dictionary.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/estudiante/src/dictionary.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/estudiante/src/palabras_validas_diccionario.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/estudiante/src/palabras_validas_diccionario.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/estudiante/src/partida_letras.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/estudiante/src/partida_letras.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/estudiante/src/partida_letras_eficiente.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/estudiante/src/partida_letras_eficiente.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/submission.zip" beforeDir="false" afterPath="$PROJECT_DIR$/submission.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/submission.zip" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,9 +79,9 @@
   }
 }</component>
   <component name="RunManager" selected="CMake Application.palabras_validas_diccionario">
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
     <configuration name="cantidad_letras" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="data/diccionario.txt data/letras.txt" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" WORKING_DIR="file://$ContentRoot$" PASS_PARENT_ENVS_2="true" PROJECT_NAME="p04_juego_letras" TARGET_NAME="cantidad_letras" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="p04_juego_letras" RUN_TARGET_NAME="cantidad_letras">
@@ -140,6 +140,7 @@
       <workItem from="1671711426220" duration="1213000" />
       <workItem from="1671712699505" duration="1576000" />
       <workItem from="1672246920406" duration="186000" />
+      <workItem from="1672247109391" duration="65000" />
     </task>
     <servers />
   </component>
