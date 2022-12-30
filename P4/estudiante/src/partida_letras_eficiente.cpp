@@ -63,11 +63,19 @@ int main(int argc, char *argv[])
 
   LettersBag bag(letterset);
 
-    auto letras_partida=bag.extractLetters(n_letras);
 
 
-//  std::vector<char> letras_partida={'A' ,'M' ,'A' ,'r' ,'o' ,'c' ,'b' ,'e' ,'u' };
-//	std::vector<char> letras_partida={'c' ,'s' ,'u' ,'c' ,'y' ,'e' ,'s' ,'e' ,'i'};
+#ifdef NDEBUG
+  std::vector<char> letras_partida={'o' ,'c' ,'f' ,'t' ,'a' ,'d' ,'s' ,'v' ,'e' };
+//  	std::vector<char> letras_partida={'c' ,'s' ,'u' ,'c' ,'y' ,'e' ,'s' ,'e' ,'i'};
+
+#else
+
+      auto letras_partida=bag.extractLetters(n_letras);
+#endif
+
+
+
 
 
   std::for_each(letras_partida.begin(),letras_partida.end(),[](char & x){ if(x<='Z')  x= std::tolower(x);});

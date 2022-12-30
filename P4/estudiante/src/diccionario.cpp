@@ -22,12 +22,13 @@ int main(int argc, char *argv[])
 
   Dictionary diccionario;
   f_diccionario >> diccionario;
+  f_diccionario.close();
 
 
-  for (Dictionary::iterator it = diccionario.begin(); it != diccionario.end(); ++it){
-    cout << *it << endl;
-  }
 
-    f_diccionario.close();
+  for(const auto& palabra:diccionario)  cout<<palabra<<endl;
+
+
+
   return 0;
 }

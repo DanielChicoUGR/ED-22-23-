@@ -7,7 +7,7 @@
 
 
 
-std::pair<vector<string>, int> Solver::getSolutions(const std::vector<char> avalible_letters, bool score_game) const{
+std::pair<vector<string>, int> Solver::getSolutions(const std::vector<char> &avalible_letters, bool score_game) const{
     std::pair<vector<string>, int> ret;
     if(score_game)
          ret=score_puntuacion(avalible_letters);
@@ -21,7 +21,7 @@ std::pair<vector<string>, int> Solver::getSolutions(const std::vector<char> aval
 }
 
 
-std::pair<vector<string>, int> Solver::score_puntuacion(const std::vector<char> avalible_letters)const {
+std::pair<vector<string>, int> Solver::score_puntuacion(const std::vector<char> &avalible_letters)const {
     std::pair<vector<string>, int> ret={{""},0};
 
     for(auto palabra:dict){
@@ -36,7 +36,7 @@ std::pair<vector<string>, int> Solver::score_puntuacion(const std::vector<char> 
     return ret;
 }
 
-std::pair<vector<string>, int> Solver::score_longitud(const std::vector<char> avalible_letters) const{
+std::pair<vector<string>, int> Solver::score_longitud(const std::vector<char>& avalible_letters) const{
     std::pair<vector<string>, int> ret;
     ret.first={};
     ret.second=-1;
@@ -86,7 +86,7 @@ void Solver::comprueba_palabra(pair<vector<string>, int> &solucion, const vector
 
 }
 
-std::pair<vector<string>, int> Solver::getSolucioneseficiente(const std::vector<char> avalible_letters, bool score_game) const {
+std::pair<vector<string>, int> Solver::getSolucioneseficiente(const std::vector<char> &avalible_letters, bool score_game) const {
   	std::pair<vector<string>, int> ret;
   	if(score_game)
 		ret=score_puntuacion_eficiente(avalible_letters);
@@ -128,5 +128,7 @@ std::pair<vector<string>, int> Solver::score_puntuacion_eficiente(const std::vec
 
   	return ret;
 }
-
-
+Solver::Solver(Solver &other) {
+        this->dict=other.dict;
+        this->ls=other.ls;
+}

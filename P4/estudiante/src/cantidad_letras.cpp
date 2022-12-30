@@ -25,7 +25,10 @@ int main(int argc, char **argv) {
 
     LetterSet letters;
 
+#ifdef NDEBUG
     dic>>diccionario;
+#endif
+
 
     letras>>letters;
     std::cout<<"Letra\tUsos\tOcurrencias\n";

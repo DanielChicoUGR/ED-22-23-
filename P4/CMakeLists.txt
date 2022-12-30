@@ -11,7 +11,7 @@ if (EXISTS ${CMAKE_SOURCE_DIR}/${BASE_FOLDER}/src/cantidad_letras.cpp)
   add_executable(cantidad_letras
     ${BASE_FOLDER}/src/cantidad_letras.cpp
     ${BASE_FOLDER}/src/dictionary.cpp
-    ${BASE_FOLDER}/src/letters_set.cpp estudiante/src/cantidad_letras.cpp)
+    ${BASE_FOLDER}/src/letters_set.cpp)
 endif()
 
 if (EXISTS ${CMAKE_SOURCE_DIR}/${BASE_FOLDER}/src/diccionario.cpp)
@@ -26,7 +26,7 @@ if (EXISTS ${CMAKE_SOURCE_DIR}/${BASE_FOLDER}/src/partida_letras.cpp)
     ${BASE_FOLDER}/src/letters_set.cpp
     ${BASE_FOLDER}/src/letters_bag.cpp
     ${BASE_FOLDER}/src/solver.cpp
-    ${BASE_FOLDER}/src/dictionary.cpp estudiante/src/partida_letras.cpp)
+    ${BASE_FOLDER}/src/dictionary.cpp)
 endif()
 
 if (EXISTS ${CMAKE_SOURCE_DIR}/${BASE_FOLDER}/src/palabras_validas_diccionario.cpp)
@@ -41,7 +41,7 @@ if (EXISTS ${CMAKE_SOURCE_DIR}/${BASE_FOLDER}/src/partida_letras_eficiente.cpp)
             ${BASE_FOLDER}/src/letters_set.cpp
             ${BASE_FOLDER}/src/letters_bag.cpp
             ${BASE_FOLDER}/src/solver.cpp
-            ${BASE_FOLDER}/src/dictionary.cpp estudiante/src/partida_letras_eficiente.cpp)
+            ${BASE_FOLDER}/src/dictionary.cpp)
 endif()
 
 if (EXISTS ${CMAKE_SOURCE_DIR}/${BASE_FOLDER}/src/partida_letras_profesor.cpp)
@@ -51,6 +51,21 @@ if (EXISTS ${CMAKE_SOURCE_DIR}/${BASE_FOLDER}/src/partida_letras_profesor.cpp)
     ${BASE_FOLDER}/src/letters_bag.cpp
     ${BASE_FOLDER}/src/solver.cpp
     ${BASE_FOLDER}/src/dictionary.cpp)
+endif()
+
+if (EXISTS ${CMAKE_SOURCE_DIR}/${BASE_FOLDER}/src/test_eficiencia.cpp)
+    find_package(OpenMP)
+    if (OPENMP_FOUND)
+        set (CMAKE_C_FLAGS "${CMAKE_C_FLAGS} ${OpenMP_C_FLAGS}")
+        set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${OpenMP_CXX_FLAGS}")
+        set (CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} ${OpenMP_EXE_LINKER_FLAGS}")
+    endif()
+    add_executable(test_eficiencia
+            ${BASE_FOLDER}/src/test_eficiencia.cpp
+            ${BASE_FOLDER}/src/letters_set.cpp
+            ${BASE_FOLDER}/src/letters_bag.cpp
+            ${BASE_FOLDER}/src/solver.cpp
+            ${BASE_FOLDER}/src/dictionary.cpp)
 endif()
 
 # check if Doxygen is installed

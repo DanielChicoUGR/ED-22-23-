@@ -255,7 +255,7 @@ public:
          * @param other Iterador a copiar
          * @return Referencia a \e this
          */
-        iterator operator=(const iterator &other);
+        iterator &operator=(const iterator &other);
 
 //        iterator(iterator &other);
 
@@ -288,7 +288,7 @@ public:
          * @param current_node Nodo perteneciente a un Tree sober el que se quiere empezar a iterar
          * @param available_letters Conjunto de letras sobre las que se quiere trabajar
          */
-        possible_words_iterator(node current_node, vector<char> available_letters);
+        possible_words_iterator(node current_node, const vector<char>& available_letters);
 
         /**
          * @brief Constructor de copia
@@ -328,7 +328,7 @@ public:
 
     private:
         multiset<char> available_letters;
-        int level;
+        int level{};
         node current_node;
         string current_word;
 

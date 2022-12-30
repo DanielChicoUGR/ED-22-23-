@@ -63,10 +63,14 @@ int main(int argc, char *argv[])
 
     LettersBag bag(letterset);
 
-    auto letras_partida=bag.extractLetters(n_letras);
+    #ifdef NDEBUG
+        std::vector<char> letras_partida={'o' ,'c' ,'f' ,'t' ,'a' ,'d' ,'s' ,'v' ,'e' };
+    //  	std::vector<char> letras_partida={'c' ,'s' ,'u' ,'c' ,'y' ,'e' ,'s' ,'e' ,'i'};
 
+    #else
 
-//    std::vector<char> letras_partida={'A' ,'M' ,'A' ,'r' ,'o' ,'c' ,'b' ,'e' ,'u' };
+        auto letras_partida=bag.extractLetters(n_letras);
+    #endif
 
 
     std::for_each(letras_partida.begin(),letras_partida.end(),[](char & x){ if(x<='Z')  x= std::tolower(x);});
@@ -83,6 +87,9 @@ int main(int argc, char *argv[])
     for(auto s:sol.first)
         std::cout<<s<<std::endl;
     std::cout<<"PUNTUACION:\n"<<sol.second<<std::endl;
+
+    f_diccionario.close();
+    f_letras.close();
 
     return 0;
 }

@@ -2,9 +2,18 @@
 
 # Introducción
 
-A RELLENAR POR EL ESTUDIANTE
+En esta práctica se propone una nueva implementación del TDA diccionario implementada en la practica passada. con el objetivo de mejorar su complegidad en memoria aprovechandonos
+de las propiedades de los árboles LR (Left child Right sibbling).
+Con esta nueva implementación se pretende evitar tener que almacenar particulas de palabras que repiten mucho, al estar estas almacenadas dentro del arbol, comparten parte
+del camino a la raiz, al recorrer cualquier camino desde la raiz, ira generando las palabras de manera automática. El recorrido en inorden de este arbol nos devuelve las palabras una a una
+en orden alfabético.
+
 
 # Ejecutables
+
+## Diccionario
+
+##Cantidad Letras
 
 A RELLENAR POR EL ESTUDIANTE
 

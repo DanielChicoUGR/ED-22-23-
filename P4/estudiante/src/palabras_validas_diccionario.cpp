@@ -1,7 +1,8 @@
-#include <iostream>
+#include <csignal>
 #include <fstream>
-#include <vector>
+#include <iostream>
 #include <string>
+#include <vector>
 
 #include "dictionary.h"
 
@@ -24,21 +25,21 @@ int main(int argc, char *argv[])
 
   Dictionary dictionary;
   dict_file >> dictionary;
+  dict_file.close();
 
-#ifdef Debug
-  std::cout<<dictionary<<std::endl;
+#ifdef NDEBUG
+    std::cout<<dictionary<<endl;
 #endif
-  vector <string> available_words;
-  for (auto it = dictionary.possible_words_begin(available_letters); it != dictionary.possible_words_end(); ++it) {
 
+  for (auto it = dictionary.possible_words_begin(available_letters); it != dictionary.possible_words_end(); ++it) {
 	cout << *it << endl;
   }
 
-  for (auto word: available_words){
+//  for (auto word: available_words){
+//
+//  }
 
-  }
 
-  dict_file.close();
 
   return 0;
 }

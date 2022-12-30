@@ -120,8 +120,8 @@ bool Dictionary::exists(const std::string &word) {
 
 bool Dictionary::insert(const std::string &word) {
   node current = this->words.get_root();
-  for (int i = 0; i < word.size(); ++i) {
-	current = this->insertCharacter(word[i], current);
+  for (char i : word) {
+	current = this->insertCharacter(i, current);
   }
 
   if (!(*current).valid_word) {
@@ -198,7 +198,7 @@ Dictionary::iterator::iterator() {
   curr_word = "";
 }
 
-Dictionary::iterator::iterator(tree<char_info>::const_preorder_iterator &iter) : iter(iter), curr_word("") {}
+Dictionary::iterator::iterator(tree<char_info>::const_preorder_iterator &iter) : iter(iter) {}
 
 Dictionary::iterator::iterator(const Dictionary::iterator &other) {
 
@@ -249,7 +249,7 @@ bool Dictionary::iterator::operator!=(const iterator &other) {
   return !(*this == other);
 }
 
-Dictionary::iterator Dictionary::iterator::operator=(const Dictionary::iterator &other) {
+Dictionary::iterator& Dictionary::iterator::operator=(const Dictionary::iterator &other) {
   this->iter = other.iter;
   this->curr_word = other.curr_word;
 
@@ -282,13 +282,12 @@ Dictionary::possible_words_iterator Dictionary::possible_words_begin(vector<char
 //	ofstream tree("data/arbol_dic.txt");
 //	tree<<this->words;
 //	tree.close();
-  it.level = 0;
   ++it;
   return it;
 }
 
 Dictionary::possible_words_iterator Dictionary::possible_words_end() const {
-  return possible_words_iterator();
+  return {};
 }
 
 Dictionary::possible_words_iterator::possible_words_iterator() {
@@ -298,7 +297,7 @@ Dictionary::possible_words_iterator::possible_words_iterator() {
   current_word = "";
 }
 
-Dictionary::possible_words_iterator::possible_words_iterator(node current_node, vector<char> available_letters) {
+Dictionary::possible_words_iterator::possible_words_iterator(node current_node, const vector<char>& available_letters) {
   this->current_node = current_node;
   this->current_word = "";
 //    this->available_letters= {available_letters.data()};
@@ -306,6 +305,7 @@ Dictionary::possible_words_iterator::possible_words_iterator(node current_node, 
   for (auto letra: available_letters) {
 	this->available_letters.insert(letra);
   }
+  this->level=0;
 
 
 }
@@ -351,18 +351,20 @@ Dictionary::possible_words_iterator &Dictionary::possible_words_iterator::operat
   bool c_parada, c_vuelta_atras;
   node nodo_aux;
   bool salta_hijos = false;
+  int nivel;
   //Al final de cada iteracion del bucle externo deja el iterador en una letra, ya sea final de palabra o no. Si es final de palabra o la raiz para el bucle y devuelve el iterador.
   do {
 	c_parada = false;
 	c_vuelta_atras = false;
 	//Comprobacion base.
-	if (!current_node.is_null()) {
+
+
 	  //Si se puede bajar al hijo izquierdo (porque existe) exploramos los hermanos del hijo izquierdo para comprobar si alguno
 	  //Busqueda de los hijos
 	  if (existe_hi(current_node) and !salta_hijos) {
 		nodo_aux = current_node.left_child();
 
-		while (!gestion_hi(nodo_aux) and !c_parada) {
+		while (!c_parada and !gestion_hi(nodo_aux)) {
 		  if (existe_herm(nodo_aux))
 			nodo_aux = nodo_aux.right_sibling();
 		  else
@@ -373,29 +375,34 @@ Dictionary::possible_words_iterator &Dictionary::possible_words_iterator::operat
 		if (!c_parada) {
 		  current_node = nodo_aux;
 		  level++;
-		} else
-		  c_vuelta_atras = true;
 
-	  } else if (existe_herm(current_node)) {
+		} else {
+                  salta_hijos= true;
+                }
+
+          } else if (existe_herm(current_node)) {
 		salta_hijos = false;
 		nodo_aux = current_node.right_sibling();
-		while (!gestion_hermd(nodo_aux) and !c_parada) {
+		while (!c_parada and !gestion_hermd(nodo_aux)) {
 		  if (existe_herm(nodo_aux))
 			nodo_aux = nodo_aux.right_sibling();
-		  else
-			c_parada = true;
-		}
+		  else {
+                        c_parada = true;
+                  }
+                }
 
 		if (!c_parada) //Si se ha parado significa que ningun herrmano puede ser explorado. Se habilita el flag para rehalizar la vuelta atras.
 		  current_node = nodo_aux;
 		else
 		  c_vuelta_atras = true;
 
-	  } else
-		//Si ni se puede acceder a un hijo y un hermano Estamos en una hoja. Se habilita el flag de vuelta atras
-		c_vuelta_atras = true;
+	  } else {
+                // Si ni se puede acceder a un hijo y un hermano Estamos en una
+                // hoja. Se habilita el flag de vuelta atras
+                c_vuelta_atras = true;
+          }
 
-	  if (c_vuelta_atras) {
+          if (c_vuelta_atras) {
 		while (existe_padre(current_node) &&
 			   (!existe_herm(current_node.parent()) || current_node.parent().right_sibling() == current_node)) {
 
@@ -408,16 +415,24 @@ Dictionary::possible_words_iterator &Dictionary::possible_words_iterator::operat
 		  gestion_backtrack();
 
 		if (existe_padre(current_node)) {
-		  gestion_backtrack();
-		  level--;
-		  current_node = current_node.parent();
+
 		  salta_hijos = true;
-		} else current_node = node();
-	  }
+
+                  current_node=current_node.parent();
+                  level--;
+                  gestion_backtrack();
+
+
+
+
+		} else {
+                  current_node = node();
+                }
+          }
 
 
 	}
-  } while (!(level == 0 or (*current_node).valid_word) or salta_hijos);
+while (!(level == 0 or (*current_node).valid_word) or salta_hijos);
 
   return *this;
 }

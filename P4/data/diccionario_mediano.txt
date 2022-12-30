@@ -7,10 +7,6 @@ abacero
 abrigo
 abril
 abubilla
-ama
-amar
-amo
-amor
 b
 baba
 blenda
@@ -18,9 +14,6 @@ blocao
 blocar
 blonda
 cafe
-cal
-col
-coz
 chapado
 zingaro
 zocalo

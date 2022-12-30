@@ -16,9 +16,12 @@ private:
     Dictionary dict;
     LetterSet ls;
 
-    Solver()=delete;
-
 public:
+
+    /**
+     * @brief Constructor por defecto de la clase solver.
+     */
+    Solver()=default;
 
     /**
      * @brief Constructor con parámetros.
@@ -32,7 +35,7 @@ public:
      * Constructor de copia por defecto
      * @param other Solver a copiar
      */
-    Solver(Solver& other)=default;
+    Solver(Solver& other);
 
 
     /**
@@ -46,17 +49,17 @@ public:
      * @return par <vector<string>,int>, con el vector de palabras se constituyen las mejores soluciones (puede haber empate) y la puntuación que obtienen.
      *
      */
-    std::pair<vector<string>,int> getSolutions(const std::vector<char>avalible_letters,bool score_game)const;
+    std::pair<vector<string>,int> getSolutions(const std::vector<char>&avalible_letters,bool score_game)const;
 
 
-	std::pair<vector<string>,int> getSolucioneseficiente(const std::vector<char> avalible_letters, bool score_game) const;
+	std::pair<vector<string>,int> getSolucioneseficiente(const std::vector<char> &avalible_letters, bool score_game) const;
 private:
     /**
      * devuelve una solución para el modo de juego basado en la puntuación de las palabras
      * @param avalible_letters Conjunto de letras sobre las que formar una solución
      * @return par <vector<string>,int>, con el vector de palabras se constituyen las mejores soluciones (puede haber empate) y la puntuación que obtienen.
      */
-    std::pair<vector<string>,int> score_puntuacion(const std::vector<char>avalible_letters)const;
+    std::pair<vector<string>,int> score_puntuacion(const std::vector<char>&avalible_letters)const;
 
     /**
      * devuelve una solución para el modo de juego basado en la longitud de las palabras
@@ -64,7 +67,7 @@ private:
      * @return par <vector<string>,int>, con el vector de palabras se constituyen las mejores soluciones (puede haber empate) y la puntuación que obtienen.
      */
 
-    std::pair<vector<string>,int> score_longitud(const std::vector<char>avalible_letters)const;
+    std::pair<vector<string>,int> score_longitud(const std::vector<char>&avalible_letters)const;
 
 
 	/**
