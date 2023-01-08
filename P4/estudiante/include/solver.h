@@ -51,7 +51,17 @@ public:
      */
     std::pair<vector<string>,int> getSolutions(const std::vector<char>&avalible_letters,bool score_game)const;
 
-
+    /**
+     * @brief construye el vector de soluciones a partir de las letras de una partida, ahora usando una estrategia que no impluique visitar todas las palabras del diccionario
+     *
+     *      Dado un conjunto de letras posibles para crear una solución, y el modo de juego con el que se juega la partida,
+     *      se construye un vector con las mejores soluciones encontradas en función del tipo de juego planteado
+     *
+     * @param avalible_letters  Vector de letras disponibles para la partida
+     * @param score_game Bool indicando el tipo de partida. True indica que se juega a puntuación. False se juega a palabra mas larga.
+     * @return par <vector<string>,int>, con el vector de palabras se constituyen las mejores soluciones (puede haber empate) y la puntuación que obtienen.
+     *
+     */
 	std::pair<vector<string>,int> getSolucioneseficiente(const std::vector<char> &avalible_letters, bool score_game) const;
 private:
     /**

@@ -27,8 +27,8 @@ std::vector<char> LettersBag::extractLetters(const unsigned int &num) {
 
     for(auto i=0;i<num;i++)
         ret.push_back(letters.get());
-
     return ret;
+
 }
 
 char LettersBag::extractLetter() { return letters.get();  }

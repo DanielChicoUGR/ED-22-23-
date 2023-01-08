@@ -139,7 +139,7 @@ public:
      *
      * Este método comprueba si una determinada palabra se encuentra o no en el dicccionario
      *
-     * @param palabra: la palabra que se quiere buscar.
+     * @param val: la palabra que se quiere buscar.
      * @return Booleano indicando si la palabra existe o no en el diccionario
      */
     bool exists(const string &val);
@@ -192,8 +192,18 @@ public:
 
     //////////////////////////////////////////////// Recursive functions ///////////////////////////////////////////////
 
+    /**
+     * @brief Devuelve la cantidad de ocurrencias del caracter que se pasa como parametro
+     * @param c Caracter a comprobar
+     * @return Cantidad de ocurrencias del caracter \e c
+     */
     int getOccurrences(const char c);
 
+    /**
+     * @brief Devuelve la cantidad de veces que se ha usado el caracter pasado como parametro
+     * @param c Caracter a comprobar
+     * @return Cantidad de usos del caracter \e c
+     */
     int getTotalUsages(const char c);
 
     ///////////////////////////////////////////////////// Iterator ////////////////////////////////////////////////////

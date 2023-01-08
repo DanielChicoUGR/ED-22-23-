@@ -303,19 +303,65 @@ public:
 
   class preorder_iterator {
   public:
+    /**
+     * @brief Constructor por defecto
+     */
      preorder_iterator();
+     /**
+      * @brief constructor por parametros
+      * @param n nodo sobre el que inicializar el iterador
+      */
     preorder_iterator(const node &n);
+
+    /**
+     * @brief definición del operador de desigualdad
+     * @param i Iterador a comparar
+     * @return False si son iguales, True en otro caso
+     */
     bool operator!=(const preorder_iterator & i) const;
+    /**
+     * @brief definición del operador de igualdad
+     * @param i Iterador a comparar
+     * @return True si son iguales, False en otro caso
+     */
     bool operator==(const preorder_iterator & i) const;
+    /**
+     *
+     * @return Nivel del arbol en que se encuentra el iterador en este momento
+     */
     inline int get_level() { return this->level; }
+
+    /**
+     *
+     * @return Referencia al objeto al que apunta el iterador
+     */
     T & operator*();
+    /**
+     *
+     * @return actualiza el valor interno del iterador y devuelve una referencia a si mismo
+     */
     preorder_iterator & operator++();
   private:
+
+    /**
+     * Nodo al que apunta el iterador
+     */
     node current;
+    /**
+     * Nivel en el que sencuentra
+     */
     int level;
   };
 
+  /**
+   *
+   * @return devuelve un iterador al primer nodo del recorrido en preorden del arbol
+   */
   preorder_iterator begin_preorder();
+
+  /**
+   * @return devuelve un iterador al final del recorrido en preorden del arbol
+   */
   preorder_iterator end_preorder();
 
   /**
@@ -343,6 +389,10 @@ public:
   //                           Node class declaration                          //
   ///////////////////////////////////////////////////////////////////////////////
 
+
+  /**
+   * TDA nodo, Se dedica a almacenar la información en memoria y a gestionar sus conexiones con otros elementos del TDA Diccionary
+   */
   class node {
   private:
     /**

@@ -279,9 +279,7 @@ Dictionary::iterator Dictionary::end() const {
 Dictionary::possible_words_iterator Dictionary::possible_words_begin(vector<char> &available_characters) const {
   auto it = possible_words_iterator(words.get_root(), available_characters);
 
-//	ofstream tree("data/arbol_dic.txt");
-//	tree<<this->words;
-//	tree.close();
+
   ++it;
   return it;
 }

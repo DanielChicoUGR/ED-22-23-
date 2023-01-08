@@ -9,10 +9,18 @@
 #include <iostream>
 #include <omp.h>
 
+
 #define N_ITERACIONES_PRUEBA 20
+#define MIN_LETRAS 3
+#define MAX_LETRAS 20
 
+ std::ostream &operator<<(std::ostream &os, const std::pair<int,double> &p  ){
+//   os<<p.first<<' '<<p.second<<';';
+    os<<p.second<<';';
+   return os;
+ }
 
-int main(int argc, char *argv[])
+    int main(int argc, char *argv[])
 {
   if(argc != 5){
     std::cerr << "Los parametros son: " << std::endl;
@@ -60,31 +68,32 @@ int main(int argc, char *argv[])
 
   Dictionary diccionario;
   f_diccionario >> diccionario;
+  f_diccionario.close();
 
   LetterSet letterset;
   f_letras>>letterset;
-
-  f_diccionario.close();
   f_letras.close();
 
    const Solver s(diccionario,letterset);
 
    LettersBag bag(letterset);
 
-    std::chrono::duration<double,std::micro> tiempo{0};
 
     std::map<int,double> datos{};
 
 
-    #pragma omp parallel for  default (none) shared(modo_j,tiempo,s,std::cout,eficiencia,datos) firstprivate(bag)
 
-  for(int j=5;j<=15;j++) {
+    #pragma omp parallel for  default (none) shared(modo_j,eficiencia,datos,s) firstprivate(bag)
 
-      auto letras_partida = bag.extractLetters(j);
+  for(int j=MIN_LETRAS;j<=MAX_LETRAS;j++) {
 
+    auto letras_partida = bag.extractLetters(j);
 
-      for (int i = 0; i < N_ITERACIONES_PRUEBA; i++) {
+    std::chrono::duration<double, std::micro> t_aux{};
+
+    for (int i = 0; i < N_ITERACIONES_PRUEBA; i++) {
         std::chrono::duration<double, std::micro> t{};
+
         if (eficiencia==0) {
           auto t1 = std::chrono::high_resolution_clock::now();
           auto sol = s.getSolucioneseficiente(letras_partida, modo_j == 'p');
@@ -97,17 +106,18 @@ int main(int argc, char *argv[])
           t=t2-t1;
         }
 
-        tiempo += t;
+        t_aux += t;
+
       }
 
-
+      auto tiempo=t_aux.count()/N_ITERACIONES_PRUEBA;
       #pragma omp critical
-      datos.insert({j,tiempo.count()/N_ITERACIONES_PRUEBA});
+        datos.insert({j,tiempo});
 
   }
 
     for(const auto&dato:datos )
-      std::cout<<dato.second<<";";
+      std::cout<<dato;
 
     return 0;
 }

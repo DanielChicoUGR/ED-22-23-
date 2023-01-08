@@ -1,4 +1,4 @@
-#include <csignal>
+//#include <csignal>
 #include <fstream>
 #include <iostream>
 #include <string>
@@ -27,17 +27,13 @@ int main(int argc, char *argv[])
   dict_file >> dictionary;
   dict_file.close();
 
-#ifdef NDEBUG
-    std::cout<<dictionary<<endl;
-#endif
+
 
   for (auto it = dictionary.possible_words_begin(available_letters); it != dictionary.possible_words_end(); ++it) {
 	cout << *it << endl;
   }
 
-//  for (auto word: available_words){
-//
-//  }
+
 
 
 

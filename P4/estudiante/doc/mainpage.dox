@@ -13,8 +13,142 @@ en orden alfabético.
 
 ## Diccionario
 
-##Cantidad Letras
+### Explicación
 
-A RELLENAR POR EL ESTUDIANTE
+Ejecutable que comprueba la funcionalidad del iterador del diccionario.
+
+Este carga un archivo de palabras que se carga en el diccionario para luego recorrerlo mostrandolo por pantalla
+### Ejemplo comando ejecución
+` $ cmake-build-____/diccionario data/diccionario_mediano.txt `
+
+### Ejemplo ejecución
+
+![](diccionario_exe.png)
+
+
+
+
+
+## Cantidad Letras
+
+### Explicación
+
+Ejecutable que comprueba la funcionalidad de las funciones:
+
+    int getOcurrences(const char c)const;
+    int getTotalUsages(cons char c)const;
+
+Este carga un archivo de palabras que se carga en el diccionario, un archivo de letras para cargar en un TDA letterset
+y por cada letra del letterset el diccionario calculará sus usos y ocurrencias para mostrarlas por pantalla
+
+
+### Ejemplo comando ejecución
+    $ cmake-build-____/cantidad_letras data/diccionario.txt data/letras.txt
+
+### Ejemplo ejecución
+
+![](cantidad_letras_exe.png)
+
+
+
+## Partida Letras
+
+### Explicación
+
+Comprueba el funcionamiento del TDA Solver, con el objetivo de devolver las palabras que maximicen una condición de puntuiación sobre un conjunto de letras dadas.
+El ejecutable recibe como parametros:
+1. Ruta al archivo que contiene el diccionario
+2. Ruta al archivo que contiene las letras y su puntuación
+3. Modo de juego (L = longitud, P = puntuación)
+4. Cantidad de letras para la partida
+
+### Ejemplo comando ejecución
+    $ cmake-build-____/partida_letras data/diccionario.txt data/letras.txt P 20
+
+### Ejemplo ejecución
+
+![](partida_letras_exe.png)
+
+
+## Palabras_validas_diccionario
+
+### Explicación
+
+
+Ejecutable que comprueba la funcionalidad del iterador del diccionario modificado para iterar solo por las palabras que
+se puedan formar con un conjunto de letras  predefinido a la hora de iniciar el recorrido.
+
+El ejecutable recibe como parametros:
+1. Ruta al archivo que contiene el diccionario
+2. letras separadas por espacios que serviran como letras sobre las que formar palabras
+
+
+### Ejemplo comando ejecución
+    $ cmake-build-____/palabras_validas_diccionario data/diccionario.txt c a l o z
+
+### Ejemplo ejecución
+
+![](palabras_validas_diccionario_exe.png)
+
+
+## Partida_letras_eficiente
+
+### Explicación
+
+Ejecutable que comprueba la funcionalidad del TDA Solver pero aprovechandose del nuevo iterador creado con el objetivo de
+mejorar los tiempos de ejecución.
+
+El ejecutable recibe como parametros:
+1. Ruta al archivo que contiene el diccionario
+2. Ruta al archivo que contiene las letras y su puntuación
+3. Modo de juego (L = longitud, P = puntuación)
+4. Cantidad de letras para la partida
+
+
+### Ejemplo comando ejecución
+    $ cmake-build-____/diccionario data/diccionario.txt data/letras.txt P 9
+
+### Ejemplo ejecución
+
+![](partida_letras_eficiente_exe.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
+##Test Eficiencia
+
+### Explicación
+
+Ejecutable que ejecuta la función del solver especificada (version eficiente o no) y devuelve los datos en formato CSV
+de distintas ejecuciones. Cada dato corresponde a una ejecución con una cantidad determinada de letras. Empezando en 3 y
+terminando en 20.
+La inclusión de este ejecutable así como la carpeta eficiencia con los archivos de python con motivo del estudio de eficiencia.
+Se recomienda si se van a ejecutar los archivos .py crear un entorno virtual y instalar los modulos indicados en el archivo "requirements.txt"
+
+El ejecutable recibe como parametros:
+1. Ruta al archivo que contiene el diccionario
+2. Ruta al archivo que contiene las letras y su puntuación
+3. Modo de juego (L = longitud, P = puntuación)
+4. 0-> Solución eficiente. 1-> Solución ineficiente
+
+
+### Ejemplo comando ejecución
+    $ cmake-build-____/diccionario data_eficiencia/diccionario_50000.txt data/letras.txt P 0
+
+### Ejemplo ejecución
+
+![](test_eficiencia_exe.png)
+
+
+
 
 */

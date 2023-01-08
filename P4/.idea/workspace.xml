@@ -16,6 +16,7 @@
       <config projectName="p04_juego_letras" targetName="test_eficiencia" />
       <config projectName="p04_juego_letras" targetName="diccionario" />
       <config projectName="p04_juego_letras" targetName="partida_letras" />
+      <config projectName="p04_juego_letras" targetName="doc_doxygen" />
       <config projectName="p04_juego_letras" targetName="partida_letras_eficiente" />
     </generated>
   </component>
@@ -27,158 +28,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1b59d18c-1a7e-4d67-80df-2188bfc52558" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/ED.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../P3/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/../P3/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/estudiante/eficiencia/gen_datos.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Doxyfile.in" beforeDir="false" afterPath="$PROJECT_DIR$/Doxyfile.in" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/diccionario_mediano.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/diccionario_mediano.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc_doxygen/html/annotated.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc_doxygen/html/bag_8h_source.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc_doxygen/html/bc_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc_doxygen/html/bc_sd.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc_doxygen/html/bdwn.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc_doxygen/html/classBag-members.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc_doxygen/html/classBag.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc_doxygen/html/classDictionary-members.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc_doxygen/html/classDictionary.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc_doxygen/html/classDictionary_1_1iterator-members.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc_doxygen/html/classDictionary_1_1iterator.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc_doxygen/html/classDictionary_1_1possible__words__iterator-members.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc_doxygen/html/classDictionary_1_1possible__words__iterator.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc_doxygen/html/classLetterSet-members.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc_doxygen/html/classLetterSet.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc_doxygen/html/classLetterSet_1_1const__iterator-members.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc_doxygen/html/classLetterSet_1_1const__iterator.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc_doxygen/html/classLetterSet_1_1iterator-members.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc_doxygen/html/classLetterSet_1_1iterator.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc_doxygen/html/classes.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc_doxygen/html/classtree-members.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc_doxygen/html/classtree.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc_doxygen/html/classtree_1_1const__preorder__iterator-members.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc_doxygen/html/classtree_1_1const__preorder__iterator.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc_doxygen/html/classtree_1_1node-members.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc_doxygen/html/classtree_1_1node.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc_doxygen/html/classtree_1_1preorder__iterator-members.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc_doxygen/html/classtree_1_1preorder__iterator.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc_doxygen/html/closed.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc_doxygen/html/dictionary_8h_source.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc_doxygen/html/dir_68267d1309a1af8e8297ef4c3efbcdba.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc_doxygen/html/dir_d44c64559bbebec7f509842c48db8b23.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc_doxygen/html/dir_e68e8157741866f444e17edd764ebbae.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc_doxygen/html/doc.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc_doxygen/html/docd.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc_doxygen/html/doxygen.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc_doxygen/html/doxygen.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc_doxygen/html/dynsections.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc_doxygen/html/files.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc_doxygen/html/folderclosed.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc_doxygen/html/folderopen.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc_doxygen/html/functions.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc_doxygen/html/functions_func.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc_doxygen/html/functions_rela.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc_doxygen/html/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc_doxygen/html/jquery.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc_doxygen/html/letters__bag_8h_source.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc_doxygen/html/letters__set_8h_source.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc_doxygen/html/menu.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc_doxygen/html/menudata.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc_doxygen/html/nav_f.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc_doxygen/html/nav_fd.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc_doxygen/html/nav_g.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc_doxygen/html/nav_h.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc_doxygen/html/nav_hd.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc_doxygen/html/open.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc_doxygen/html/search/all_0.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc_doxygen/html/search/all_1.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc_doxygen/html/search/all_2.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc_doxygen/html/search/all_3.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc_doxygen/html/search/all_4.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc_doxygen/html/search/all_5.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc_doxygen/html/search/all_6.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc_doxygen/html/search/all_7.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc_doxygen/html/search/all_8.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc_doxygen/html/search/all_9.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc_doxygen/html/search/all_a.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc_doxygen/html/search/all_b.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc_doxygen/html/search/all_c.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc_doxygen/html/search/all_d.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc_doxygen/html/search/all_e.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc_doxygen/html/search/all_f.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc_doxygen/html/search/classes_0.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc_doxygen/html/search/classes_1.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc_doxygen/html/search/classes_2.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc_doxygen/html/search/classes_3.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc_doxygen/html/search/classes_4.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc_doxygen/html/search/classes_5.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc_doxygen/html/search/classes_6.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc_doxygen/html/search/classes_7.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc_doxygen/html/search/close.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc_doxygen/html/search/functions_0.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc_doxygen/html/search/functions_1.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc_doxygen/html/search/functions_2.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc_doxygen/html/search/functions_3.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc_doxygen/html/search/functions_4.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc_doxygen/html/search/functions_5.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc_doxygen/html/search/functions_6.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc_doxygen/html/search/functions_7.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc_doxygen/html/search/functions_8.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc_doxygen/html/search/functions_9.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc_doxygen/html/search/functions_a.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc_doxygen/html/search/functions_b.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc_doxygen/html/search/functions_c.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc_doxygen/html/search/functions_d.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc_doxygen/html/search/functions_e.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc_doxygen/html/search/functions_f.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc_doxygen/html/search/mag.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc_doxygen/html/search/mag_d.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc_doxygen/html/search/mag_sel.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc_doxygen/html/search/mag_seld.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc_doxygen/html/search/pages_0.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc_doxygen/html/search/related_0.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc_doxygen/html/search/search.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc_doxygen/html/search/search.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc_doxygen/html/search/searchdata.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc_doxygen/html/splitbar.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc_doxygen/html/splitbard.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc_doxygen/html/structLetterInfo-members.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc_doxygen/html/structLetterInfo.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc_doxygen/html/sync_off.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc_doxygen/html/sync_on.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc_doxygen/html/tab_a.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc_doxygen/html/tab_ad.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc_doxygen/html/tab_b.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc_doxygen/html/tab_bd.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc_doxygen/html/tab_h.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc_doxygen/html/tab_hd.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc_doxygen/html/tab_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc_doxygen/html/tab_sd.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc_doxygen/html/tabs.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc_doxygen/html/tree_8h_source.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/estudiante/doc/mainpage.dox" beforeDir="false" afterPath="$PROJECT_DIR$/estudiante/doc/mainpage.dox" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/estudiante/include/bag.h" beforeDir="false" afterPath="$PROJECT_DIR$/estudiante/include/bag.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/estudiante/eficiencia/eficiencia.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/estudiante/eficiencia/ejecuciones.sh" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/estudiante/include/dictionary.h" beforeDir="false" afterPath="$PROJECT_DIR$/estudiante/include/dictionary.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/estudiante/include/letters_set.h" beforeDir="false" afterPath="$PROJECT_DIR$/estudiante/include/letters_set.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/estudiante/include/solver.h" beforeDir="false" afterPath="$PROJECT_DIR$/estudiante/include/solver.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/estudiante/include/tree.h" beforeDir="false" afterPath="$PROJECT_DIR$/estudiante/include/tree.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/estudiante/src/cantidad_letras.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/estudiante/src/cantidad_letras.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/estudiante/src/diccionario.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/estudiante/src/diccionario.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/estudiante/src/dictionary.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/estudiante/src/dictionary.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/estudiante/src/letters_bag.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/estudiante/src/letters_bag.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/estudiante/src/palabras_validas_diccionario.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/estudiante/src/palabras_validas_diccionario.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/estudiante/src/partida_letras.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/estudiante/src/partida_letras.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/estudiante/src/partida_letras_eficiente.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/estudiante/src/partida_letras_eficiente.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/estudiante/src/solver.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/estudiante/src/solver.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/juez.sh" beforeDir="false" afterPath="$PROJECT_DIR$/juez.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/estudiante/src/test_eficiencia.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/estudiante/src/test_eficiencia.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Release" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -205,44 +77,56 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;cf.advertisement.text.overridden&quot;: &quot;true&quot;,
-    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
-    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/daniel/Proyectos/ED/P4&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "cf.advertisement.text.overridden": "true",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "database.data.extractors.current.export.id": "88598240-806b-48af-832c-8e5569c6bdb8",
+    "database.data.extractors.current.id": "88598240-806b-48af-832c-8e5569c6bdb8",
+    "last_opened_file_path": "/home/daniel/Proyectos/ED/P4",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
-  <component name="RunManager" selected="Python.eficiencia">
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/estudiante/doc/img" />
+    </key>
+  </component>
+  <component name="RunManager" selected="CMake Application.doc_doxxygen">
     <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" singleton="false" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug" EXPLICIT_BUILD_TARGET_NAME="all">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="cantidad_letras" type="CMakeRunConfiguration" factoryName="Application" singleton="false" PROGRAM_PARAMS="data/diccionario.txt data/letras.txt" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" WORKING_DIR="file://$ContentRoot$" PASS_PARENT_ENVS_2="true" PROJECT_NAME="p04_juego_letras" TARGET_NAME="cantidad_letras" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="p04_juego_letras" RUN_TARGET_NAME="cantidad_letras">
+    <configuration name="cantidad_letras" type="CMakeRunConfiguration" factoryName="Application" singleton="false" PROGRAM_PARAMS="data/diccionario.txt data/letras.txt" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" WORKING_DIR="file://$ContentRoot$" PASS_PARENT_ENVS_2="true" PROJECT_NAME="p04_juego_letras" TARGET_NAME="cantidad_letras" CONFIG_NAME="Release" RUN_TARGET_PROJECT_NAME="p04_juego_letras" RUN_TARGET_NAME="cantidad_letras">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="diccionario" type="CMakeRunConfiguration" factoryName="Application" singleton="false" PROGRAM_PARAMS="data/diccionario.txt" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" WORKING_DIR="file://$ContentRoot$" PASS_PARENT_ENVS_2="true" PROJECT_NAME="p04_juego_letras" TARGET_NAME="diccionario" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="p04_juego_letras" RUN_TARGET_NAME="diccionario">
+    <configuration name="diccionario" type="CMakeRunConfiguration" factoryName="Application" singleton="false" PROGRAM_PARAMS="data/diccionario_mediano.txt" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" WORKING_DIR="file://$ContentRoot$" PASS_PARENT_ENVS_2="true" PROJECT_NAME="p04_juego_letras" TARGET_NAME="diccionario" CONFIG_NAME="Release" RUN_TARGET_PROJECT_NAME="p04_juego_letras" RUN_TARGET_NAME="diccionario">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="palabras_validas_diccionario" type="CMakeRunConfiguration" factoryName="Application" singleton="false" PROGRAM_PARAMS="data/diccionario_mini.txt c a l o z" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" WORKING_DIR="file://$ContentRoot$" PASS_PARENT_ENVS_2="true" PROJECT_NAME="p04_juego_letras" TARGET_NAME="palabras_validas_diccionario" CONFIG_NAME="Release" RUN_TARGET_PROJECT_NAME="p04_juego_letras" RUN_TARGET_NAME="palabras_validas_diccionario">
+    <configuration name="doc_doxxygen" type="CMakeRunConfiguration" factoryName="Application" singleton="false" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="p04_juego_letras" TARGET_NAME="doc_doxygen" CONFIG_NAME="Release">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="palabras_validas_diccionario" type="CMakeRunConfiguration" factoryName="Application" singleton="false" PROGRAM_PARAMS="data/diccionario.txt c a l o z" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" WORKING_DIR="file://$ContentRoot$" PASS_PARENT_ENVS_2="true" PROJECT_NAME="p04_juego_letras" TARGET_NAME="palabras_validas_diccionario" CONFIG_NAME="Release" RUN_TARGET_PROJECT_NAME="p04_juego_letras" RUN_TARGET_NAME="palabras_validas_diccionario">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -257,24 +141,47 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="test_eficiencia" type="CMakeRunConfiguration" factoryName="Application" singleton="false" PROGRAM_PARAMS="data/diccionario.txt data/letras.txt P 0" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" WORKING_DIR="file://$ContentRoot$" PASS_PARENT_ENVS_2="true" PROJECT_NAME="p04_juego_letras" TARGET_NAME="test_eficiencia" CONFIG_NAME="Release" RUN_TARGET_PROJECT_NAME="p04_juego_letras" RUN_TARGET_NAME="test_eficiencia">
+    <configuration name="test_eficiencia" type="CMakeRunConfiguration" factoryName="Application" singleton="false" PROGRAM_PARAMS="data_eficiencia/diccionario_50000.txt data/letras.txt P 0" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" WORKING_DIR="file://$ContentRoot$" PASS_PARENT_ENVS_2="true" PROJECT_NAME="p04_juego_letras" TARGET_NAME="test_eficiencia" CONFIG_NAME="Release" RUN_TARGET_PROJECT_NAME="p04_juego_letras" RUN_TARGET_NAME="test_eficiencia">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="eficiencia" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+    <configuration name="gen_datos" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="P4" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/estudiante/eficiencia" />
+      <option name="SDK_HOME" value="$PROJECT_DIR$/estudiante/eficiencia/env/bin/python" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/estudiante/eficiencia/eficiencia.py" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/estudiante/eficiencia/gen_datos.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="gen_graficos" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="P4" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="$PROJECT_DIR$/estudiante/eficiencia/env/bin/python" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/estudiante/eficiencia/gen_graficos.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -287,10 +194,12 @@
       <item itemvalue="CMake Application.cantidad_letras" />
       <item itemvalue="CMake Application.diccionario" />
       <item itemvalue="CMake Application.palabras_validas_diccionario" />
+      <item itemvalue="CMake Application.doc_doxxygen" />
       <item itemvalue="CMake Application.partida_letras" />
       <item itemvalue="CMake Application.partida_letras_eficiente" />
       <item itemvalue="CMake Application.test_eficiencia" />
-      <item itemvalue="Python.eficiencia" />
+      <item itemvalue="Python.gen_datos" />
+      <item itemvalue="Python.gen_graficos" />
     </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -313,22 +222,23 @@
       <workItem from="1672329644828" duration="2698000" />
       <workItem from="1672334338095" duration="1841000" />
       <workItem from="1672407606312" duration="6307000" />
+      <workItem from="1672475955410" duration="16737000" />
+      <workItem from="1672501162216" duration="2357000" />
+      <workItem from="1672503758028" duration="37000" />
+      <workItem from="1672505822606" duration="395000" />
+      <workItem from="1672506491728" duration="269000" />
+      <workItem from="1672506867791" duration="193000" />
+      <workItem from="1672507631190" duration="1632000" />
+      <workItem from="1672510284874" duration="1178000" />
+      <workItem from="1673170974577" duration="24000" />
+      <workItem from="1673187620364" duration="131000" />
+      <workItem from="1673187761451" duration="5107000" />
+      <workItem from="1673195964614" duration="2003000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/estudiante/src/palabras_validas_diccionario.cpp</url>
-          <line>34</line>
-          <option name="timeStamp" value="42" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -25,20 +25,21 @@ int main(int argc, char **argv) {
 
     LetterSet letters;
 
-#ifdef NDEBUG
+
+
     dic>>diccionario;
-#endif
-
-
     letras>>letters;
+    dic.close();
+
+    letras.close();
+
+
     std::cout<<"Letra\tUsos\tOcurrencias\n";
     for(auto letra:letters){
         std::cout<<char(toupper(letra.first))<<"\t"<<diccionario.getTotalUsages(letra.first)<<"\t"<<diccionario.getOccurrences(letra.first)<<std::endl;
     }
 
-    dic.close();
 
-    letras.close();
 
 
 

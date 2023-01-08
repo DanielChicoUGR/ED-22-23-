@@ -12,7 +12,13 @@
  */
 
 struct LetterInfo{
+  /**
+   * Cantidad de veces que a aparecido la letra
+   */
     int repeticiones;
+    /**
+     * Puntos que se le da a la letra.
+     */
     int score;
 
     /**
