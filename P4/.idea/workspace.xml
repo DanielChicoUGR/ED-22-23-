@@ -28,22 +28,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1b59d18c-1a7e-4d67-80df-2188bfc52558" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/estudiante/eficiencia/gen_datos.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Doxyfile.in" beforeDir="false" afterPath="$PROJECT_DIR$/Doxyfile.in" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/estudiante/doc/mainpage.dox" beforeDir="false" afterPath="$PROJECT_DIR$/estudiante/doc/mainpage.dox" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/estudiante/eficiencia/eficiencia.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/estudiante/eficiencia/ejecuciones.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/estudiante/include/dictionary.h" beforeDir="false" afterPath="$PROJECT_DIR$/estudiante/include/dictionary.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/estudiante/include/letters_set.h" beforeDir="false" afterPath="$PROJECT_DIR$/estudiante/include/letters_set.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/estudiante/include/solver.h" beforeDir="false" afterPath="$PROJECT_DIR$/estudiante/include/solver.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/estudiante/include/tree.h" beforeDir="false" afterPath="$PROJECT_DIR$/estudiante/include/tree.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/estudiante/src/cantidad_letras.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/estudiante/src/cantidad_letras.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/estudiante/src/dictionary.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/estudiante/src/dictionary.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/estudiante/src/letters_bag.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/estudiante/src/letters_bag.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/estudiante/src/palabras_validas_diccionario.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/estudiante/src/palabras_validas_diccionario.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/estudiante/src/test_eficiencia.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/estudiante/src/test_eficiencia.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +74,7 @@
     "cidr.known.project.marker": "true",
     "database.data.extractors.current.export.id": "88598240-806b-48af-832c-8e5569c6bdb8",
     "database.data.extractors.current.id": "88598240-806b-48af-832c-8e5569c6bdb8",
-    "last_opened_file_path": "/home/daniel/Proyectos/ED/P4",
+    "last_opened_file_path": "/home/daniel/Proyectos/proyectoDDSI",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -105,7 +90,7 @@
       <recent name="$PROJECT_DIR$/estudiante/doc/img" />
     </key>
   </component>
-  <component name="RunManager" selected="CMake Application.doc_doxxygen">
+  <component name="RunManager" selected="Python.gen_datos">
     <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" singleton="false" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug" EXPLICIT_BUILD_TARGET_NAME="all">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -193,8 +178,8 @@
     <list>
       <item itemvalue="CMake Application.cantidad_letras" />
       <item itemvalue="CMake Application.diccionario" />
-      <item itemvalue="CMake Application.palabras_validas_diccionario" />
       <item itemvalue="CMake Application.doc_doxxygen" />
+      <item itemvalue="CMake Application.palabras_validas_diccionario" />
       <item itemvalue="CMake Application.partida_letras" />
       <item itemvalue="CMake Application.partida_letras_eficiente" />
       <item itemvalue="CMake Application.test_eficiencia" />
@@ -233,7 +218,11 @@
       <workItem from="1673170974577" duration="24000" />
       <workItem from="1673187620364" duration="131000" />
       <workItem from="1673187761451" duration="5107000" />
-      <workItem from="1673195964614" duration="2003000" />
+      <workItem from="1673195964614" duration="2549000" />
+      <workItem from="1673198540439" duration="13000" />
+      <workItem from="1673346467428" duration="29000" />
+      <workItem from="1673454026462" duration="35000" />
+      <workItem from="1674494111909" duration="67000" />
     </task>
     <servers />
   </component>
